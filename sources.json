@@ -1,6 +1,51 @@
 {
-  "_instructions": "Add verified, authorized boards. Set authorized=true only after checking API and reuse terms; keep disabled demo rows off.",
-  "greenhouse": [],
-  "lever": [],
-  "ashby": []
+  "_instructions": "Board identifiers are inferred from public job-board URLs, NOT live-tested API or blanket republication permission. Run Probe candidate boards. Set authorized=true for a source ONLY after confirming your use case is permitted. Keep the existing job snapshots when upgrading.",
+  "greenhouse": [
+    {
+      "company": "MongoDB",
+      "board_token": "mongodb",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Singapore. API live response and reuse permission must be checked separately."
+    }
+  ],
+  "lever": [
+    {
+      "company": "Ninja Van",
+      "site": "ninjavan",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+    },
+    {
+      "company": "Lalamove",
+      "site": "lalamove",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+    },
+    {
+      "company": "WalkMe",
+      "site": "walkme",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Singapore. API live response and reuse permission must be checked separately."
+    }
+  ],
+  "ashby": [
+    {
+      "company": "Airwallex",
+      "board_name": "airwallex",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+    },
+    {
+      "company": "Notion",
+      "board_name": "notion",
+      "enabled": true,
+      "authorized": false,
+      "coverage_note": "Official career board observed; selected markets: Singapore. API live response and reuse permission must be checked separately."
+    }
+  ]
 }

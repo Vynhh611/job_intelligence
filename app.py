@@ -69,6 +69,8 @@ items=[enrich(j) for j in raw if isinstance(j,dict) and j.get('id') and j.get('t
 profiles=read('company_profiles.json',{})
 status=read('run_status.json',{})
 history=read('history.json',[])
+watchlist=read('company_watchlist.json',[])
+probe=read('source_probe.json',[])
 sources_config=json.loads((ROOT/'sources.json').read_text(encoding='utf-8')) if (ROOT/'sources.json').exists() else {}
 active=visible_jobs([j for j in items if j.get('status','active')=='active'])
 
@@ -119,7 +121,7 @@ with st.sidebar:
     st.caption('ASIA · CAREER RESEARCH DESK')
     st.divider()
     st.markdown('**Market coverage**')
-    markets=st.multiselect('Country',['Vietnam','Singapore','Taiwan'],default=['Vietnam','Singapore','Taiwan'],label_visibility='collapsed')
+    markets=st.multiselect('Country',['Vietnam','Singapore','Taiwan'],default=['Vietnam','Singapore'],label_visibility='collapsed')
     st.markdown('**Live collection**')
     st.write(f'**{len(active):,}** active records')
     st.caption(f'Last collector run: {date_str(status.get("checked_at"))}')
@@ -128,7 +130,7 @@ with st.sidebar:
     st.divider()
     st.caption('Listings are source-attributed; completeness, visa and salary details are not guaranteed. No company reputation allegations are generated.')
 
-st.markdown('''<div class="hero"><div class="eyebrow">CAREER DATA · VERIFIED SOURCE TRAIL</div><h1>Discover opportunities. Understand the market.</h1><p>Explore jobs across Vietnam, Singapore and Taiwan, inspect actual job requirements, compare skills and review transparency signals without unsupported company ratings.</p></div>''',unsafe_allow_html=True)
+st.markdown('''<div class="hero"><div class="eyebrow">CAREER DATA · VERIFIED SOURCE TRAIL</div><h1>Discover opportunities. Understand the market.</h1><p>Explore jobs across Vietnam and Singapore, inspect actual job requirements, compare skills and review transparency signals without unsupported company ratings.</p></div>''',unsafe_allow_html=True)
 
 if not active:
     st.info('Website hoạt động. Chưa có tin tuyển dụng đang mở: thêm nguồn đã kiểm tra quyền sử dụng vào sources.json (authorized=true), sau đó chạy Actions → Collect job listings. Có thể xem giao diện và phương pháp bên dưới.')
@@ -214,10 +216,11 @@ with tabs[0]:
 with tabs[1]:
     st.markdown('### Company research')
     st.caption('Evidence-led profile: no invented ratings, unsupported misconduct claims or inferred visa support.')
-    known=sorted(set(j.get('company','') for j in countries)|set(profiles))
+    known=sorted(set(j.get('company','') for j in countries)|set(profiles)|{c['company'] for c in watchlist if c.get('country') in markets})
     if known:
         selected=st.selectbox('Choose company',known)
         related=[j for j in countries if j.get('company')==selected]
+        watched=[c for c in watchlist if c.get('company')==selected and c.get('country') in markets]
         p=profiles.get(selected,{})
         x,y,z=st.columns(3)
         x.metric('Active listings',len(related))
@@ -228,6 +231,12 @@ with tabs[1]:
         for field,label in [('industry','Industry'),('headquarters','Headquarters'),('company_size','Company size'),('careers_url','Careers page')]:
             if p.get(field): st.write(f'**{label}:** {p[field]}')
         if safe_url(p.get('website')):st.link_button('Official employer site',p['website'])
+        if watched:
+            st.markdown('#### Official careers directory')
+            for c in watched:
+                st.write(f"**{c['country']} · {c['platform']}** — {c['integration_status']}")
+                if safe_url(c.get('careers_url')): st.link_button(f"Open {c['country']} careers page ↗",c['careers_url'])
+            st.caption('A company in this registry is not counted as an ingested job, a successfully connected API or permission to republish JD text.')
         st.markdown('#### Active openings')
         st.dataframe(pd.DataFrame([{'Role':j['title'],'Market':j.get('country'),'Location':j.get('location'),'Category':j.get('category'),'Original URL':j.get('url')} for j in related]),use_container_width=True,hide_index=True)
         st.markdown('#### What to verify before applying')
@@ -302,6 +311,14 @@ with tabs[4]:
     st.write(f'**Last run:** {date_str(status.get("checked_at"))} · **Successful sources:** {status.get("successful_sources",0)}')
     st.caption('Registered ATS coverage is skewed toward organizations using Greenhouse, Lever or Ashby; local boards and employers using other systems are not represented unless individually integrated.')
     if status.get('sources'):st.dataframe(pd.DataFrame(status['sources']),use_container_width=True,hide_index=True)
+    st.markdown('#### Priority employer coverage')
+    watched=[c for c in watchlist if c.get('country') in markets]
+    st.caption(f'{len(watched)} targeted company-market pairs (official careers directory, NOT ingested jobs). API candidates remain permission-gated.')
+    if watched:
+        st.dataframe(pd.DataFrame([{'Market':c['country'],'Company':c['company'],'Industry':c.get('industry'),'Careers':c.get('careers_url'),'Platform':c.get('platform'),'Integration':c.get('integration_status')} for c in watched]),hide_index=True,use_container_width=True,column_config={'Careers':st.column_config.LinkColumn('Official careers URL')})
+    if probe:
+        st.markdown('#### Candidate board connectivity probe (not publication permission)')
+        st.dataframe(pd.DataFrame(probe),hide_index=True,use_container_width=True)
     source_rows=[]
     for provider in ('greenhouse','lever','ashby'):
         for source in sources_config.get(provider,[]):
