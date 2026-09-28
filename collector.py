@@ -1,112 +1,154 @@
-"""Collect published roles from configured public Greenhouse / Lever job boards.
-
-Configure sources.json with board tokens/sites and company display names.
-Does not bypass access controls or scrape HTML pages.
+"""Multi-source public ATS collector. Add sources only when use is authorized.
+Usage: python collector.py --dry-run | python collector.py
 """
-import csv
-import html
+import argparse
 import json
-import re
+import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
-
+from urllib.parse import quote
 import requests
+from intelligence import enrich, infer_country, plain
 
-ROOT = Path(__file__).resolve().parent
-CSV_PATH = ROOT / 'data' / 'jobs.csv'
-FIELDS = ['job_id','title','company','location','category','source','posted_at','first_seen','last_seen','url','description']
-HEADERS = {'User-Agent': 'JobIntelligencePersonalResearch/0.1', 'Accept': 'application/json'}
-KEYWORDS = {
-    'Strategy & Consulting': r'\b(strategy|strategic|consult|transformation|business design)\b',
-    'Revenue & Pricing': r'\b(revenue|pricing|commercial excellence|growth management|rgm)\b',
-    'Business Development': r'\b(business development|partnership|account manager|sales|b2b)\b',
-    'Data & Analytics': r'\b(data|analytic|business intelligence|research|insight)\b',
-    'Operations': r'\b(operation|process improvement|supply chain)\b',
-}
+ROOT=Path(__file__).resolve().parent
+DATA=ROOT/'data'
+DATA.mkdir(exist_ok=True)
+SESSION=requests.Session()
+SESSION.headers.update({'User-Agent':'JobIntelligenceAsia/1.0 (public recruitment source monitor)'})
+TIMEOUT=25
+COUNTRIES={'Vietnam','Singapore','Taiwan'}
 
-def classify(title):
-    for group, pattern in KEYWORDS.items():
-        if re.search(pattern, title, re.I):
-            return group
-    return 'Other'
+def get_json(url):
+    last=None
+    for n in range(3):
+        try:
+            r=SESSION.get(url,timeout=TIMEOUT)
+            if r.status_code==429 or 500 <= r.status_code < 600:
+                r.raise_for_status()
+            r.raise_for_status()
+            return r.json()
+        except (requests.RequestException,ValueError) as exc:
+            last=exc
+            if n<2: time.sleep(1.5*(n+1))
+    raise last
 
-def strip_html(value):
-    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', value or ''))).strip()[:2500]
+def greenhouse(source):
+    token=quote(source['board_token'].strip(),safe='')
+    result=get_json(f'https://boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true')
+    for j in result.get('jobs',[]):
+        loc=(j.get('location') or {}).get('name','')
+        yield {'id':f'greenhouse:{token}:{j["id"]}','title':j.get('title',''),'company':source['company'],
+               'location':loc,'url':j.get('absolute_url',''),'description':j.get('content',''),
+               'source':'Greenhouse','source_key':f'greenhouse:{token}','source_updated_at':j.get('updated_at','')}
 
-def fetch_json(url, params=None):
-    response = requests.get(url, params=params, headers=HEADERS, timeout=25)
-    response.raise_for_status()
-    return response.json()
+def lever(source):
+    site=quote(source['site'].strip(),safe='')
+    listings=get_json(f'https://api.lever.co/v0/postings/{site}?mode=json')
+    for j in listings:
+        cats=j.get('categories') or {}
+        desc=' '.join(str(j.get(k) or '') for k in ('descriptionPlain','additionalPlain','description','additional'))
+        desc+=' '+' '.join(plain(v.get('content','')) for v in (j.get('lists') or []) if isinstance(v,dict))
+        yield {'id':f'lever:{site}:{j["id"]}','title':j.get('text',''),'company':source['company'],
+               'location':cats.get('location',''),'url':j.get('hostedUrl',''),'description':desc,
+               'source':'Lever','source_key':f'lever:{site}','employment_type':cats.get('commitment') or 'Not specified',
+               'source_updated_at':''}
 
-def greenhouse(entry, now):
-    token = entry['token']
-    if not re.fullmatch(r'[A-Za-z0-9_-]+', token):
-        raise ValueError('Invalid Greenhouse token')
-    payload = fetch_json(f'https://boards-api.greenhouse.io/v1/boards/{token}/jobs', {'content':'true'})
-    for j in payload.get('jobs', []):
-        yield dict(job_id=f'greenhouse:{token}:{j["id"]}', title=j.get('title',''), company=entry['company'],
-            location=(j.get('location') or {}).get('name',''), category=classify(j.get('title','')),
-            source='Greenhouse', posted_at=j.get('updated_at',''), first_seen=now, last_seen=now,
-            url=j.get('absolute_url',''), description=strip_html(j.get('content','')))
+def ashby(source):
+    board=quote(source['board_name'].strip(),safe='')
+    result=get_json(f'https://api.ashbyhq.com/posting-api/job-board/{board}?includeCompensation=true')
+    for j in result.get('jobs',[]):
+        if j.get('isListed') is False: continue
+        comp=j.get('compensation') or {}
+        yield {'id':f'ashby:{board}:{j.get("id") or j.get("jobUrl")}', 'title':j.get('title',''),
+               'company':source['company'],'location':j.get('location',''),'url':j.get('jobUrl',''),
+               'description':j.get('descriptionPlain') or j.get('descriptionHtml') or '',
+               'source':'Ashby','source_key':f'ashby:{board}',
+               'salary_text':comp.get('compensationTierSummary') or comp.get('scrapeableCompensationSalarySummary') or '',
+               'workplace_type':j.get('workplaceType') or 'Not specified',
+               'employment_type':j.get('employmentType') or 'Not specified',
+               'source_updated_at':j.get('publishedAt','')}
 
-def lever(entry, now):
-    site = entry['site']
-    if not re.fullmatch(r'[A-Za-z0-9_-]+', site):
-        raise ValueError('Invalid Lever site')
-    # Lever may paginate; skip/limit are documented public Postings API parameters.
-    skip = 0
-    while True:
-        items = fetch_json(f'https://api.lever.co/v0/postings/{site}', {'mode':'json', 'skip':skip, 'limit':100})
-        if not isinstance(items, list):
-            raise ValueError('Unexpected Lever API response')
-        for j in items:
-            categories = j.get('categories') or {}
-            yield dict(job_id=f'lever:{site}:{j["id"]}', title=j.get('text',''), company=entry['company'],
-                location=categories.get('location',''), category=classify(j.get('text','')),
-                source='Lever', posted_at='', first_seen=now, last_seen=now,
-                url=j.get('hostedUrl',''), description=strip_html(j.get('descriptionPlain','') or j.get('description','')))
-        if len(items) < 100:
-            break
-        skip += len(items)
-
-def previous_rows():
-    if not CSV_PATH.exists():
-        return {}
-    with CSV_PATH.open(newline='', encoding='utf-8-sig') as f:
-        return {row['job_id']:row for row in csv.DictReader(f) if row.get('job_id')}
+COLLECTORS={'greenhouse':greenhouse,'lever':lever,'ashby':ashby}
+def load_json(path,default):
+    if not path.exists(): return default
+    return json.loads(path.read_text(encoding='utf-8'))
+def save_json(path,value):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    temp=path.with_suffix(path.suffix+'.tmp')
+    temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    temp.replace(path)
 
 def main():
-    config = json.loads((ROOT/'sources.json').read_text(encoding='utf-8'))
-    old = previous_rows()
-    now = datetime.now(timezone.utc).isoformat(timespec='seconds')
-    collected = {}
-    failures = []
-    configured = 0
-    for provider, fn in [('greenhouse',greenhouse), ('lever',lever)]:
-        for entry in config.get(provider, []):
-            configured += 1
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--dry-run',action='store_true',help='Report counts without writing snapshots')
+    args=parser.parse_args()
+    config=load_json(ROOT/'sources.json',{})
+    previous={j['id']:j for j in load_json(DATA/'jobs.json',[])}
+    history=load_json(DATA/'history.json',[])
+    now=datetime.now(timezone.utc).isoformat()
+    updated={}; stats=[]; errors=[]; successes=0
+    for name,fn in COLLECTORS.items():
+        for source in config.get(name,[]):
+            if not source.get('enabled',True): continue
+            if not source.get('authorized',False):
+                print(f'SKIP {name}/{source.get("company")}: set authorized=true only after confirming terms / permission')
+                continue
+            key_name={'greenhouse':'board_token','lever':'site','ashby':'board_name'}[name]
+            key=source.get(key_name,'')
+            if not key or not source.get('company'):
+                errors.append(f'Invalid source {name}/{source}: missing {key_name} or company')
+                continue
+            source_key=f'{name}:{key}'
             try:
-                for j in fn(entry, now):
-                    if not j['url'].startswith('https://'):
-                        continue
-                    j['first_seen'] = old.get(j['job_id'], {}).get('first_seen') or now
-                    collected[j['job_id']] = j
-                print(f'OK: {provider} / {entry["company"]}')
-            except (requests.RequestException, ValueError, KeyError, TypeError) as ex:
-                failures.append(f'{provider}/{entry.get("company", "?")}: {ex}')
-    # Do not overwrite a known-good snapshot if the source configuration is empty or ANY API fails.
-    if not configured:
-        print('No sources configured: existing CSV left untouched.')
-        return
-    if failures:
-        raise RuntimeError('Some sources failed; existing CSV retained. ' + '; '.join(failures))
-    CSV_PATH.parent.mkdir(exist_ok=True)
-    with CSV_PATH.open('w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=FIELDS)
-        writer.writeheader()
-        writer.writerows(sorted(collected.values(), key=lambda x:(x['company'].lower(),x['title'].lower())))
-    print(f'Saved {len(collected)} active published jobs on {now}.')
+                fresh=list(fn(source))
+                successes+=1
+                in_scope=0
+                for j in fresh:
+                    j['country']=infer_country(j['location'])
+                    if j['country'] not in COUNTRIES: continue
+                    in_scope+=1
+                    old=previous.get(j['id'],{})
+                    j['first_seen']=old.get('first_seen',now)
+                    j['last_seen']=now
+                    j['status']='active'
+                    j['reopen_count']=old.get('reopen_count',0)+(1 if old.get('status')=='closed' else 0)
+                    updated[j['id']]=enrich(j)
+                stats.append({'source_key':source_key,'company':source['company'],'provider':name,'fetched':len(fresh),'in_scope':in_scope,'checked_at':now,'status':'ok'})
+                print(f'OK {source_key}: fetched={len(fresh)}, VN/SG/TW={in_scope}')
+                # Close only after TWO successful consecutive checks where posting is absent.
+                observed={j['id'] for j in fresh}
+                for jid,old in previous.items():
+                    if old.get('source_key')!=source_key or jid in observed: continue
+                    if old.get('status')=='closed': continue
+                    updated_old=dict(old)
+                    updated_old['missed_successful_checks']=old.get('missed_successful_checks',0)+1
+                    if updated_old['missed_successful_checks']>=2:
+                        updated_old['status']='closed'
+                        updated_old['closed_detected_at']=now
+                        history.append({'job_id':jid,'event':'closed_detected','at':now,'source':source_key})
+                    updated[jid]=updated_old
+                for jid,j in list(updated.items()):
+                    if j.get('source_key')==source_key and jid in observed:
+                        j['missed_successful_checks']=0
+            except (requests.RequestException,ValueError,KeyError,TypeError) as e:
+                errors.append(f'{source_key}: {e}')
+                stats.append({'source_key':source_key,'company':source.get('company',''),'provider':name,'checked_at':now,'status':'error','error':str(e)[:200]})
+                print('ERROR',errors[-1])
+    merged=dict(previous)
+    for jid,job in updated.items():
+        old=previous.get(jid)
+        if old is None: history.append({'job_id':jid,'event':'first_seen','at':now,'source':job['source_key']})
+        elif old.get('status')=='closed' and job.get('status')=='active':
+            history.append({'job_id':jid,'event':'reopened','at':now,'source':job['source_key']})
+        merged[jid]=job
+    if not args.dry_run:
+        # Never overwrite a populated snapshot if all configured sources fail.
+        if successes:
+            save_json(DATA/'jobs.json',sorted(merged.values(),key=lambda j:(j.get('last_seen',''),j['id']),reverse=True))
+            save_json(DATA/'history.json',history[-30000:])
+        save_json(DATA/'run_status.json',{'checked_at':now,'successful_sources':successes,'errors':errors,'sources':stats,'total_records':len(merged)})
+    print(f'DONE successes={successes}, records={len(merged)}, errors={len(errors)}')
+    if errors: raise SystemExit(1)
 
-if __name__ == '__main__':
-    main()
+if __name__=='__main__': main()

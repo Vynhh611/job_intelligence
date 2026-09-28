@@ -1,4 +1,6 @@
 {
+  "_instructions": "Add verified, authorized boards. Set authorized=true only after checking API and reuse terms; keep disabled demo rows off.",
   "greenhouse": [],
-  "lever": []
+  "lever": [],
+  "ashby": []
 }
