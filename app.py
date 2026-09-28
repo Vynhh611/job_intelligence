@@ -279,6 +279,16 @@ if page in ('Tìm việc', 'Việc đã lưu'):
 elif page == 'Doanh nghiệp':
     st.title('Hiểu doanh nghiệp trước khi ứng tuyển')
     st.caption('Danh bạ trang tuyển dụng chính thức. Có trong danh bạ không đồng nghĩa đang tuyển hoặc đã cho phép thu thập dữ liệu.')
+    st.metric('Doanh nghiệp trong danh bạ Việt Nam', len(watchlist))
+    search = st.text_input('Tìm trong danh bạ', placeholder='Tên doanh nghiệp hoặc ngành…')
+    industries = st.multiselect('Lọc ngành trong danh bạ', sorted({r.get('industry', 'Chưa phân loại') for r in watchlist}))
+    directory = [r for r in watchlist if (not industries or r.get('industry') in industries) and search.strip().casefold() in (r['company'] + ' ' + r.get('industry', '')).casefold()]
+    st.caption(f'{len(directory)} doanh nghiệp phù hợp · Mở trang chính thức để xem vị trí đang tuyển.')
+    if directory:
+        st.dataframe(pd.DataFrame([{'Doanh nghiệp': r['company'], 'Ngành': r.get('industry'), 'Trang tuyển dụng': r.get('careers_url')} for r in sorted(directory, key=lambda r: r['company'].casefold())]), hide_index=True, column_config={'Trang tuyển dụng': st.column_config.LinkColumn('Trang tuyển dụng', display_text='Mở trang chính thức ↗')}, width='stretch')
+    else:
+        st.info('Chưa có doanh nghiệp phù hợp trong danh bạ. Thử đổi từ khóa hoặc bỏ bộ lọc.')
+    st.divider()
     names = sorted(set(j.get('company', '') for j in archive) | set(profiles) | {r['company'] for r in watchlist})
     if names:
         name = st.selectbox('Tìm doanh nghiệp', names)
@@ -292,6 +302,17 @@ elif page == 'Doanh nghiệp':
             if safe_url(url):
                 st.link_button(label + ' ↗', url)
         st.caption('Ngày xác minh hồ sơ: ' + date(profile.get('verified_at')))
+        if registry.get('source_url') and safe_url(registry['source_url']):
+            st.link_button('Nguồn tham chiếu trang tuyển dụng ↗', registry['source_url'])
+            method = 'Đã xem trang chính thức' if registry.get('verification_method') == 'official_page_review' else 'Đã đối chiếu kết quả tìm kiếm từ trang chính thức; cần kiểm tra trực tiếp'
+            st.caption(method + ' · ' + date(registry.get('reference_checked_at')))
+        if safe_url(registry.get('linkedin_url')) and safe_url(registry.get('linkedin_evidence_url')):
+            st.link_button('LinkedIn được doanh nghiệp dẫn chiếu ↗', registry['linkedin_url'])
+            st.link_button('Bằng chứng liên kết LinkedIn ↗', registry['linkedin_evidence_url'])
+        else:
+            st.caption('Chưa đối chiếu liên kết LinkedIn cho doanh nghiệp này.')
+        if registry.get('rights_status') == 'unreviewed':
+            st.caption('Nguồn mới: chưa kết nối tự động, đang chờ xác minh quyền sử dụng dữ liệu.')
         own = [j for j in archive if j.get('company') == name]
         live = [j for j in jobs if j.get('company') == name]
         a, b, c = st.columns(3)
