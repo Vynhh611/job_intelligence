@@ -71,8 +71,12 @@ status=read('run_status.json',{})
 history=read('history.json',[])
 watchlist=read('company_watchlist.json',[])
 probe=read('source_probe.json',[])
+discovery_status=read('discovery_status.json',{})
+raw_discovery=read('discovered_jobs.json',[])
+discovered=visible_jobs([j for j in raw_discovery if isinstance(j,dict) and j.get('status')=='active' and j.get('id') and j.get('title') and safe_url(j.get('url'))])
 sources_config=json.loads((ROOT/'sources.json').read_text(encoding='utf-8')) if (ROOT/'sources.json').exists() else {}
 active=visible_jobs([j for j in items if j.get('status','active')=='active'])
+combined=visible_jobs(active+discovered)
 
 def render_detail(job, prefix='detail'):
     st.caption('FROM THE POSTING · Original JD is shown as ingested; extracted fields are rule-based interpretations.')
@@ -123,8 +127,10 @@ with st.sidebar:
     st.markdown('**Market coverage**')
     markets=st.multiselect('Country',['Vietnam','Singapore','Taiwan'],default=['Vietnam','Singapore'],label_visibility='collapsed')
     st.markdown('**Live collection**')
-    st.write(f'**{len(active):,}** active records')
-    st.caption(f'Last collector run: {date_str(status.get("checked_at"))}')
+    st.write(f'**{len(combined):,}** observed opportunities')
+    st.caption(f'{len(discovered):,} source links · {len(active):,} full JD records')
+    st.caption(f'Last link index run: {date_str(discovery_status.get("checked_at"))}')
+    st.caption(f'Last full JD collection: {date_str(status.get("checked_at"))}')
     st.caption(f'Sources checked successfully: {status.get("successful_sources",0)}')
     if status.get('errors'): st.warning(f'{len(status["errors"])} source error(s); see Source health.')
     st.divider()
@@ -132,26 +138,55 @@ with st.sidebar:
 
 st.markdown('''<div class="hero"><div class="eyebrow">CAREER DATA · VERIFIED SOURCE TRAIL</div><h1>Discover opportunities. Understand the market.</h1><p>Explore jobs across Vietnam and Singapore, inspect actual job requirements, compare skills and review transparency signals without unsupported company ratings.</p></div>''',unsafe_allow_html=True)
 
-if not active:
-    st.info('Website hoạt động. Chưa có tin tuyển dụng đang mở: thêm nguồn đã kiểm tra quyền sử dụng vào sources.json (authorized=true), sau đó chạy Actions → Collect job listings. Có thể xem giao diện và phương pháp bên dưới.')
+if not combined:
+    st.info('Chưa có danh sách công việc: chạy GitHub Actions → Discover public job links. Báo cáo Probe chỉ lưu số lượng, không lưu từng tin. Hãy kiểm tra điều kiện sử dụng nguồn trước khi xuất bản danh mục liên kết.')
+elif not active:
+    st.info('Đã có danh sách việc làm kèm link gốc bên dưới. Hồ sơ JD chi tiết chưa được kích hoạt; hãy đọc mô tả tại website tuyển dụng của doanh nghiệp.')
 
 countries=[j for j in active if j.get('country') in markets]
-companies=len({j.get('company','') for j in countries})
-new_today=sum(j.get('first_seen','')[:10]==datetime.now(timezone.utc).date().isoformat() for j in countries)
-new_week=new_in_last_days(countries)
+discovery_countries=[j for j in discovered if j.get('country') in markets]
+all_countries=visible_jobs(countries+discovery_countries)
+companies=len({j.get('company','') for j in all_countries})
+new_today=sum(j.get('first_seen','')[:10]==datetime.now(timezone.utc).date().isoformat() for j in all_countries)
+new_week=new_in_last_days(all_countries)
 a,b,c,d=st.columns(4)
-a.metric('Active opportunities',f'{len(countries):,}')
+a.metric('Observed active links',f'{len(all_countries):,}')
 b.metric('Hiring companies',f'{companies:,}')
 c.metric('Newly discovered (UTC)',f'{new_today:,}')
-d.metric('Markets',str(len({j.get('country') for j in countries})))
-st.caption('Coverage: '+f'{len(countries):,} observed active jobs from {companies:,} companies · Last collection: '+date_str(status.get('checked_at'))+' · VN '+str(sum(j.get('country')=='Vietnam' for j in countries))+' / SG '+str(sum(j.get('country')=='Singapore' for j in countries))+' / TW '+str(sum(j.get('country')=='Taiwan' for j in countries))+'. Registered sources only; not a national census.')
+d.metric('Markets',str(len({j.get('country') for j in all_countries})))
+st.caption('Coverage: '+f'{len(all_countries):,} observed active links from {companies:,} companies · Link index updated: '+date_str(discovery_status.get('checked_at'))+' · VN '+str(sum(j.get('country')=='Vietnam' for j in all_countries))+' / SG '+str(sum(j.get('country')=='Singapore' for j in all_countries))+'. Registered source sample, not a census. Link-only entries have no copied JD.')
 st.markdown('**MARKET PULSE · OBSERVED SAMPLE**')
 p1,p2,p3=st.columns(3)
 p1.metric('Newly detected · last 7 days',new_week)
-p2.metric('Listings publishing a salary',f'{sum(bool(j.get("salary_text")) for j in countries) / len(countries):.0%}' if countries else '—')
+p2.metric('Salary disclosed · full-JD sample',f'{sum(bool(j.get("salary_text")) for j in countries) / len(countries):.0%}' if countries else '—')
 skill_counter=Counter(s for j in countries for s in j.get('skills',[]))
-p3.metric('Most mentioned tracked skill',skill_counter.most_common(1)[0][0] if skill_counter else '—')
+p3.metric('Top detected skill · full JD',skill_counter.most_common(1)[0][0] if skill_counter else '—')
 st.caption('Pulse describes observed listings with exact duplicate application URLs collapsed. Similar company/title/location is only a review candidate, not silently merged. “Most mentioned” is not a growth metric; unreported salary ≠ unpaid role.')
+
+st.markdown('### 🔗 Open jobs · Direct source links')
+st.caption('LINK INDEX · Employer-published vacancy titles and original links. This section does not copy full job descriptions, infer visa support, or claim that every observed opening is still available. Confirm on the employer page.')
+if discovery_countries:
+    iq=st.text_input('Search current job links',key='discovery-search',placeholder='Job title, employer, city...')
+    filtered_discovery=[j for j in discovery_countries if iq.lower() in ' '.join(str(j.get(k,'')) for k in ('title','company','location','country')).lower()]
+    filtered_discovery.sort(key=lambda j:(j.get('last_seen',''),j.get('title','')),reverse=True)
+    st.caption(f'{len(filtered_discovery):,} source-linked listings match the current market and search filters. Details and application remain on the original site.')
+    if filtered_discovery:
+        link_df=pd.DataFrame([{'Title':j['title'],'Company':j['company'],'Market':j['country'],'Location':j['location'],'Source':j['source'],'Original URL':j['url'],'Last observed (UTC)':j.get('last_seen','')[:16]} for j in filtered_discovery])
+        st.download_button('↓ Export link index (CSV)',link_df.to_csv(index=False).encode('utf-8-sig'),'job-intelligence-source-links.csv','text/csv',key='discovery-csv')
+    for j in filtered_discovery[:50]:
+        with st.container(border=True):
+            st.markdown('<div class="jobtitle">'+__import__('html').escape(j['title'])+'</div><div class="jobmeta">'+__import__('html').escape(j['company'])+' · '+__import__('html').escape(j['location'])+' · '+__import__('html').escape(j['country'])+'</div>',unsafe_allow_html=True)
+            st.caption(f"{j['source']} · LINK ONLY · First observed: {date_str(j.get('first_seen'))} · Last observed: {date_str(j.get('last_seen'))}")
+            st.link_button('View original vacancy / Apply ↗',j['url'])
+    if len(filtered_discovery)>50: st.caption('Showing the first 50 results; use search or export the full link index.')
+    if not filtered_discovery: st.info('No matching links. Broaden the search or add another market.')
+else:
+    st.info('No individual vacancy links have been collected for the selected markets yet. Run Actions → Discover public job links. The earlier Probe output contains counts only.')
+    if probe:
+        st.markdown('**Previous API probe · company counts only (not individual job listings)**')
+        st.dataframe(pd.DataFrame([{'Company':p.get('company'),'Vietnam':p.get('VN',0),'Singapore':p.get('SG',0),'API':p.get('api_access','unknown')} for p in probe]),hide_index=True,use_container_width=True)
+st.caption('Publication note: the operator must check the applicable board terms for a public outgoing-link index. Disable discovery_enabled for any source that disallows this use. Full JD collection remains controlled by the separate authorized flag.')
+
 selected_job=next((j for j in items if j.get('id')==st.query_params.get('job')),None)
 if selected_job:
     with st.container(border=True):
@@ -220,12 +255,13 @@ with tabs[1]:
     if known:
         selected=st.selectbox('Choose company',known)
         related=[j for j in countries if j.get('company')==selected]
+        related_links=[j for j in discovery_countries if j.get('company')==selected]
         watched=[c for c in watchlist if c.get('company')==selected and c.get('country') in markets]
         p=profiles.get(selected,{})
         x,y,z=st.columns(3)
-        x.metric('Active listings',len(related))
-        y.metric('Markets',len({j.get('country') for j in related}))
-        z.metric('Available posting sources',len({j.get('source_key') for j in related}))
+        x.metric('Observed active links',len(visible_jobs(related+related_links)))
+        y.metric('Markets',len({j.get('country') for j in related+related_links}))
+        z.metric('Available posting sources',len({j.get('source_key') for j in related+related_links}))
         st.markdown('#### Employer profile')
         st.write(p.get('overview') or 'No verified company overview has been added yet. Job listings alone do not establish employer size, benefits, management quality or financial position.')
         for field,label in [('industry','Industry'),('headquarters','Headquarters'),('company_size','Company size'),('careers_url','Careers page')]:
@@ -237,6 +273,9 @@ with tabs[1]:
                 st.write(f"**{c['country']} · {c['platform']}** — {c['integration_status']}")
                 if safe_url(c.get('careers_url')): st.link_button(f"Open {c['country']} careers page ↗",c['careers_url'])
             st.caption('A company in this registry is not counted as an ingested job, a successfully connected API or permission to republish JD text.')
+        if related_links:
+            st.markdown('#### Direct links to published openings (metadata only)')
+            st.dataframe(pd.DataFrame([{'Job title':j['title'],'Location':j.get('location'),'Market':j.get('country'),'Source link':j['url']} for j in related_links]),use_container_width=True,hide_index=True,column_config={'Source link':st.column_config.LinkColumn('Official vacancy')})
         st.markdown('#### Active openings')
         st.dataframe(pd.DataFrame([{'Role':j['title'],'Market':j.get('country'),'Location':j.get('location'),'Category':j.get('category'),'Original URL':j.get('url')} for j in related]),use_container_width=True,hide_index=True)
         st.markdown('#### What to verify before applying')
@@ -244,6 +283,12 @@ with tabs[1]:
     else:st.info('Employer profiles will populate after collecting eligible jobs or adding verified company_profiles.json entries.')
 with tabs[2]:
     st.markdown('### Market intelligence')
+    st.caption(f'Observed source-linked listings (including link-only): n = {len(all_countries)}. Full-JD analysis below uses n = {len(countries)}; do not interpret either as total national vacancies.')
+    if discovery_countries:
+        link_counts=pd.DataFrame([{'Country':j.get('country'),'Company':j.get('company')} for j in discovery_countries]).groupby(['Country','Company']).size().reset_index(name='Observed source links')
+        with st.expander('Link index coverage by employer', expanded=True):
+            st.dataframe(link_counts.sort_values('Observed source links',ascending=False),hide_index=True,use_container_width=True)
+
     if countries:
         df=pd.DataFrame([{'Country':j.get('country'),'Category':j.get('category'),'Company':j.get('company'),'First seen':j.get('first_seen','')[:10],'Skills':j.get('skills',[])} for j in countries])
         st.caption(f'Analysis sample: n = {len(countries)} observed active postings. Charts are suppressed when n < 20 to avoid over-reading thin coverage.')
@@ -307,10 +352,14 @@ with tabs[3]:
     elif not countries:st.info('Select a market with current jobs or add authorized sources to enable comparisons.')
 with tabs[4]:
     st.markdown('### Data provenance & source reliability')
-    st.write('Greenhouse, Lever and Ashby public posting endpoints are supported. Every entry needs a verified board identifier and an explicit authorized flag in sources.json. No LinkedIn scraping or anti-bot bypass is implemented.')
+    st.write('Greenhouse, Lever and Ashby public posting endpoints are supported. Link-only discovery has a separate discovery_enabled switch; full JD collection still requires authorized=true. Operators must verify appropriate usage terms. No LinkedIn scraping or anti-bot bypass is implemented.')
     st.write(f'**Last run:** {date_str(status.get("checked_at"))} · **Successful sources:** {status.get("successful_sources",0)}')
     st.caption('Registered ATS coverage is skewed toward organizations using Greenhouse, Lever or Ashby; local boards and employers using other systems are not represented unless individually integrated.')
     if status.get('sources'):st.dataframe(pd.DataFrame(status['sources']),use_container_width=True,hide_index=True)
+    st.markdown('#### Link-only discovery collector')
+    st.write(f"**Last run:** {date_str(discovery_status.get('checked_at'))} · **Successful sources:** {discovery_status.get('successful_sources',0)} · **Active links:** {len(discovered)}")
+    if discovery_status.get('sources'):st.dataframe(pd.DataFrame(discovery_status['sources']),use_container_width=True,hide_index=True)
+    for err in discovery_status.get('errors',[]):st.warning(err)
     st.markdown('#### Priority employer coverage')
     watched=[c for c in watchlist if c.get('country') in markets]
     st.caption(f'{len(watched)} targeted company-market pairs (official careers directory, NOT ingested jobs). API candidates remain permission-gated.')
@@ -322,7 +371,7 @@ with tabs[4]:
     source_rows=[]
     for provider in ('greenhouse','lever','ashby'):
         for source in sources_config.get(provider,[]):
-            source_rows.append({'Company':source.get('company',''),'ATS':provider,'Enabled':source.get('enabled',True),'Authorized':source.get('authorized',False),'Coverage note':source.get('coverage_note','Registered ATS careers page; not representative of all employers')})
+            source_rows.append({'Company':source.get('company',''),'ATS':provider,'Enabled':source.get('enabled',True),'Full JD authorized':source.get('authorized',False),'Link discovery enabled':source.get('discovery_enabled',True),'Coverage note':source.get('coverage_note','Registered ATS careers page; not representative of all employers')})
     if source_rows:st.dataframe(pd.DataFrame(source_rows),hide_index=True,use_container_width=True)
 
     if status.get('errors'):
@@ -344,6 +393,6 @@ with tabs[5]:
     st.markdown('### Privacy, provenance & usage terms')
     st.write('This service is an independent research interface, not affiliated with the employers or recruiting platforms shown. Every job links to its original source. Availability, completeness, salaries and sponsorship should be confirmed directly with the employer.')
     st.write('We do not store CV uploads in our job snapshots or GitHub repository, nor transmit them to third-party AI APIs in this version. Uploaded documents are processed transiently by Streamlit infrastructure during the current app session. Avoid sensitive identifiers. No user accounts or behavioral analytics are enabled in this MVP.')
-    st.write('Data sources: explicitly configured, authorized ATS boards only. Operators must check API terms, permitted reuse, retention and privacy requirements in each market before publication. Historical job records may contain employer-authored information and are retained in repository snapshots until removed by the operator. Do not include candidate personal data in source files.')
+    st.write('Data sources: the link-only index uses configured published ATS pages, subject to source usage terms; full JD content uses separately authorized ATS boards only. Operators must check API terms, permitted reuse, retention and privacy requirements in each market before publication. Historical job records may contain employer-authored information and are retained in repository snapshots until removed by the operator. Do not include candidate personal data in source files.')
     st.write('For corrections, use the “Report inaccurate listing” link on a dossier. Do not enter personal information into public GitHub issues. Operator contact and formal privacy notices should be completed before public production launch; this page is operational guidance, not a jurisdiction-specific legal compliance certification.')
     st.write('Method: locations and requirements inferred by transparent keyword rules. Salary disclosure rate denominator is observed active listings; the market distribution does not represent all vacancies. Visa and language labels mean an explicit phrase was detected or Unknown, never a guarantee. Duplicate candidate keys are review hints, not indiscriminate record deletion.')
