@@ -110,7 +110,7 @@ with st.sidebar:
     st.markdown('### 🌿 JOB INTELLIGENCE\n**VIETNAM**')
     st.caption('Discover jobs. Understand companies. Plan your career.')
     st.divider()
-    page = st.radio('Khám phá', ['Tìm việc', 'Việc đã lưu', 'Doanh nghiệp', 'CV của tôi', 'Lộ trình nghề nghiệp', 'Thị trường', 'Phương pháp & riêng tư', 'Quản trị nguồn'])
+    page = st.radio('Khám phá', ['Tìm việc', 'Việc đã lưu', 'Doanh nghiệp', 'CV của tôi', 'Lộ trình nghề nghiệp', 'Thị trường', 'Phương pháp & riêng tư', 'Quản trị nguồn'], on_change=st.query_params.clear)
     st.divider()
     st.caption('Dành riêng cho cơ hội tại Việt Nam')
     st.caption(f'Cập nhật: {date(updated)} · {len(jobs):,} tin đang quan sát')

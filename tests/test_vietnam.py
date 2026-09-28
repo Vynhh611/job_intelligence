@@ -128,6 +128,10 @@ class AppSmokeTests(unittest.TestCase):
             next(b for b in app.button if b.label == 'Tìm hiểu công việc →').click().run()
             self.assertFalse(list(app.exception))
             self.assertEqual(app.query_params['job'], ['test-only'])
+            app.sidebar.radio[0].set_value('CV của tôi').run()
+            self.assertFalse(list(app.exception))
+            self.assertNotIn('job', app.query_params)
+            self.assertTrue(any('đối chiếu' in title.value for title in app.title))
 
 
 if __name__ == '__main__':
