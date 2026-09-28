@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "company": "MongoDB",
+    "provider": "greenhouse",
+    "board": "mongodb",
+    "checked_at": "2026-09-28T15:04:40.723976+00:00",
+    "api_access": "public_get_ok",
+    "VN": 0,
+    "SG": 8,
+    "TW": 1,
+    "total": 397,
+    "rights_status": "Requires separate review"
+  },
+  {
+    "company": "Ninja Van",
+    "provider": "lever",
+    "board": "ninjavan",
+    "checked_at": "2026-09-28T15:04:40.942537+00:00",
+    "api_access": "public_get_ok",
+    "VN": 2,
+    "SG": 14,
+    "TW": 0,
+    "total": 149,
+    "rights_status": "Requires separate review"
+  },
+  {
+    "company": "Lalamove",
+    "provider": "lever",
+    "board": "lalamove",
+    "checked_at": "2026-09-28T15:04:42.083707+00:00",
+    "api_access": "public_get_ok",
+    "VN": 3,
+    "SG": 10,
+    "TW": 17,
+    "total": 187,
+    "rights_status": "Requires separate review"
+  },
+  {
+    "company": "WalkMe",
+    "provider": "lever",
+    "board": "walkme",
+    "checked_at": "2026-09-28T15:04:43.148427+00:00",
+    "api_access": "public_get_ok",
+    "VN": 0,
+    "SG": 2,
+    "TW": 0,
+    "total": 22,
+    "rights_status": "Requires separate review"
+  },
+  {
+    "company": "Airwallex",
+    "provider": "ashby",
+    "board": "airwallex",
+    "checked_at": "2026-09-28T15:04:43.887236+00:00",
+    "api_access": "public_get_ok",
+    "VN": 4,
+    "SG": 160,
+    "TW": 0,
+    "total": 570,
+    "rights_status": "Requires separate review"
+  },
+  {
+    "company": "Notion",
+    "provider": "ashby",
+    "board": "notion",
+    "checked_at": "2026-09-28T15:04:44.209475+00:00",
+    "api_access": "public_get_ok",
+    "VN": 0,
+    "SG": 0,
+    "TW": 0,
+    "total": 129,
+    "rights_status": "Requires separate review"
+  }
+]
