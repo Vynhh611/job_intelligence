@@ -15,26 +15,24 @@ from urllib.parse import quote, urlparse
 
 import requests
 from intelligence import infer_country, visible_jobs
+from collectors.transport import payload as fetch_payload
+from storage import load, save, configured_store
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
-COUNTRIES = {'Vietnam', 'Singapore'}
+COUNTRIES = {'Vietnam'}
+STORE = None
 SESSION = requests.Session()
 SESSION.headers.update({'User-Agent': 'JobIntelligenceAsia-LinkIndex/1.0'})
 
 
 def read_json(path, default):
-    try:
-        return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
-    except (OSError, ValueError):
-        return default
+    # Corrupt historical snapshots must fail closed, never become an empty index.
+    return load(path, default, STORE)
 
 
 def write_json(path, value):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + '.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    tmp.replace(path)
+    save(path, value, STORE)
 
 
 def https_url(value):
@@ -126,7 +124,7 @@ def merge_one(previous, fresh, source_key, now):
         }
         seen.add(key)
     for key, old in previous.items():
-        if old.get('source_key') != source_key or key in seen or old.get('status') == 'closed':
+        if old.get('country') not in COUNTRIES or old.get('source_key') != source_key or key in seen or old.get('status') == 'closed':
             continue
         misses = int(old.get('missed_successful_checks', 0)) + 1
         merged[key] = {**old, 'missed_successful_checks': misses,
@@ -137,7 +135,10 @@ def merge_one(previous, fresh, source_key, now):
 
 
 def main():
+    global STORE
+    STORE = configured_store()
     config = read_json(ROOT / 'sources.json', {})
+    read_json(DATA / 'discovery_status.json', {})
     previous = {r['id']: r for r in read_json(DATA / 'discovered_jobs.json', []) if isinstance(r, dict) and r.get('id')}
     merged = dict(previous)
     now = datetime.now(timezone.utc).isoformat()
@@ -145,7 +146,7 @@ def main():
     successful = 0
     for provider, field in (('greenhouse', 'board_token'), ('lever', 'site'), ('ashby', 'board_name')):
         for source in config.get(provider, []):
-            if not source.get('enabled', True) or not source.get('discovery_enabled', True):
+            if not source.get('enabled', True) or not source.get('discovery_enabled', False):
                 continue
             board = str(source.get(field, '')).strip()
             company = source.get('company', '')
@@ -154,14 +155,14 @@ def main():
                 continue
             source_key = f'{provider}:{board}'
             try:
-                payload = get_json(endpoint(provider, board))
+                payload = fetch_payload(provider, endpoint(provider, board), get_json)
                 items = parse_posts(provider, source, payload)
                 merged = merge_one(merged, items, source_key, now)
                 successful += 1
                 counts = {c: sum(j['country'] == c for j in items) for c in sorted(COUNTRIES)}
                 stats.append({'company': company, 'source_key': source_key, 'status': 'ok',
                               'in_scope': len(items), **counts, 'checked_at': now})
-                print(f'OK {source_key}: {len(items)} link-only records, VN={counts["Vietnam"]}, SG={counts["Singapore"]}')
+                print(f'OK {source_key}: {len(items)} link-only records, VN={counts["Vietnam"]}')
             except (requests.RequestException, ValueError, KeyError, TypeError) as e:
                 message = f'{source_key}: {type(e).__name__}: {str(e)[:160]}'
                 errors.append(message)
@@ -170,6 +171,12 @@ def main():
                 print('ERROR', message)
     # Preserve all previous data if every board fails. In fact, failed sources
     # never modify merged, even when some other boards succeed.
+    history = read_json(DATA / 'discovery_history.json', [])
+    for key, item in merged.items():
+        old = previous.get(key)
+        if item != old:
+            history.append({'job_id': key, 'at': now, 'event': 'first_seen' if old is None else 'snapshot', 'previous': old})
+    write_json(DATA / 'discovery_history.json', history)
     write_json(DATA / 'discovered_jobs.json', sorted(merged.values(), key=lambda j: (j.get('last_seen', ''), j['id']), reverse=True))
     active = [j for j in merged.values() if j.get('status') == 'active']
     write_json(DATA / 'discovery_status.json', {

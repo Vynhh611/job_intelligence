@@ -1,76 +1,125 @@
-# Job Intelligence Asia · Research Platform v3
+# Job Intelligence Vietnam
 
-A multi-country job discovery and evidence-led research website for **Vietnam, Singapore and Taiwan**, built with Streamlit, a source-aware Python collector and GitHub Actions. No fabricated listings, employer reviews or LinkedIn scraping.
+Nền tảng nghiên cứu nghề nghiệp bằng Streamlit, giao diện tiếng Việt xanh lá nhạt. Giữ nguyên điểm vào `app.py`, kho dữ liệu JSON và lịch GitHub Actions. Không tạo việc làm, đánh giá doanh nghiệp hay mức lương giả.
 
-## Deploy to the EXISTING GitHub repository (no new repository required)
+## Chạy và kiểm thử
 
-1. Download ZIP and unzip it. Upload **the contents** of `job-intelligence-asia-pro/` to the ROOT of `Vynhh611/job_intelligence`, **replacing same-name files**. The GitHub browser uploader may reject overwrites; to avoid manual editing, use GitHub Desktop: File → Add local repository (clone existing if needed), copy these files into the cloned repository, Commit → Push. Alternatively edit individual existing files in the GitHub browser and create new files.
-2. Ensure `.github/workflows/collect.yml`, `data/jobs.json`, `data/history.json`, `data/run_status.json`, `data/company_profiles.json`, `intelligence.py`, `app.py`, `collector.py`, `requirements.txt`, `sources.json` are present.
-3. Streamlit Community Cloud: keep repository, branch `main`, main path `app.py`; it should redeploy after push.
-4. Set API sources in `sources.json` once you have **verified** a valid board and its terms. Example syntax below has placeholders, not actual verified companies. `authorized` must be set to true deliberately after checking permission. Do **not** put private keys or passwords in repository files.
-5. GitHub Actions → `Collect job listings` → `Run workflow` (branch main). A successful run commits `data/*.json`; daily schedule is around 07:17 Vietnam time, not guaranteed exact.
-6. Review Source health tab and check live jobs. If no sources are authorized, the site intentionally displays an empty state instead of fabricated data.
+Python 3.12 trở lên:
 
-### sources.json format
-
-```json
-{
-  "greenhouse": [{"company":"Verified Example A","board_token":"verified-board-token","enabled":true,"authorized":true}],
-  "lever": [{"company":"Verified Example B","site":"verified-site-name","enabled":true,"authorized":true}],
-  "ashby": [{"company":"Verified Example C","board_name":"verified-board-name","enabled":true,"authorized":true}]
-}
-```
-
-Find the public board identifiers from the official career-page URL, verify the JSON endpoint in a browser, read data-reuse terms, and only then enable collection. One configuration can contain hundreds of boards; the actual number is bounded by provider terms, API limits and the GitHub Actions runtime. Only listings with recognized Vietnam/Singapore/Taiwan locations are ingested; remote/unknown are excluded rather than incorrectly classified.
-
-### Company information
-
-`data/company_profiles.json` is an optional map keyed by exact company name. Add sourced, verified profile facts only:
-
-```json
-{"Verified Example A": {"overview":"Description verified from official site.","website":"https://example.com","industry":"Technology","headquarters":"Singapore","careers_url":"https://example.com/careers"}}
-```
-
-### V3 release: selected research-first improvements
-
-- **Target audience:** cross-border professionals looking at VN, SG and TW. Countries, explicit visa statements and JD-mentioned English/Mandarin/Vietnamese are first-class filters. Unknown is distinct from no sponsorship.
-- **Search-first Market Pulse:** new listings detected within 7 days, salary-disclosure share, most-mentioned tracked skill, coverage counts and last run. These are observations from registered sources, not national totals.
-- **Evidence-led dossier:** Open research dossier sets a durable `?job=<source-id>` URL. JD, extracted requirement sentences, skill text snippets, published compensation, visa/language evidence, observed reopen count and questions to ask are displayed in two columns. The Streamlit two-column layout is responsive, but not sticky-positioned across devices.
-- **Careful review language:** factual JD, system-extracted observations and unverified follow-up questions are distinguished; no company-wide red-flag or reputation score.
-- **Duplicate control:** exact canonical application URLs collapse in the displayed view. Same-title/location/company matches are candidates only, never silently deleted. Snapshots keep source-specific records.
-- **Small sample safeguard:** market charts and skill-frequency distributions are suppressed for fewer than 20 observed live postings; sample size and coverage caveat shown.
-- **Career Lab evidence:** no misleading fit percentage. Show matched and missing detected skills with supporting text snippets. CV bytes read in memory for that session, not saved or sent to a third-party AI endpoint.
-- **Data correction:** per-listing GitHub Issue link, with a warning to avoid personal data in public issues. Empty filters show recovery suggestions.
-- **Privacy / methodology:** explicit page and operational notes. Public launch still needs completed operator contact, jurisdiction-specific reviewed notices and permitted content reuse; no behavioral tracking is silently installed.
-- **No invented source integrations:** the existing Greenhouse, Lever and Ashby collectors and the original workflow remain. LinkedIn/JobStreet/104 are not automatically scraped. The ZIP ships with no pre-authorized live employer board.
-
-### What works now
-
-- Greenhouse / Lever / Ashby collectors with source IDs, timeouts/retries and per-source health.
-- Daily scheduler, source permission gate and first/last-seen history. Closes missing postings only after **two successful** board checks; failed requests never close jobs.
-- Professional responsive UI: advanced search, market/category/company filters, original posting, JD & requirements, skill tagging, salary visibility, transparency review cues, company research, analytics and CSV export.
-- CV/JD term comparison with PDF/DOCX/TXT input processed in the app session, not saved to data or sent to an AI API. This is not a hiring prediction or automated recruitment decision.
-- Empty-state safe (works with no data).
-
-### Important limits / roadmap
-
-V3 does not yet implement: full semantic AI, verified immigration/visa advice, automated alerts/accounts, salary trend modeling, cross-platform inferred deduplication, persisted visitor analytics, licensed platform feeds, or large-scale managed PostgreSQL. Source registry must still be configured. The app uses heuristic extraction and only explicit visa wording. The separate URL per job works after a listing has been collected and uses the site's own domain with `?job=`; no external URL is hardcoded.
-
-
-This is a deployable **v2 foundation**, not a claim of 1,000 connected companies or completed commercial-scale ingestion. LinkedIn, VietnamWorks, JobStreet and 104 are **not** scraped; add only a legitimate licensed partner feed. Source-based signals are questions for further checking, not objective employer misconduct findings or company-wide ratings. Salary, experience, sponsorship and benefits are displayed only if actually provided; unknown is shown otherwise. The `data/*.json` Git-snapshot persistence is suitable for initial volume but not commercial scale. Before 10,000+ jobs or multiple users, migrate to managed PostgreSQL with normalized job/organization/source tables, reliable scheduling, retention policy and monitoring. AI-assisted multilingual summarization can be introduced only after choosing a data processor, consent/privacy controls, audit and explicit citation back to JD text.
-
-### Local run
-
-```bash
+```sh
 python -m pip install -r requirements.txt
-streamlit run app.py
-python collector.py --dry-run
-python collector.py
+python -m streamlit run app.py
 python -m unittest discover -s tests -v
+python collector.py --dry-run
 ```
 
-Read API terms before republishing job descriptions. Do not store applicant personal information without an appropriate privacy process. Public GitHub datasets are readable by anyone; CV uploads never enter the GitHub collector.
+Trên máy này thư viện kiểm thử được cài riêng vào `.runtime` (không đưa lên Git). PowerShell:
 
-### Operational upgrade safety
+```powershell
+$env:PYTHONPATH = Join-Path (Get-Location) '.runtime'
+python -m streamlit run app.py --global.developmentMode false
+```
 
-Before replacing files, copy any populated `sources.json`, `data/jobs.json`, `data/history.json`, `data/run_status.json`, `data/company_profiles.json` to a safe location. This ZIP contains intentionally EMPTY placeholders. Merge existing source configuration and snapshots back instead of overwriting accumulated data. The job processing and collector are kept in separate Python modules from the Streamlit UI to support later FastAPI/PostgreSQL migration.
+## Các chức năng
+
+- Tìm kiếm chức danh, công ty, chức năng và kỹ năng; lọc địa điểm, ngành doanh nghiệp, kinh nghiệm, ngôn ngữ, hợp đồng, hình thức làm việc, thời điểm phát hiện, công bố lương. Có phân trang và xuất CSV chống công thức độc hại.
+- Chỉ hiển thị Việt Nam. Tin Singapore/Taiwan trong lịch sử không bị xóa hoặc đổi trạng thái vì thay đổi phạm vi.
+- Hồ sơ công việc hai cột, `?job=<id>`, nhiệm vụ và yêu cầu trích từ JD, dẫn chứng kỹ năng, lương công bố, nguồn, thời điểm phát hiện/kiểm tra, lưu trong phiên, đường dẫn ứng tuyển.
+- Danh bạ doanh nghiệp, thông tin đã có nguồn, lịch sử tuyển dụng, số tin công bố lương. Chưa có đánh giá nhân viên được cấp quyền.
+- CV PDF/DOCX trong bộ nhớ, tối đa 5 MB; PDF tối đa 30 trang, DOCX giải nén tối đa 20 MB. Không ghi CV, không log nội dung, không gửi AI. Có nút xóa khỏi phiên. Không OCR.
+- Đối chiếu kỹ năng ba nhóm có câu JD/CV và gợi ý bổ sung. “Đáp ứng” chỉ nghĩa có câu mô tả áp dụng kỹ năng, chưa xác minh năng lực, mức thành thạo, số năm hay học vấn. Không dùng điểm tuyển dụng.
+- Lộ trình minh họa cho tám nhóm nghề, so sánh kỹ năng từ tin hiện có. Không hứa hẹn thăng tiến.
+- Thống kê có phạm vi, kỳ quan sát và ngày cập nhật. Dưới 20 tin không hiện biểu đồ. Tin mới nghĩa là lần đầu hệ thống thấy, không chắc là ngày nhà tuyển dụng đăng.
+
+## Quản trị nguồn không sửa Python/JSON
+
+Đặt `JOB_ADMIN_PASSWORD` bằng biến môi trường hoặc Streamlit Secrets. Không commit mật khẩu. Mở **Quản trị nguồn**:
+
+1. Thêm tên doanh nghiệp và URL ATS chính thức. Hỗ trợ nhận diện Greenhouse, Lever, Ashby, SmartRecruiters.
+2. Nguồn mới mặc định tắt. Chỉ tích kích hoạt sau khi xác minh quyền lưu và công bố dữ liệu, kèm URL bằng chứng. Kết nối API công khai không đồng nghĩa được phép tái sử dụng.
+3. Muốn sửa hoặc tắt nguồn, nhập lại cùng URL board và lưu trạng thái mới.
+4. Có thể thêm bất kỳ doanh nghiệp/ngành nào vào danh sách chờ xác minh bằng URL tuyển dụng chính thức. Danh sách không bị giới hạn số doanh nghiệp cố định.
+5. Xem lần chạy, số tin, lỗi từng nguồn và báo cáo kiểm tra kết nối.
+
+**Lưu ý triển khai:** cấu hình thay đổi trên giao diện được lưu ở máy đang chạy ứng dụng. Streamlit Cloud không đồng bộ ngược về GitHub và có thể mất thay đổi khi redeploy. Nếu dùng JSON, dùng nút tải `sources.json` để đưa cấu hình đã duyệt vào repo; không cần sửa JSON thủ công. Nên chỉ có một quản trị viên ghi cấu hình tại một thời điểm trong phiên bản lưu bằng tệp này.
+
+Nguồn đầy đủ dùng `authorized=true`; chỉ mục liên kết dùng `discovery_enabled=true`, mặc định false khi chưa có trường này. Quản trị cho phép chọn riêng phạm vi chỉ liên kết hoặc JD đầy đủ; quyền xử lý AI là một lựa chọn riêng. SmartRecruiters được xử lý qua bộ thu thập JD, không qua chỉ mục liên kết.
+
+## Thu thập & lịch sử
+
+- `collector.py`: Greenhouse, Lever, Ashby, SmartRecruiters; chỉ nguồn có quyền mới chạy.
+- `collectors/transport.py`: phân trang Lever, phát hiện trang lặp hoặc phản hồi sai, từ chối coi phản hồi thiếu là danh sách rỗng.
+- `collectors/smartrecruiters.py`: Posting API có phân trang và nội dung chi tiết Việt Nam.
+- `discovery_collector.py`: chỉ lưu metadata/liên kết, không JD; cũng phải bật quyền rõ ràng.
+- Retry/timeout, nhịp nghỉ request; đóng tin sau hai lần kiểm tra thành công liên tiếp không thấy tin. Lỗi request không làm đóng tin.
+- `data/history.json` và `data/discovery_history.json` lưu phiên bản trước khi đổi. Không cắt lịch sử còn 30.000 bản ghi như trước.
+- Loại trùng chỉ với URL đồng nhất, bỏ tham số tracking nhưng giữ mã tin trong query. Không tự gộp hai tin chỉ vì cùng tên/vị trí.
+- Ghi JSON qua tệp tạm rồi đổi tên. Cấu hình cũ tự được sao lưu trước khi lưu nguồn trên giao diện.
+
+Workflow giữ lịch cũ: thu thập JD khoảng 07:17 và liên kết khoảng 07:47 giờ Việt Nam. Các workflow ghi dữ liệu dùng chung khóa chạy để tránh xung đột. CI kiểm thử khi sửa mã/PR. Lịch GitHub có thể trễ. Quyền repository Contents: write cần được cho phép để workflow commit dữ liệu.
+
+Tài liệu API tham khảo: [Lever public Postings API](https://github.com/lever/postings-api), [SmartRecruiters Posting endpoints](https://developers.smartrecruiters.com/docs/endpoints). Không tự động bật nguồn chỉ vì API trả về thành công.
+
+## Dữ liệu và quyền còn thiếu
+
+Đã đồng bộ dữ liệu từ GitHub: 196 liên kết lịch sử, trong đó 9 tin Việt Nam được hiển thị trong phạm vi sản phẩm mới. Chưa có JD đầy đủ; tất cả nguồn JD vẫn `authorized=false`. Quyền nguồn chưa được xác nhận, nên không tự bật thu thập mới. Không chèn dữ liệu kiểm thử vào sản phẩm.
+
+- LinkedIn, VietnamWorks, TopCV, CareerViet, ITviec, Vieclam24h, Glints: cần hợp đồng/feed/API được phép. Chưa có adapter live cho những nền tảng này.
+- Workday và các portal riêng: chưa có adapter được xác minh. Có thể lưu trang chính thức trong danh bạ chờ tích hợp.
+- Phát hiện ATS tự động từ trang tuyển dụng trong danh bạ đã được bật kiểm tra; chưa khám phá doanh nghiệp diện rộng trên Internet. Không vượt CAPTCHA/login hay tự bật nguồn chưa duyệt.
+- Đã có adapter diễn giải JD bằng OpenAI, chỉ hoạt động khi cấu hình khóa/model và nguồn có quyền xử lý bên ngoài. Hiện chưa bật; phần trích xuất giữ nguyên ngôn ngữ gốc.
+- Chưa có dữ liệu lương thị trường được cấp quyền để ước tính. Có lọc khoảng lương công bố khi tiền tệ/kỳ trả được xác định; tin thiếu thông tin này không được tự suy đoán.
+- Mặc định JSON/Git; đã có backend PostgreSQL tùy chọn với lịch sử và kiểm tra phiên bản. Chưa cấu hình máy chủ thật để di trú hoặc xác minh kết nối production; xem hướng dẫn bên dưới.
+- Bộ phân loại kỹ năng/quốc gia dựa từ khóa không bao phủ mọi nghề/địa danh. Dữ liệu thiếu giữ “Chưa công bố”, không suy luận chắc chắn.
+
+## Triển khai vào repo hiện có
+
+Giữ cấu hình Streamlit trỏ đến `app.py`; commit/push mã đã kiểm thử vào nhánh triển khai hiện có. Không cần tạo dự án mới. Thiết lập secret quản trị và cấu hình nguồn có quyền trước khi kỳ vọng có việc làm thực. Sau khi cấu hình nguồn trong repo, chạy workflow và kiểm tra bảng sức khỏe nguồn. Chưa thực thi GitHub Actions từ xa trong lần sửa cục bộ này.
+
+Bản sao trước khi sửa nằm tại `backups/before-vietnam-*`, được Git bỏ qua; không xóa khi chưa kiểm tra. Dữ liệu và cấu hình nguồn gốc được giữ nguyên. Các tài liệu `README_START_HERE.md` và `README_SOURCE_PACK.md` là tài liệu phiên bản cũ; README này mô tả hành vi hiện tại.
+
+Các hợp đồng tích hợp ở integrations.py dành cho feed được cấp phép và dịch vụ diễn giải JD; mặc định từ chối gọi nếu chưa được cấp quyền, kiểm tra dẫn chứng trả về, không nhận CV. Đã có adapter OpenAI tùy chọn, mặc định tắt; chưa cấu hình tài khoản để gọi thật.
+## Bổ sung vận hành: nguồn chờ duyệt, AI và PostgreSQL
+
+### Quyền nguồn
+
+Quản trị hiện có danh sách chọn nguồn để sửa trực tiếp và hai phạm vi quyền: chỉ metadata/liên kết hoặc JD đầy đủ. Quyền xử lý JD bằng OpenAI là một lựa chọn riêng, mặc định tắt. Người dùng xác nhận hiện **chưa có nguồn được cấp quyền**, do đó không kích hoạt nguồn nào trong lần nâng cấp này.
+
+### Phát hiện ATS có kiểm soát
+
+`source_discovery.py` nhận diện ATS từ URL trong danh bạ hoặc tìm liên kết ATS trên trang tuyển dụng chính thức. Trang web chỉ được truy cập khi doanh nghiệp có `page_discovery_enabled=true`; kiểm tra robots.txt, giới hạn 1 MB, từ chối redirect và địa chỉ nội bộ. Không tự khám phá toàn bộ Internet, không thu thập JD và không tự bật nguồn. Kết quả nằm trong `data/source_candidates.json` để quản trị xét duyệt.
+
+```sh
+python source_discovery.py --offline
+python source_discovery.py
+```
+
+Lệnh offline chỉ kiểm tra các URL đã có trong danh bạ, không gọi Internet. Workflow `Discover candidate ATS sources` chạy sáng thứ Hai, tối đa 10 trang được bật mỗi lần. Nguồn chưa được phép kiểm tra không bị truy cập. Đây là phát hiện ATS từ danh bạ do quản trị cung cấp, chưa phải công cụ tìm doanh nghiệp mới trên toàn Internet.
+
+### PostgreSQL tùy chọn
+
+Đã có backend PostgreSQL chạy cùng giao diện website và hai collector. Mặc định vẫn JSON. Backend dùng tài liệu JSONB có phiên bản và lịch sử, chưa chuẩn hóa thành bảng riêng cho mọi trường việc làm. Giao dịch theo từng tài liệu; chưa có giao dịch nguyên tử bao trùm toàn bộ một đợt thu thập. Các workflow ghi dữ liệu vẫn được chạy lần lượt để tránh xung đột.
+
+1. Chuẩn bị PostgreSQL của bạn, lưu `DATABASE_URL` trong biến môi trường máy chạy di trú. Không đặt URI chứa mật khẩu trong lệnh hoặc kho mã.
+2. Cài `requirements.txt` (đã gồm psycopg).
+3. Chạy `python migrate_storage.py` để xem danh sách nhập; `python migrate_storage.py --apply` tạo schema và nhập **chỉ các tài liệu chưa có**. Không ghi đè dữ liệu sẵn có trong PostgreSQL, không xóa JSON gốc. Có thể chạy lại an toàn sau khi nhập bị gián đoạn.
+4. Đặt cùng `DATABASE_URL` vào Streamlit Secrets và GitHub repository Actions Secret. Khi đó thay đổi quản trị được collector nhìn thấy qua cơ sở dữ liệu dùng chung, không cần tải rồi chép cấu hình thủ công.
+5. Sao lưu: `python migrate_storage.py --export-dir backups/postgres-export-new`. Thư mục đích phải chưa tồn tại; không ghi đè tệp dự án.
+
+Kết nối lỗi sẽ dừng thay vì âm thầm dùng kho JSON khác. Lỗi không in URI hay mật khẩu. Kiểm thử SQL dùng mô phỏng kết nối; **chưa có máy chủ PostgreSQL để xác minh tích hợp thật**.
+
+### Diễn giải JD tiếng Việt bằng OpenAI
+
+Adapter thực tế ở `ai_explainer.py`, dùng Responses API với JSON Schema, `store=false`, giới hạn đầu vào/đầu ra và timeout. Tùy chọn này không có retry tự động để tránh tạo thêm phí không mong muốn. CV không nằm trong hợp đồng đầu vào, không được gửi đến API.
+
+- Thiết lập `OPENAI_API_KEY`, `OPENAI_MODEL`, `JOB_AI_ENABLED=true` trong Streamlit Secrets. Chọn model hỗ trợ Structured Outputs mà tài khoản của bạn được phép dùng; không có model tự chọn mặc định.
+- Nguồn phải có cả quyền lưu JD và quyền xử lý JD bên ngoài (`ai_authorized=true`). Chỉ quản trị viên đã đăng nhập có nút tạo nội dung.
+- Kết quả chỉ được lưu khi hoàn tất và từng ý có đoạn trích đúng trong JD. Kiểm tra đoạn trích không bảo đảm diễn giải luôn đúng nghĩa; giao diện công khai nhắc người đọc kiểm tra bản gốc. Không có review của con người được giả định.
+- Bản diễn giải gắn hash JD, tự ẩn khi mô tả thay đổi. Không bật cho mọi lượt xem để tránh phát sinh phí không kiểm soát.
+- Không có khóa API trong môi trường hiện tại; đã kiểm thử hợp đồng bằng phản hồi mô phỏng, chưa gọi dịch vụ thật.
+
+Tài liệu: [Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs), [Responses API](https://developers.openai.com/api/docs/guides/migrate-to-responses), [psycopg](https://www.psycopg.org/psycopg3/docs/basic/usage.html).
+
+### Lương công bố
+
+Có bộ lọc lương VND/USD theo tháng khi trường cấu trúc hoặc nội dung công bố chứa đủ khoảng lương, tiền tệ và kỳ trả. Không tự quy đổi USD/VND, không suy luận lương năm thành tháng, không đoán gross/net. Chưa có mô hình ước tính lương thị trường.

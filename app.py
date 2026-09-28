@@ -1,398 +1,488 @@
-"""Job Intelligence Asia — source-attributed recruitment intelligence portal."""
-import io
+"""Vietnam career research interface; business logic lives in services.py."""
+import hmac
 import json
+import os
 from collections import Counter
 from datetime import datetime, timezone
+from html import escape
 from pathlib import Path
-from urllib.parse import urlparse, quote
+from urllib.parse import quote
 
 import pandas as pd
-import plotly.express as px
 import streamlit as st
-from intelligence import enrich, signal_report, cv_matches, plain, evidence_snippet, new_in_last_days, visible_jobs
+from storage import load, save, configured_store, StorageError
+from intelligence import new_in_last_days, evidence_snippet, skill_tags
+from services import (vietnam_jobs, display, safe_url, dossier, match_cv, parse_cv,
+                      register_source, CAREERS, FIELDS)
+from ai_explainer import configured as ai_configured, generate, content_hash, current_explanation
+from source_discovery import candidates, merge_candidates, add_pending
+from salary import disclosed_salary, matches_salary
 
-ROOT=Path(__file__).resolve().parent
-DATA=ROOT/'data'
-st.set_page_config(page_title='Job Intelligence Asia | Career Research',page_icon='🌏',layout='wide',initial_sidebar_state='expanded')
+ROOT = Path(__file__).resolve().parent
+DATA = ROOT / 'data'
+STORE = configured_store()
+st.set_page_config(page_title='Job Intelligence Vietnam', page_icon='🌿', layout='wide')
 st.markdown('''<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-html,body,[class*="css"],div[data-testid="stAppViewContainer"]{font-family:'DM Sans',sans-serif}
-h1,h2,h3,h4{font-family:'Manrope',sans-serif!important;letter-spacing:-.035em!important}
-.stApp{background:#F6F8FC;color:#12213A}
-.block-container{padding-top:1.4rem;max-width:1440px;padding-bottom:4rem}
-[data-testid="stSidebar"]{background:#10213C}
-[data-testid="stSidebar"] *{color:#E8EEFB!important}
-[data-testid="stSidebar"] div[data-baseweb="select"] *{color:#17243b!important}
-[data-testid="stSidebar"] input{color:#17243b!important}
-[data-testid="stMetric"]{background:#fff;border:1px solid #E3EAF3;border-radius:16px;padding:16px 20px;box-shadow:0 6px 20px rgba(23,47,82,.035)}
-[data-testid="stMetricLabel"]{font-size:.85rem}
-[data-testid="stMetricValue"]{color:#132E54;font-family:'Manrope',sans-serif;font-weight:800}
-[data-testid="stVerticalBlockBorderWrapper"]{border-color:#E1E9F4!important;border-radius:17px!important;background:#fff}
-div.stButton>button[kind="primary"],div.stLinkButton>a{background:#1671E8;color:white;border:none;border-radius:10px;font-weight:700}
-div.stButton>button{border-radius:10px}
-[data-testid="stTabs"] button{font-weight:700}
-.hero{padding:32px 34px;background:linear-gradient(112deg,#102443 0%,#174A77 60%,#1267A2 100%);border-radius:22px;color:#fff;margin-bottom:22px;box-shadow:0 13px 35px rgba(15,46,80,.15)}
-.hero .eyebrow{font-size:.76rem;letter-spacing:.19em;font-weight:800;color:#8ed7f2}
-.hero h1{font-size:2.35rem;color:white!important;margin:6px 0 9px}
-.hero p{color:#D5E7F7;max-width:760px;font-size:1rem}
-.smallnote{font-size:.78rem;color:#75839B}
-.jobtitle{font-size:1.1rem;font-weight:800;color:#183355;margin-bottom:5px}
-.jobmeta{color:#62728b;font-size:.87rem}
-.pill{display:inline-block;border:1px solid #D8E7F5;background:#F3F8FF;color:#28517C;padding:4px 10px;border-radius:8px;margin:7px 5px 6px 0;font-size:.77rem;font-weight:600}
-.section-eyebrow{font-size:.73rem;color:#1671e8;font-weight:800;letter-spacing:.13em}
-.market-strip{border:1px solid #dbe5f2;background:#fff;border-radius:12px;padding:12px 18px;margin-bottom:12px}
-@media(max-width:700px){.hero{padding:20px}.hero h1{font-size:1.65rem}}
+.stApp{background:#f5f9f3;color:#183d2b}
+.block-container{max-width:1240px;padding-top:2rem;padding-bottom:4rem}
+h1,h2,h3{letter-spacing:-.035em} h1{line-height:1.15!important}
+[data-testid="stSidebar"]{background:#e8f2e4;border-right:1px solid #d4e3cf}
+[data-testid="stMetric"]{background:white;border:1px solid #dce8d7;border-radius:16px;padding:16px}
+[data-testid="stVerticalBlockBorderWrapper"]{border-radius:16px!important;border-color:#dce8d7!important}
+.hero{background:linear-gradient(120deg,#dceecf,#edf5e4 65%,#d7eadb);border:1px solid #cee1c5;border-radius:24px;padding:38px;margin:16px 0 24px}
+.hero h1{font-size:2.7rem;max-width:830px;color:#194b31;margin:12px 0}
+.hero p{max-width:780px;color:#43624d;font-size:1.05rem}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.16em;color:#376b48}
+.pill{display:inline-block;background:#eaf3e5;color:#285a39;border-radius:24px;padding:5px 12px;margin:4px 5px 6px 0;font-size:.8rem}
+.job-title{font-size:1.2rem;font-weight:750;color:#224b32;margin:6px 0}.muted{color:#567060;font-size:.88rem}
+.salary{color:#24623c;font-weight:700;margin:10px 0}
+a{color:#286b47}button{border-radius:10px!important}
+@media(max-width:700px){.hero{padding:22px}.hero h1{font-size:1.9rem}.block-container{padding:1rem}}
+</style>''', unsafe_allow_html=True)
 
-</style>''',unsafe_allow_html=True)
 
-def read(name,default):
-    file=DATA/name
-    try: return json.loads(file.read_text(encoding='utf-8')) if file.exists() else default
-    except (OSError,ValueError): return default
-
-def safe_url(s):
+def read(name, default):
     try:
-        p=urlparse(str(s or ''))
-        return p.scheme=='https' and bool(p.netloc) and not p.username and not p.password
-    except ValueError: return False
+        path = DATA / name
+        return load(path, default, STORE)
+    except StorageError as error:
+        st.error(str(error))
+        st.stop()
+    except (OSError, ValueError):
+        st.warning(f'Không đọc được dữ liệu {name}. Quản trị viên cần kiểm tra tệp; dữ liệu chưa bị thay đổi.')
+        return default
 
-def txt(v,default='Not disclosed'):
-    v=plain(v)
-    return v if v else default
 
-def date_str(s):
-    try: return datetime.fromisoformat(str(s).replace('Z','+00:00')).strftime('%d %b %Y')
-    except (TypeError,ValueError): return 'Not available'
+def save_json(path, value):
+    try:
+        save(path, value, STORE)
+    except StorageError as error:
+        st.error(str(error))
+        st.stop()
 
-raw=read('jobs.json',[])
-items=[enrich(j) for j in raw if isinstance(j,dict) and j.get('id') and j.get('title')]
-profiles=read('company_profiles.json',{})
-status=read('run_status.json',{})
-history=read('history.json',[])
-watchlist=read('company_watchlist.json',[])
-probe=read('source_probe.json',[])
-discovery_status=read('discovery_status.json',{})
-raw_discovery=read('discovered_jobs.json',[])
-discovered=visible_jobs([j for j in raw_discovery if isinstance(j,dict) and j.get('status')=='active' and j.get('id') and j.get('title') and safe_url(j.get('url'))])
-sources_config=json.loads((ROOT/'sources.json').read_text(encoding='utf-8')) if (ROOT/'sources.json').exists() else {}
-active=visible_jobs([j for j in items if j.get('status','active')=='active'])
-combined=visible_jobs(active+discovered)
 
-def render_detail(job, prefix='detail'):
-    st.caption('FROM THE POSTING · Original JD is shown as ingested; extracted fields are rule-based interpretations.')
-    left,right=st.columns([1.85,1],gap='large')
-    with left:
-        st.markdown('#### Role overview & job description')
-        st.write(job.get('description') or 'Full job description not available from this source. Please review the original listing.')
-        st.markdown('#### Requirements detected in the original posting')
-        lines=job.get('requirements_extracted',[])
-        if lines:
-            for line in lines: st.markdown('• '+line)
-        else:st.caption('No requirement sentences confidently extracted; check the full JD.')
-        st.markdown('#### Skills · SYSTEM ANALYSIS (keyword evidence)')
-        if job.get('skills'):
-            for idx,skill in enumerate(job['skills']):
-                with st.expander(f'{skill} · Show JD evidence',expanded=False):
-                    st.write(evidence_snippet(job.get('description',''),skill) or 'No literal evidence found; classification may have relied on a synonym.')
-        else:st.caption('No tracked skills identified. This does not mean no skills are needed.')
-    with right:
-        with st.container(border=True):
-            st.markdown('#### Decision brief')
-            st.write('**Published compensation:** '+txt(job.get('salary_text')))
-            st.write('**Work arrangement:** '+txt(job.get('workplace_type')))
-            st.write('**Visa sponsorship:** '+job.get('visa_sponsorship','Unknown'))
-            if job.get('visa_evidence',{}).get('evidence'):st.caption('FROM JD: '+job['visa_evidence']['evidence'])
-            st.write('**Languages mentioned:** '+(', '.join(job.get('language_requirements',[])) or 'Unknown'))
-            for item in job.get('language_evidence',[]):st.caption('FROM JD: '+item['language']+' — '+item['evidence'])
-            st.write('**First detected:** '+date_str(job.get('first_seen')))
-            st.write('**Last verified:** '+date_str(job.get('last_seen')))
-            st.write('**Reopenings observed:** '+str(job.get('reopen_count',0)))
-            st.caption('History reflects this collector, not necessarily the employer’s original publication date.')
-            st.markdown('#### Questions before applying')
-            for signal in job.get('review_signals',[]):
-                st.warning(f"{signal['label']} — {signal['reason']}")
-                st.caption('SYSTEM ANALYSIS / VERIFY · '+signal['evidence'])
-            if not job.get('review_signals'):st.caption('No tracked cues detected, not an employer endorsement.')
-            if safe_url(job.get('url')):st.link_button('Apply at original source ↗',job['url'],use_container_width=True)
-            st.caption('Source: '+txt(job.get('source'))+' · Record ID: '+str(job.get('id')))
-            st.caption('Share this specific job using the browser URL after opening its detail view.')
-            issue_url='https://github.com/Vynhh611/job_intelligence/issues/new?title='+quote('Data correction: '+str(job.get('id',''))) + '&body='+quote('Job ID: '+str(job.get('id',''))+'\nOriginal URL: '+str(job.get('url',''))+'\nWhat should be corrected?\n')
-            st.link_button('Report inaccurate listing ↗',issue_url,use_container_width=True)
-    st.caption('Evidence labels: FROM JD = employer-provided text; SYSTEM ANALYSIS = rule-based extraction; VERIFY = question for the hiring team. No reputational finding about the employer is implied.')
+def date(value):
+    try:
+        return datetime.fromisoformat(str(value).replace('Z', '+00:00')).strftime('%d/%m/%Y')
+    except (ValueError, TypeError):
+        return 'Chưa xác định'
+
+
+def save_button(job, suffix):
+    saved = st.session_state.setdefault('saved_jobs', set())
+    if st.button('♥ Đã lưu' if job['id'] in saved else '♡ Lưu việc', key=f'save-{suffix}-{job["id"]}'):
+        if job['id'] in saved:
+            saved.remove(job['id'])
+        else:
+            saved.add(job['id'])
+        st.rerun()
+
+
+def match_panel(job):
+    if st.session_state.get('cv_text'):
+        rows = match_cv(st.session_state.cv_text, job)
+        if rows:
+            st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+        else:
+            st.info('JD chưa đủ dữ liệu kỹ năng để đối chiếu. Hãy đọc bản gốc.')
+    else:
+        st.caption('Tải CV tại mục CV của tôi để xem dẫn chứng phù hợp.')
+
+
+raw = read('jobs.json', []) + read('discovered_jobs.json', [])
+jobs = vietnam_jobs(raw)
+archive = vietnam_jobs(raw, active_only=False)
+profiles = read('company_profiles.json', {})
+watchlist = [r for r in read('company_watchlist.json', []) if r.get('country') == 'Vietnam']
+for job in jobs:
+    job['industry'] = profiles.get(job.get('company'), {}).get('industry') or next((r.get('industry') for r in watchlist if r.get('company') == job.get('company')), None)
+status = read('run_status.json', {})
+discovery_status = read('discovery_status.json', {})
+explanations = read('job_explanations.json', {})
+try:
+    config = load(ROOT / 'sources.json', {}, STORE)
+except (StorageError, ValueError, OSError):
+    st.error('Không đọc được cấu hình nguồn. Kiểm tra lưu trữ trước khi tiếp tục.')
+    st.stop()
+updated = max(str(status.get('checked_at', '')), str(discovery_status.get('checked_at', '')))
 
 with st.sidebar:
-    st.markdown('### 🌏 JOB INTELLIGENCE')
-    st.caption('ASIA · CAREER RESEARCH DESK')
+    st.markdown('### 🌿 JOB INTELLIGENCE\n**VIETNAM**')
+    st.caption('Discover jobs. Understand companies. Plan your career.')
     st.divider()
-    st.markdown('**Market coverage**')
-    markets=st.multiselect('Country',['Vietnam','Singapore','Taiwan'],default=['Vietnam','Singapore'],label_visibility='collapsed')
-    st.markdown('**Live collection**')
-    st.write(f'**{len(combined):,}** observed opportunities')
-    st.caption(f'{len(discovered):,} source links · {len(active):,} full JD records')
-    st.caption(f'Last link index run: {date_str(discovery_status.get("checked_at"))}')
-    st.caption(f'Last full JD collection: {date_str(status.get("checked_at"))}')
-    st.caption(f'Sources checked successfully: {status.get("successful_sources",0)}')
-    if status.get('errors'): st.warning(f'{len(status["errors"])} source error(s); see Source health.')
+    page = st.radio('Khám phá', ['Tìm việc', 'Việc đã lưu', 'Doanh nghiệp', 'CV của tôi', 'Lộ trình nghề nghiệp', 'Thị trường', 'Phương pháp & riêng tư', 'Quản trị nguồn'])
     st.divider()
-    st.caption('Listings are source-attributed; completeness, visa and salary details are not guaranteed. No company reputation allegations are generated.')
+    st.caption('Dành riêng cho cơ hội tại Việt Nam')
+    st.caption(f'Cập nhật: {date(updated)} · {len(jobs):,} tin đang quan sát')
+    st.caption('Dữ liệu từ các nguồn đã đăng ký; không đại diện toàn bộ thị trường Việt Nam.')
 
-st.markdown('''<div class="hero"><div class="eyebrow">CAREER DATA · VERIFIED SOURCE TRAIL</div><h1>Discover opportunities. Understand the market.</h1><p>Explore jobs across Vietnam and Singapore, inspect actual job requirements, compare skills and review transparency signals without unsupported company ratings.</p></div>''',unsafe_allow_html=True)
 
-if not combined:
-    st.info('Chưa có danh sách công việc: chạy GitHub Actions → Discover public job links. Báo cáo Probe chỉ lưu số lượng, không lưu từng tin. Hãy kiểm tra điều kiện sử dụng nguồn trước khi xuất bản danh mục liên kết.')
-elif not active:
-    st.info('Đã có danh sách việc làm kèm link gốc bên dưới. Hồ sơ JD chi tiết chưa được kích hoạt; hãy đọc mô tả tại website tuyển dụng của doanh nghiệp.')
-
-countries=[j for j in active if j.get('country') in markets]
-discovery_countries=[j for j in discovered if j.get('country') in markets]
-all_countries=visible_jobs(countries+discovery_countries)
-companies=len({j.get('company','') for j in all_countries})
-new_today=sum(j.get('first_seen','')[:10]==datetime.now(timezone.utc).date().isoformat() for j in all_countries)
-new_week=new_in_last_days(all_countries)
-a,b,c,d=st.columns(4)
-a.metric('Observed active links',f'{len(all_countries):,}')
-b.metric('Hiring companies',f'{companies:,}')
-c.metric('Newly discovered (UTC)',f'{new_today:,}')
-d.metric('Markets',str(len({j.get('country') for j in all_countries})))
-st.caption('Coverage: '+f'{len(all_countries):,} observed active links from {companies:,} companies · Link index updated: '+date_str(discovery_status.get('checked_at'))+' · VN '+str(sum(j.get('country')=='Vietnam' for j in all_countries))+' / SG '+str(sum(j.get('country')=='Singapore' for j in all_countries))+'. Registered source sample, not a census. Link-only entries have no copied JD.')
-st.markdown('**MARKET PULSE · OBSERVED SAMPLE**')
-p1,p2,p3=st.columns(3)
-p1.metric('Newly detected · last 7 days',new_week)
-p2.metric('Salary disclosed · full-JD sample',f'{sum(bool(j.get("salary_text")) for j in countries) / len(countries):.0%}' if countries else '—')
-skill_counter=Counter(s for j in countries for s in j.get('skills',[]))
-p3.metric('Top detected skill · full JD',skill_counter.most_common(1)[0][0] if skill_counter else '—')
-st.caption('Pulse describes observed listings with exact duplicate application URLs collapsed. Similar company/title/location is only a review candidate, not silently merged. “Most mentioned” is not a growth metric; unreported salary ≠ unpaid role.')
-
-st.markdown('### 🔗 Open jobs · Direct source links')
-st.caption('LINK INDEX · Employer-published vacancy titles and original links. This section does not copy full job descriptions, infer visa support, or claim that every observed opening is still available. Confirm on the employer page.')
-if discovery_countries:
-    iq=st.text_input('Search current job links',key='discovery-search',placeholder='Job title, employer, city...')
-    filtered_discovery=[j for j in discovery_countries if iq.lower() in ' '.join(str(j.get(k,'')) for k in ('title','company','location','country')).lower()]
-    filtered_discovery.sort(key=lambda j:(j.get('last_seen',''),j.get('title','')),reverse=True)
-    st.caption(f'{len(filtered_discovery):,} source-linked listings match the current market and search filters. Details and application remain on the original site.')
-    if filtered_discovery:
-        link_df=pd.DataFrame([{'Title':j['title'],'Company':j['company'],'Market':j['country'],'Location':j['location'],'Source':j['source'],'Original URL':j['url'],'Last observed (UTC)':j.get('last_seen','')[:16]} for j in filtered_discovery])
-        st.download_button('↓ Export link index (CSV)',link_df.to_csv(index=False).encode('utf-8-sig'),'job-intelligence-source-links.csv','text/csv',key='discovery-csv')
-    for j in filtered_discovery[:50]:
-        with st.container(border=True):
-            st.markdown('<div class="jobtitle">'+__import__('html').escape(j['title'])+'</div><div class="jobmeta">'+__import__('html').escape(j['company'])+' · '+__import__('html').escape(j['location'])+' · '+__import__('html').escape(j['country'])+'</div>',unsafe_allow_html=True)
-            st.caption(f"{j['source']} · LINK ONLY · First observed: {date_str(j.get('first_seen'))} · Last observed: {date_str(j.get('last_seen'))}")
-            st.link_button('View original vacancy / Apply ↗',j['url'])
-    if len(filtered_discovery)>50: st.caption('Showing the first 50 results; use search or export the full link index.')
-    if not filtered_discovery: st.info('No matching links. Broaden the search or add another market.')
-else:
-    st.info('No individual vacancy links have been collected for the selected markets yet. Run Actions → Discover public job links. The earlier Probe output contains counts only.')
-    if probe:
-        st.markdown('**Previous API probe · company counts only (not individual job listings)**')
-        st.dataframe(pd.DataFrame([{'Company':p.get('company'),'Vietnam':p.get('VN',0),'Singapore':p.get('SG',0),'API':p.get('api_access','unknown')} for p in probe]),hide_index=True,use_container_width=True)
-st.caption('Publication note: the operator must check the applicable board terms for a public outgoing-link index. Disable discovery_enabled for any source that disallows this use. Full JD collection remains controlled by the separate authorized flag.')
-
-selected_job=next((j for j in items if j.get('id')==st.query_params.get('job')),None)
-if selected_job:
+def card(job, suffix='list'):
     with st.container(border=True):
-        st.markdown('### Job dossier · '+selected_job.get('title',''))
-        st.caption(txt(selected_job.get('company'))+' · '+txt(selected_job.get('location')))
-        if st.button('← Back to all jobs',key='clear-job'):
-            del st.query_params['job']
+        left, right = st.columns([4, 1])
+        with left:
+            st.markdown(f'<div class="muted">{escape(job.get("company", ""))} · {escape(job.get("location", ""))}</div><div class="job-title">{escape(job["title"])}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="salary">{escape(display(job.get("salary_text")))}</div>', unsafe_allow_html=True)
+            st.markdown(''.join(f'<span class="pill">{escape(display(v))}</span>' for v in [job.get('experience'), job.get('employment_type'), job.get('workplace_type')]), unsafe_allow_html=True)
+        with right:
+            save_button(job, suffix)
+        details = dossier(job)
+        for line in details['duties'][:2]:
+            st.write('• ' + line)
+        if job.get('skills'):
+            st.caption('Kỹ năng: ' + ' · '.join(job['skills'][:6]))
+        if st.session_state.get('cv_text'):
+            results = match_cv(st.session_state.cv_text, job)
+            st.caption(f'CV: {sum(r["Phân loại"] == "Đáp ứng" for r in results)}/{len(results)} kỹ năng có dẫn chứng áp dụng; cần xác minh mức thành thạo.' if results else 'CV: JD chưa đủ dữ liệu để đối chiếu.')
+        st.caption(f'{job.get("source", "Nguồn gốc")} · Phát hiện {date(job.get("first_seen"))} · Kiểm tra {date(job.get("last_seen"))}' + (' · Chỉ có liên kết gốc' if not job.get('description') else ''))
+        a, b = st.columns(2)
+        if a.button('Tìm hiểu công việc →', key=f'open-{suffix}-{job["id"]}', use_container_width=True):
+            st.query_params['job'] = job['id']
             st.rerun()
-        render_detail(selected_job,'focus')
+        if safe_url(job.get('url')):
+            b.link_button('Ứng tuyển tại nguồn ↗', job['url'], use_container_width=True)
 
 
-tabs=st.tabs(['🔎 Explore jobs','🏢 Company research','📊 Market intelligence','🧭 Career lab','🛡️ Source health','📄 Privacy & methodology'])
-with tabs[0]:
-    st.markdown('### Find an opportunity')
-    q=st.text_input('Search across job titles, employers, descriptions and skills',placeholder='e.g. Revenue Growth Management, Strategy, SQL, Pricing')
-    cats=sorted({j.get('category','Other') for j in countries})
-    firms=sorted({j.get('company','') for j in countries})
-    x,y,z=st.columns([1.2,1.2,1])
-    cat=x.multiselect('Career category',cats)
-    firm=y.multiselect('Company',firms)
-    mode=z.selectbox('Status',['Active only','Include closed'])
-    u,v,w=st.columns(3)
-    visa=u.selectbox('Visa information',['Any','Sponsored (explicit)','Not sponsored (explicit)','Unknown'])
-    language=v.selectbox('Language evidence',['Any','English','Mandarin','Vietnamese','Not stated'])
-    salary_filter=w.checkbox('Salary disclosed only',value=False)
-
-    pool=visible_jobs([j for j in items if j.get('country') in markets]) if mode=='Include closed' else countries
-    matches=[]
-    for j in pool:
-        content=' '.join([j.get('title',''),j.get('company',''),j.get('description',''),' '.join(j.get('skills',[]))]).lower()
-        if q and q.lower() not in content: continue
-        if cat and j.get('category') not in cat: continue
-        if firm and j.get('company') not in firm: continue
-        if visa!='Any' and j.get('visa_sponsorship','Unknown') != {'Sponsored (explicit)':'Sponsored','Not sponsored (explicit)':'Not sponsored','Unknown':'Unknown'}[visa]:continue
-        if language!='Any' and (language not in j.get('language_requirements',[]) if language!='Not stated' else bool(j.get('language_requirements'))):continue
-        if salary_filter and not j.get('salary_text'):continue
-        matches.append(j)
-    matches.sort(key=lambda j:j.get('last_seen',''),reverse=True)
-    st.markdown(f'**{len(matches):,} matching opportunities**')
-    if matches:
-        download_df=pd.DataFrame([{k:j.get(k,'') for k in ('title','company','country','location','category','source','url','first_seen','last_seen','status')} for j in matches])
-        st.download_button('↓ Export results (CSV)',download_df.to_csv(index=False).encode('utf-8-sig'),'job-intelligence-results.csv','text/csv')
-    limit=st.select_slider('Show first',options=[10,25,50,100],value=25)
-    for j in matches[:limit]:
+def detail(job):
+    if st.button('← Quay lại danh sách'):
+        st.query_params.clear()
+        st.rerun()
+    st.caption(job.get('company', '') + ' / ' + job.get('location', ''))
+    st.title(job['title'])
+    if job.get('status') == 'closed':
+        st.warning('Tin này không còn được quan sát tại nguồn. Kiểm tra lại với nhà tuyển dụng.')
+    left, right = st.columns([1.8, 1], gap='large')
+    d = dossier(job)
+    with left:
+        st.subheader('Tổng quan công việc')
+        explanation = current_explanation(job, explanations)
+        if explanation:
+            st.caption('Diễn giải tiếng Việt bằng AI · Có trích dẫn để đối chiếu, vẫn có thể sai nghĩa. Kiểm tra JD gốc trước khi quyết định.')
+            for item in explanation.get('items', []):
+                st.write(item['summary'])
+                with st.expander('Câu gốc hỗ trợ nội dung này'):
+                    st.text(item['evidence'])
+        st.caption('Phần trích xuất bên dưới giữ nguyên ngôn ngữ JD. Yêu cầu không được tự bổ sung.')
+        st.write(d['overview'] or 'Nguồn chỉ cung cấp liên kết. Mở tin gốc để đọc đầy đủ trách nhiệm và yêu cầu.')
+        st.subheader('Công việc hằng ngày')
+        for line in d['duties']:
+            st.write('• ' + line)
+        if not d['duties']:
+            st.info('Chưa có đủ dẫn chứng để tách nhiệm vụ, người phối hợp và kết quả cần bàn giao.')
+        st.subheader('Yêu cầu tuyển dụng')
+        for label, lines in d['requirements'].items():
+            if lines:
+                st.markdown('**' + label + '**')
+                for line in lines:
+                    st.write('• ' + line)
+        st.caption('“Ưu tiên” chỉ được gắn khi JD có từ ngữ tương ứng. Các nhóm còn lại không tự động có nghĩa là bắt buộc.')
+        st.subheader('Kỹ năng & dẫn chứng')
+        for skill in job.get('skills', []):
+            with st.expander(skill):
+                from services import sentences
+                from intelligence import SKILLS
+                import re
+                st.write(next((s for s in sentences(job.get('description')) if re.search(SKILLS[skill], s, re.I)), 'Chưa tìm thấy dẫn chứng.'))
+        st.subheader('Đối chiếu với CV của bạn')
+        match_panel(job)
+        st.subheader('Khả năng phát triển nghề nghiệp')
+        st.write('Có thể phát triển chuyên môn sâu, quản lý nhóm hoặc chuyển sang vai trò liên quan. Xem Lộ trình nghề nghiệp để so sánh kỹ năng từ các tin đang có.')
+        st.caption('Gợi ý minh họa; không phải cam kết thăng tiến hoặc mức lương.')
+        with st.expander('Xem toàn bộ JD đã thu thập'):
+            st.text(job.get('description') or 'Chưa lưu JD. Vui lòng xem nguồn gốc.')
+    with right:
         with st.container(border=True):
-            st.markdown(f'<div class="jobtitle">{__import__("html").escape(txt(j.get("title")))}</div><div class="jobmeta">{__import__("html").escape(txt(j.get("company")))} · {__import__("html").escape(txt(j.get("location")))} · {__import__("html").escape(j.get("country","Unknown"))}</div>',unsafe_allow_html=True)
-            st.markdown(' '.join(f'<span class="pill">{__import__("html").escape(t)}</span>' for t in [j.get('category','Other'),j.get('source','Source unknown'),j.get('employment_type','Not specified')]),unsafe_allow_html=True)
-            a,b,c=st.columns(3)
-            a.caption(f'Salary: {txt(j.get("salary_text"))}')
-            b.caption(f'First seen: {date_str(j.get("first_seen"))}')
-            c.caption(f'Last verified: {date_str(j.get("last_seen"))}')
-            a,b=st.columns([1,1])
-            if a.button('Open research dossier →',key='dossier-'+str(j['id'])):
-                st.query_params['job']=str(j['id'])
-                st.rerun()
-            b.caption('Visa: '+j.get('visa_sponsorship','Unknown')+' · Language: '+(', '.join(j.get('language_requirements',[])) or 'Unknown'))
-            with st.expander('Quick view · JD and evidence'):
-                render_detail(j,'quick')
-            if safe_url(j.get('url')): st.link_button('View official posting / Apply ↗',j['url'])
-            else: st.caption('Original application URL unavailable or not verified.')
-    if not matches: st.info('No matching results. Try selecting all countries, clearing visa/language filters or entering a broader skill. Unknown visa status does not mean sponsorship is unavailable.')
-with tabs[1]:
-    st.markdown('### Company research')
-    st.caption('Evidence-led profile: no invented ratings, unsupported misconduct claims or inferred visa support.')
-    known=sorted(set(j.get('company','') for j in countries)|set(profiles)|{c['company'] for c in watchlist if c.get('country') in markets})
-    if known:
-        selected=st.selectbox('Choose company',known)
-        related=[j for j in countries if j.get('company')==selected]
-        related_links=[j for j in discovery_countries if j.get('company')==selected]
-        watched=[c for c in watchlist if c.get('company')==selected and c.get('country') in markets]
-        p=profiles.get(selected,{})
-        x,y,z=st.columns(3)
-        x.metric('Observed active links',len(visible_jobs(related+related_links)))
-        y.metric('Markets',len({j.get('country') for j in related+related_links}))
-        z.metric('Available posting sources',len({j.get('source_key') for j in related+related_links}))
-        st.markdown('#### Employer profile')
-        st.write(p.get('overview') or 'No verified company overview has been added yet. Job listings alone do not establish employer size, benefits, management quality or financial position.')
-        for field,label in [('industry','Industry'),('headquarters','Headquarters'),('company_size','Company size'),('careers_url','Careers page')]:
-            if p.get(field): st.write(f'**{label}:** {p[field]}')
-        if safe_url(p.get('website')):st.link_button('Official employer site',p['website'])
-        if watched:
-            st.markdown('#### Official careers directory')
-            for c in watched:
-                st.write(f"**{c['country']} · {c['platform']}** — {c['integration_status']}")
-                if safe_url(c.get('careers_url')): st.link_button(f"Open {c['country']} careers page ↗",c['careers_url'])
-            st.caption('A company in this registry is not counted as an ingested job, a successfully connected API or permission to republish JD text.')
-        if related_links:
-            st.markdown('#### Direct links to published openings (metadata only)')
-            st.dataframe(pd.DataFrame([{'Job title':j['title'],'Location':j.get('location'),'Market':j.get('country'),'Source link':j['url']} for j in related_links]),use_container_width=True,hide_index=True,column_config={'Source link':st.column_config.LinkColumn('Official vacancy')})
-        st.markdown('#### Active openings')
-        st.dataframe(pd.DataFrame([{'Role':j['title'],'Market':j.get('country'),'Location':j.get('location'),'Category':j.get('category'),'Original URL':j.get('url')} for j in related]),use_container_width=True,hide_index=True)
-        st.markdown('#### What to verify before applying')
-        st.write('Confirm: legal employing entity, direct reporting line, total compensation and variable-pay targets, probation terms, actual working location, visa sponsorship, overtime expectations, and whether the same job remains actively open.')
-    else:st.info('Employer profiles will populate after collecting eligible jobs or adding verified company_profiles.json entries.')
-with tabs[2]:
-    st.markdown('### Market intelligence')
-    st.caption(f'Observed source-linked listings (including link-only): n = {len(all_countries)}. Full-JD analysis below uses n = {len(countries)}; do not interpret either as total national vacancies.')
-    if discovery_countries:
-        link_counts=pd.DataFrame([{'Country':j.get('country'),'Company':j.get('company')} for j in discovery_countries]).groupby(['Country','Company']).size().reset_index(name='Observed source links')
-        with st.expander('Link index coverage by employer', expanded=True):
-            st.dataframe(link_counts.sort_values('Observed source links',ascending=False),hide_index=True,use_container_width=True)
+            st.subheader('Thông tin để quyết định')
+            st.markdown('**Lương nhà tuyển dụng công bố**')
+            st.write(display(job.get('salary_text')))
+            salary = disclosed_salary(job)
+            if salary:
+                st.caption(f"Khoảng đã chuẩn hóa từ nguồn: {salary['min']:,.0f}–{salary['max']:,.0f} {salary['currency']} / {salary['period']}. Chưa tự suy luận gross/net hoặc thưởng.")
+            st.caption('Chưa đủ dữ liệu để ước tính mức lương đáng tin cậy.')
+            for label, field in [('Địa điểm', 'location'), ('Hình thức làm việc', 'workplace_type'), ('Kinh nghiệm', 'experience'), ('Loại hợp đồng', 'employment_type')]:
+                st.write(f'**{label}:** {display(job.get(field))}')
+            st.caption(f'Phát hiện: {date(job.get("first_seen"))}\n\nKiểm tra: {date(job.get("last_seen"))}')
+            st.link_button('Mở tin gốc / Ứng tuyển ↗', job['url'], use_container_width=True)
+            save_button(job, 'detail')
+            st.caption('Chia sẻ: sao chép địa chỉ hiện tại trên trình duyệt. Mã liên kết cố định:')
+            st.code('?job=' + quote(job['id'], safe=''), language=None)
+            st.caption('Nguồn: ' + job.get('source', 'Chưa xác định'))
+        with st.container(border=True):
+            st.subheader(job.get('company', 'Doanh nghiệp'))
+            profile = profiles.get(job.get('company'), {})
+            st.write(profile.get('overview') or 'Chưa có hồ sơ doanh nghiệp được xác minh.')
+            if safe_url(profile.get('website')):
+                st.link_button('Website doanh nghiệp ↗', profile['website'])
+            st.markdown('**Những điều nên tìm hiểu thêm**')
+            for signal in job.get('review_signals', []):
+                st.write('• ' + signal['label'])
+                st.caption(signal['reason'] + ' — Dẫn chứng: ' + signal['evidence'])
+            st.caption('Thông tin còn thiếu không phải bằng chứng về uy tín hay hành vi của doanh nghiệp.')
 
-    if countries:
-        df=pd.DataFrame([{'Country':j.get('country'),'Category':j.get('category'),'Company':j.get('company'),'First seen':j.get('first_seen','')[:10],'Skills':j.get('skills',[])} for j in countries])
-        st.caption(f'Analysis sample: n = {len(countries)} observed active postings. Charts are suppressed when n < 20 to avoid over-reading thin coverage.')
-        if len(countries)<20:
-            st.info('Fewer than 20 observed postings. Showing descriptive records only; distribution charts withheld.')
-            st.dataframe(df[['Country','Category','Company','First seen']],hide_index=True,use_container_width=True)
+
+job_id = st.query_params.get('job')
+if job_id:
+    selected = next((j for j in archive if j['id'] == job_id), None)
+    if selected:
+        detail(selected)
+    else:
+        st.warning('Không tìm thấy tin tuyển dụng Việt Nam với mã này trong dữ liệu hiện có.')
+        if st.button('Về trang tìm việc'):
+            st.query_params.clear()
+            st.rerun()
+    st.stop()
+
+if page in ('Tìm việc', 'Việc đã lưu'):
+    st.markdown('''<div class="hero"><div class="eyebrow">CƠ HỘI MỚI · GÓC NHÌN RÕ RÀNG HƠN</div><h1>Tìm công việc phù hợp.<br>Hiểu rõ trước khi ứng tuyển.</h1><p>Khám phá cơ hội tuyển dụng tại Việt Nam, tìm hiểu doanh nghiệp và đối chiếu yêu cầu công việc với CV của bạn.</p></div>''', unsafe_allow_html=True)
+    query = st.text_input('Bạn đang tìm công việc gì?', placeholder='Chức danh, doanh nghiệp, lĩnh vực hoặc kỹ năng…')
+    filtered = jobs if page == 'Tìm việc' else [j for j in jobs if j['id'] in st.session_state.get('saved_jobs', set())]
+    with st.expander('Bộ lọc tìm kiếm', expanded=bool(jobs)):
+        cols = st.columns(3)
+        selections = {}
+        for index, (label, field) in enumerate([('Địa điểm', 'location'), ('Doanh nghiệp', 'company'), ('Chức năng công việc', 'category'), ('Hình thức làm việc', 'workplace_type'), ('Kinh nghiệm', 'experience'), ('Loại hợp đồng', 'employment_type'), ('Ngành doanh nghiệp', 'industry')]):
+            selections[field] = cols[index % 3].multiselect(label, sorted({display(j.get(field)) for j in jobs}))
+        cols = st.columns(3)
+        recency = cols[0].selectbox('Thời điểm phát hiện', ['Tất cả', '7 ngày qua', '30 ngày qua'])
+        disclosed = cols[1].checkbox('Chỉ tin công bố lương')
+        languages = cols[2].multiselect('Ngôn ngữ được nhắc đến', sorted({s for j in jobs for s in j.get('language_requirements', [])}))
+        salary_filter = st.checkbox('Lọc khoảng lương công bố có đơn vị rõ ràng')
+        if salary_filter:
+            s1, s2, s3 = st.columns(3)
+            salary_currency = s1.selectbox('Đơn vị lương', ['VND', 'USD'])
+            salary_range = s2.number_input('Từ / tháng', min_value=0, value=0, step=1000)
+            salary_ceiling = s3.number_input('Đến / tháng', min_value=0, value=100000000 if salary_currency == 'VND' else 10000, step=1000)
+            st.caption('Chỉ lọc lương nhà tuyển dụng công bố có tiền tệ và kỳ trả lương rõ ràng; không quy đổi ngoại tệ hoặc suy đoán lương tháng.')
+    filtered = [j for j in filtered if query.casefold() in ' '.join(str(j.get(k, '')) for k in ('title', 'company', 'description', 'category', 'skills')).casefold() and all(not values or display(j.get(field)) in values for field, values in selections.items()) and (not disclosed or j.get('salary_text')) and (not languages or set(languages).issubset(j.get('language_requirements', []))) and (recency == 'Tất cả' or new_in_last_days([j], 7 if recency == '7 ngày qua' else 30))]
+    filtered.sort(key=lambda j: j.get('first_seen', ''), reverse=True)
+    if salary_filter:
+        filtered = [j for j in filtered if matches_salary(j, salary_range, salary_ceiling, salary_currency)]
+        if salary_range > salary_ceiling:
+            st.warning('Mức lương tối thiểu cần nhỏ hơn hoặc bằng mức tối đa.')
+    st.subheader(f'{len(filtered):,} cơ hội' + (' đã lưu' if page == 'Việc đã lưu' else ' dành cho bạn khám phá'))
+    st.caption('Tin mới phát hiện trước · Việc đã lưu chỉ được giữ trong phiên hiện tại.')
+    if not filtered:
+        st.info('Chưa có công việc phù hợp trong dữ liệu hiện có. Thử bỏ bộ lọc hoặc khám phá các trang tuyển dụng chính thức tại mục Doanh nghiệp.')
+        st.subheader('Khám phá trang tuyển dụng doanh nghiệp')
+        st.caption('Liên kết trong danh bạ hiện có; chưa xác nhận số vị trí đang tuyển hoặc quyền thu thập.')
+        for employer in watchlist[:6]:
+            if safe_url(employer.get('careers_url')):
+                st.link_button(employer['company'] + ' ↗', employer['careers_url'])
+    else:
+        current = st.number_input('Trang', min_value=1, max_value=max(1, (len(filtered) + 11) // 12), step=1)
+        for job in filtered[(current - 1) * 12:current * 12]:
+            card(job)
+        export = pd.DataFrame([{k: j.get(k, '') for k in ('title', 'company', 'location', 'salary_text', 'url', 'first_seen')} for j in filtered])
+        # Avoid spreadsheet formula execution in exported employer text.
+        export = export.map(lambda x: "'" + x if isinstance(x, str) and x.startswith(('=', '+', '-', '@')) else x)
+        st.download_button('Tải danh sách CSV', export.to_csv(index=False).encode('utf-8-sig'), 'viec-lam-vietnam.csv', 'text/csv')
+
+elif page == 'Doanh nghiệp':
+    st.title('Hiểu doanh nghiệp trước khi ứng tuyển')
+    st.caption('Danh bạ trang tuyển dụng chính thức. Có trong danh bạ không đồng nghĩa đang tuyển hoặc đã cho phép thu thập dữ liệu.')
+    names = sorted(set(j.get('company', '') for j in archive) | set(profiles) | {r['company'] for r in watchlist})
+    if names:
+        name = st.selectbox('Tìm doanh nghiệp', names)
+        profile = profiles.get(name, {})
+        registry = next((r for r in watchlist if r['company'] == name), {})
+        st.subheader(name)
+        st.write(profile.get('overview') or 'Chưa có mô tả doanh nghiệp đã xác minh.')
+        for label, field in [('Lĩnh vực', 'industry'), ('Trụ sở', 'headquarters'), ('Quy mô', 'size'), ('Công ty mẹ', 'parent_company')]:
+            st.write(f'**{label}:** {display(profile.get(field) or registry.get(field))}')
+        for label, url in [('Website chính thức', profile.get('website')), ('Trang tuyển dụng', profile.get('careers_url') or registry.get('careers_url')), ('Nguồn xác minh hồ sơ', profile.get('source_url'))]:
+            if safe_url(url):
+                st.link_button(label + ' ↗', url)
+        st.caption('Ngày xác minh hồ sơ: ' + date(profile.get('verified_at')))
+        own = [j for j in archive if j.get('company') == name]
+        live = [j for j in jobs if j.get('company') == name]
+        a, b, c = st.columns(3)
+        a.metric('Đang quan sát', len(live))
+        b.metric('Đã ghi nhận trong lịch sử', len(own))
+        c.metric('Tin có công bố lương', sum(bool(j.get('salary_text')) for j in live))
+        st.caption('Đánh giá nhân viên: chưa có dữ liệu được cấp quyền. Không tạo điểm uy tín hoặc lời chứng thực giả.')
+        if own:
+            st.dataframe(pd.DataFrame([{'Chức danh': j['title'], 'Trạng thái': j.get('status', 'active'), 'Phát hiện': date(j.get('first_seen')), 'Số lần mở lại': j.get('reopen_count', 0)} for j in own]), hide_index=True)
+        for job in live[:12]:
+            card(job, 'company')
+
+elif page == 'CV của tôi':
+    st.title('Biến yêu cầu tuyển dụng thành điều có thể đối chiếu')
+    st.info('CV chỉ được đọc trong bộ nhớ của phiên hiện tại. Không ghi tệp, không lưu vào cơ sở dữ liệu, không gửi đến dịch vụ AI bên ngoài.')
+    st.caption('PDF/DOCX tối đa 5 MB; PDF tối đa 30 trang. Không hỗ trợ OCR cho bản quét. Kết quả là đối chiếu từ khóa và dẫn chứng, không dự đoán quyết định tuyển dụng.')
+    key = st.session_state.get('upload_epoch', 0)
+    uploaded = st.file_uploader('Tải CV của bạn', type=['pdf', 'docx'], key=f'cv-upload-{key}')
+    if st.button('Xóa CV khỏi phiên'):
+        st.session_state.pop('cv_text', None)
+        st.session_state.upload_epoch = key + 1
+        st.rerun()
+    if uploaded:
+        try:
+            st.session_state.cv_text = parse_cv(uploaded.getvalue(), uploaded.name)
+            st.success('CV đã sẵn sàng để đối chiếu trong phiên này.')
+        except Exception:
+            st.session_state.pop('cv_text', None)
+            st.error('Không đọc được CV. Kiểm tra định dạng, giới hạn dung lượng/trang và dùng tệp có văn bản, không mã hóa.')
+    st.caption('Đáp ứng: có câu mô tả áp dụng kỹ năng. Đáp ứng một phần: chỉ nhắc tới kỹ năng. Chưa tìm thấy: không có từ khóa trong phần văn bản đọc được. Chưa đánh giá số năm kinh nghiệm, trình độ hoặc tính xác thực.')
+    if jobs:
+        chosen = st.selectbox('Chọn công việc để đối chiếu', jobs, format_func=lambda j: j['title'] + ' · ' + j['company'])
+        match_panel(chosen)
+    else:
+        st.info('Chưa có JD Việt Nam để đối chiếu. CV sẽ không được đưa vào bộ thu thập dữ liệu.')
+
+elif page == 'Lộ trình nghề nghiệp':
+    st.title('Hình dung bước tiếp theo của bạn')
+    track = st.selectbox('Nhóm nghề nghiệp', list(CAREERS))
+    roles = CAREERS[track]
+    st.markdown(' → '.join('**' + r + '**' for r in roles))
+    st.caption('Lộ trình minh họa, không phải kết quả thống kê hoặc cam kết thăng tiến. Có thể đi theo nhánh chuyên gia, quản lý hoặc nghề liên quan.')
+    a, b = st.columns(2)
+    current = a.selectbox('Vai trò hiện tại', roles)
+    target = b.selectbox('Vai trò mong muốn', roles, index=min(1, len(roles) - 1))
+    current_jobs = [j for j in jobs if current.casefold() in j['title'].casefold()]
+    target_jobs = [j for j in jobs if target.casefold() in j['title'].casefold()]
+    current_skills = {s for j in current_jobs for s in j.get('skills', [])}
+    target_skills = {s for j in target_jobs for s in j.get('skills', [])}
+    st.write('**Kỹ năng chung quan sát được:** ' + (', '.join(sorted(current_skills & target_skills)) or 'Chưa đủ dữ liệu'))
+    st.write('**Kỹ năng bổ sung ở vai trò đích:** ' + (', '.join(sorted(target_skills - current_skills)) or 'Chưa đủ dữ liệu'))
+    st.caption(f'Đối chiếu từ {len(current_jobs)} tin vai trò hiện tại và {len(target_jobs)} tin vai trò đích; đây là khác biệt giữa mẫu tin, không kết luận về năng lực của bạn.')
+    for job in target_jobs[:6]:
+        card(job, 'career')
+
+elif page == 'Thị trường':
+    st.title('Góc nhìn từ những cơ hội đã quan sát')
+    period_start = min((j.get('first_seen', '') for j in archive if j.get('first_seen')), default='')
+    scope = f'Mẫu {len(jobs)} tin Việt Nam đang quan sát / {len(archive)} tin lịch sử; từ {date(period_start)} đến {date(updated)}. Chỉ các nguồn đã đăng ký, không đại diện toàn quốc.'
+    st.caption(scope)
+    a, b, c, d = st.columns(4)
+    a.metric('Tin đang quan sát', len(jobs))
+    b.metric('Mới trong 7 ngày', new_in_last_days(jobs))
+    c.metric('Doanh nghiệp', len({j['company'] for j in jobs}))
+    d.metric('Công bố lương', f'{sum(bool(j.get("salary_text")) for j in jobs) / len(jobs):.0%}' if jobs else '—')
+    if len(jobs) < 20:
+        st.info('Mẫu dưới 20 tin: chưa hiển thị biểu đồ phân bố để tránh diễn giải quá mức.')
+    else:
+        for title, counts in [('Cơ hội theo địa điểm', Counter(j.get('location', 'Chưa rõ') for j in jobs)), ('Chức năng công việc', Counter(j.get('category', 'Khác') for j in jobs)), ('Kỹ năng được nhắc tới', Counter(s for j in jobs for s in j.get('skills', []))), ('Tin phát hiện theo ngày', Counter(j.get('first_seen', '')[:10] for j in archive if j.get('first_seen')))]:
+            if counts:
+                st.subheader(title)
+                st.bar_chart(pd.DataFrame(counts.most_common(15), columns=['Nhóm', 'Số tin']).set_index('Nhóm'), color='#75A66A')
+                st.caption(scope + ' Ngày phát hiện không nhất thiết là ngày đăng tuyển.')
+    st.write(f'**Tin từng mở lại:** {sum(j.get("reopen_count", 0) > 0 for j in archive)}')
+
+elif page == 'Phương pháp & riêng tư':
+    st.title('Rõ nguồn dữ liệu. Rõ giới hạn.')
+    st.markdown('''- **Việc làm:** nguồn ATS có quyền sử dụng được xác nhận; tin thiếu hai lần kiểm tra thành công liên tiếp mới được ghi nhận đóng.
+- **Phân tích:** trích xuất từ khóa theo quy tắc. Bản diễn giải AI chỉ hiển thị khi quản trị đã tạo từ JD được cấp quyền; nội dung được gắn nhãn và kèm câu gốc để đối chiếu.
+- **Lương:** chỉ hiển thị nội dung nguồn công bố. Chưa có bộ dữ liệu được cấp quyền để ước tính thị trường.
+- **CV và việc đã lưu:** chỉ tồn tại trong phiên hiện tại; không lưu vào kho mã hoặc gửi đến AI bên ngoài. Xóa CV bằng nút tại CV của tôi.
+- **Uy tín doanh nghiệp:** không chấm điểm, không suy diễn hành vi từ dữ liệu thiếu, không tạo đánh giá giả.
+- **Phạm vi:** Việt Nam; dữ liệu lịch sử các thị trường khác vẫn được bảo toàn trong kho dữ liệu.
+- **Nguồn đối tác:** LinkedIn, VietnamWorks, TopCV, CareerViet, ITviec, Vieclam24h và Glints cần quyền sử dụng/luồng dữ liệu phù hợp trước khi kết nối.''')
+
+elif page == 'Quản trị nguồn':
+    st.title('Quản trị doanh nghiệp & sức khỏe nguồn')
+    secret = os.environ.get('JOB_ADMIN_PASSWORD', '')
+    if not secret:
+        try:
+            secret = st.secrets.get('JOB_ADMIN_PASSWORD', '')
+        except Exception:
+            secret = ''
+    password = st.text_input('Mật khẩu quản trị', type='password')
+    if not secret:
+        st.info('Thiết lập JOB_ADMIN_PASSWORD trong biến môi trường hoặc Streamlit Secrets để bật quản trị.')
+        st.stop()
+    if not hmac.compare_digest(password.encode(), str(secret).encode()):
+        st.info('Đăng nhập để quản lý nguồn và xem lỗi thu thập.')
+        st.stop()
+    st.caption('Lưu trữ dùng chung: PostgreSQL. Website và bộ thu thập cần dùng cùng DATABASE_URL.' if STORE else 'Lưu trữ hiện tại: JSON trên máy chủ. Trên Streamlit Cloud, tải cấu hình và đưa vào GitHub để GitHub Actions sử dụng; ổ đĩa Cloud không bảo đảm lưu lâu dài.')
+    rows = [{**s, 'provider': p} for p in FIELDS for s in config.get(p, [])]
+    if rows:
+        st.dataframe(pd.DataFrame(rows), hide_index=True)
+    editing = st.selectbox('Chọn nguồn để chỉnh sửa', [None] + rows, format_func=lambda r: 'Thêm nguồn mới' if r is None else r['company'] + ' · ' + r['provider']) or {}
+    provider = editing.get('provider')
+    domains = {'greenhouse': 'https://boards.greenhouse.io/', 'lever': 'https://jobs.lever.co/', 'ashby': 'https://jobs.ashbyhq.com/', 'smartrecruiters': 'https://careers.smartrecruiters.com/'}
+    edit_url = editing.get('careers_url') or (domains[provider] + editing.get(FIELDS[provider], '') if provider else '')
+    with st.form('source-form'):
+        st.subheader('Thêm / cập nhật / tắt nguồn ATS')
+        company = st.text_input('Tên doanh nghiệp', value=editing.get('company', ''))
+        url = st.text_input('URL trang tuyển dụng ATS', value=edit_url, placeholder='https://jobs.lever.co/tên-doanh-nghiệp')
+        permission = st.text_input('URL bằng chứng cho phép lưu và công bố dữ liệu', value=editing.get('permission_url', ''))
+        permission_mode = st.radio('Phạm vi được cấp quyền', ['full', 'links'], index=1 if editing.get('permission_mode') == 'links' else 0, format_func=lambda v: 'JD đầy đủ và liên kết' if v == 'full' else 'Chỉ thông tin cơ bản và liên kết')
+        enabled = st.checkbox('Tôi đã xác minh quyền sử dụng và muốn kích hoạt thu thập', value=bool(editing.get('enabled') and (editing.get('authorized') or editing.get('discovery_enabled'))))
+        ai_allowed = st.checkbox('Quyền sử dụng cũng cho phép gửi JD đến OpenAI để diễn giải', value=bool(editing.get('ai_authorized')))
+        submitted = st.form_submit_button('Lưu nguồn')
+    if submitted:
+        try:
+            revised = register_source(config, company, url, permission, enabled, permission_mode, ai_allowed)
+            backup = ROOT / 'backups' / ('sources-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%f') + '.json')
+            save_json(backup, config)
+            save_json(ROOT / 'sources.json', revised)
+            st.success('Đã lưu cấu hình nguồn. Lần chạy bộ thu thập tiếp theo sẽ đọc cấu hình mới.')
+            config = revised
+        except ValueError as error:
+            st.error(str(error))
+    st.download_button('Tải cấu hình nguồn cho GitHub', json.dumps(config, ensure_ascii=False, indent=2), 'sources.json', 'application/json')
+    with st.form('company-form'):
+        st.subheader('Thêm doanh nghiệp vào danh sách cần xác minh')
+        employer = st.text_input('Doanh nghiệp')
+        careers_url = st.text_input('Trang tuyển dụng chính thức')
+        industry = st.text_input('Ngành nghề')
+        page_discovery = st.checkbox('Cho phép kiểm tra trang tuyển dụng để tìm liên kết ATS (không thu thập JD)')
+        add_company = st.form_submit_button('Lưu doanh nghiệp')
+    if add_company:
+        if employer.strip() and safe_url(careers_url):
+            existing = read('company_watchlist.json', [])
+            old = next((r for r in existing if r.get('company') == employer.strip() and r.get('country') == 'Vietnam'), {})
+            entry = {**old, 'company': employer.strip(), 'country': 'Vietnam', 'careers_url': careers_url, 'industry': industry, 'page_discovery_enabled': page_discovery, 'integration_status': 'Cần xác minh quyền sử dụng'}
+            existing = [r for r in existing if not (r.get('company') == employer.strip() and r.get('country') == 'Vietnam')] + [entry]
+            save_json(DATA / 'company_watchlist.json', existing)
+            st.success('Đã lưu doanh nghiệp; chưa bật thu thập tự động.')
         else:
-            left,right=st.columns(2)
-            with left:
-                fig=px.bar(df.groupby('Country').size().reset_index(name='Openings'),x='Country',y='Openings',title='Observed active openings by market',color='Country')
-                fig.update_layout(showlegend=False,margin=dict(l=0,r=0,t=45,b=0),paper_bgcolor='rgba(0,0,0,0)',plot_bgcolor='rgba(0,0,0,0)')
-                st.plotly_chart(fig,use_container_width=True)
-            with right:
-                fig=px.bar(df.groupby('Category').size().reset_index(name='Openings').sort_values('Openings'),x='Openings',y='Category',orientation='h',title='Career category distribution')
-                fig.update_layout(margin=dict(l=0,r=0,t=45,b=0),paper_bgcolor='rgba(0,0,0,0)',plot_bgcolor='rgba(0,0,0,0)')
-                st.plotly_chart(fig,use_container_width=True)
-        skills=Counter(skill for job in countries for skill in job.get('skills',[]))
-        st.markdown('#### Most frequently detected skills')
-        if skills and len(countries)>=20:st.dataframe(pd.DataFrame(skills.most_common(20),columns=['Skill','Postings mentioning skill']),hide_index=True,use_container_width=True)
-        elif skills:st.caption('Skill frequency breakdown suppressed: sample below 20.')
-        else:st.info('No skills detected from the currently available descriptions.')
-        daily=df.groupby('First seen').size().reset_index(name='First detected')
-        if not daily.empty and len(countries)>=20:
-            st.plotly_chart(px.line(daily,x='First seen',y='First detected',markers=True,title='New listings detected by the collector (not employer posting dates)'),use_container_width=True)
-        st.caption('Sampling bias: only registered sources and VN/SG/TW location matches. Absence of a listing here is not evidence that an employer is not hiring.')
-    else:st.info('Charts will appear when the collector retrieves actual jobs.')
-with tabs[3]:
-    st.markdown('### Private CV-to-JD skill comparison')
-    st.caption('PRIVACY: CV content is handled in memory during this app session. This code does not write CVs to disk, logs, GitHub or an external AI provider. Avoid ID numbers and personal secrets; Streamlit hosting infrastructure still processes the upload. Close/refresh the session to clear the working text.')
-    upload=st.file_uploader('Upload a CV (.pdf, .docx, .txt); maximum 5 MB',type=['pdf','docx','txt'])
-    cv_text=''
-    if upload:
-        if upload.size>5*1024*1024:st.error('File exceeds 5 MB.')
-        else:
+            st.error('Cần tên doanh nghiệp và URL HTTPS hợp lệ.')
+    st.subheader('Phát hiện nguồn từ danh bạ')
+    st.caption('Chỉ dò liên kết ATS trên trang được chọn; kiểm tra robots.txt, không đăng nhập, không vượt hạn chế, không tự bật thu thập.')
+    eligible = [r for r in watchlist if r.get('page_discovery_enabled')]
+    if eligible:
+        scan = st.selectbox('Trang đã cho phép kiểm tra', eligible, format_func=lambda r: r['company'])
+        if st.button('Kiểm tra trang này'):
             try:
-                if upload.name.lower().endswith('.pdf'):
-                    from pypdf import PdfReader
-                    cv_text='\n'.join(page.extract_text() or '' for page in PdfReader(io.BytesIO(upload.getvalue())).pages[:12])
-                elif upload.name.lower().endswith('.docx'):
-                    from docx import Document
-                    cv_text='\n'.join(p.text for p in Document(io.BytesIO(upload.getvalue())).paragraphs)
-                else:cv_text=upload.getvalue().decode('utf-8')
-                st.success(f'Read {len(cv_text):,} characters. This implementation does not persist your CV.')
-            except Exception as e:st.error(f'Could not read this file: {type(e).__name__}. Try a text-based PDF or DOCX.')
-    if countries and cv_text:
-        option=st.selectbox('Compare CV against a current opportunity',range(len(countries)),format_func=lambda i:f'{countries[i]["title"]} — {countries[i]["company"]}')
-        result=cv_matches(cv_text,countries[option])
-        st.markdown('#### Explainable comparison · no fit score or hiring prediction')
-        st.markdown('**Detected in both CV and JD**')
-        if result['matched']:
-            for skill in result['matched']:
-                st.success(skill)
-                st.caption('CV evidence: '+evidence_snippet(cv_text,skill)+' · JD evidence: '+evidence_snippet(countries[option]['description'],skill))
-        else:st.write('No tracked overlapping keywords found.')
-        st.markdown('**Mentioned in JD but not detected in CV text**')
-        for skill in result['not_detected']:
-            st.warning(skill)
-            st.caption('JD evidence: '+evidence_snippet(countries[option]['description'],skill))
-        st.caption('Partial matches require manual review: keywords alone cannot distinguish adjacent experience, seniority or actual competence.')
-        st.info(result['note'])
-    elif not countries:st.info('Select a market with current jobs or add authorized sources to enable comparisons.')
-with tabs[4]:
-    st.markdown('### Data provenance & source reliability')
-    st.write('Greenhouse, Lever and Ashby public posting endpoints are supported. Link-only discovery has a separate discovery_enabled switch; full JD collection still requires authorized=true. Operators must verify appropriate usage terms. No LinkedIn scraping or anti-bot bypass is implemented.')
-    st.write(f'**Last run:** {date_str(status.get("checked_at"))} · **Successful sources:** {status.get("successful_sources",0)}')
-    st.caption('Registered ATS coverage is skewed toward organizations using Greenhouse, Lever or Ashby; local boards and employers using other systems are not represented unless individually integrated.')
-    if status.get('sources'):st.dataframe(pd.DataFrame(status['sources']),use_container_width=True,hide_index=True)
-    st.markdown('#### Link-only discovery collector')
-    st.write(f"**Last run:** {date_str(discovery_status.get('checked_at'))} · **Successful sources:** {discovery_status.get('successful_sources',0)} · **Active links:** {len(discovered)}")
-    if discovery_status.get('sources'):st.dataframe(pd.DataFrame(discovery_status['sources']),use_container_width=True,hide_index=True)
-    for err in discovery_status.get('errors',[]):st.warning(err)
-    st.markdown('#### Priority employer coverage')
-    watched=[c for c in watchlist if c.get('country') in markets]
-    st.caption(f'{len(watched)} targeted company-market pairs (official careers directory, NOT ingested jobs). API candidates remain permission-gated.')
-    if watched:
-        st.dataframe(pd.DataFrame([{'Market':c['country'],'Company':c['company'],'Industry':c.get('industry'),'Careers':c.get('careers_url'),'Platform':c.get('platform'),'Integration':c.get('integration_status')} for c in watched]),hide_index=True,use_container_width=True,column_config={'Careers':st.column_config.LinkColumn('Official careers URL')})
-    if probe:
-        st.markdown('#### Candidate board connectivity probe (not publication permission)')
-        st.dataframe(pd.DataFrame(probe),hide_index=True,use_container_width=True)
-    source_rows=[]
-    for provider in ('greenhouse','lever','ashby'):
-        for source in sources_config.get(provider,[]):
-            source_rows.append({'Company':source.get('company',''),'ATS':provider,'Enabled':source.get('enabled',True),'Full JD authorized':source.get('authorized',False),'Link discovery enabled':source.get('discovery_enabled',True),'Coverage note':source.get('coverage_note','Registered ATS careers page; not representative of all employers')})
-    if source_rows:st.dataframe(pd.DataFrame(source_rows),hide_index=True,use_container_width=True)
-
-    if status.get('errors'):
-        for err in status['errors']:st.error(err)
-    st.markdown('#### How the posting review works')
-    st.write('Checks flag missing compensation details, vague salary wording, unclear role detail, mentions of overtime/pressure, and unrecognized location. These are job-posting-level review questions, **not** verified company-wide problems, claims of unlawful behavior or reputation scores.')
-    st.write('Closed jobs are marked only after two successive *successful* checks of the same board where an earlier posting is missing. Failed API requests never close jobs. Historical records retain first detection date and source trail.')
-    st.write('Country mapping and skill/category tagging are rule-based, explainable approximations. Human review and primary-source verification are required before making decisions.')
-    st.markdown('#### Operational links')
-    st.link_button('Greenhouse job board documentation','https://developers.greenhouse.io/job-board.html')
-    st.link_button('Lever public postings documentation','https://github.com/lever/postings-api')
-    st.link_button('Ashby posting API documentation','https://developers.ashbyhq.com/docs/public-job-posting-api')
-    st.caption('Sources are public API documentation links, not blanket permission to republish individual postings. Consult applicable terms and data usage rights.')
-
-st.divider()
-st.markdown('<span class="smallnote">JOB INTELLIGENCE ASIA · An evidence-oriented career research tool · Data quality and employer claims require source verification · Designed for desktop and mobile</span>',unsafe_allow_html=True)
-
-with tabs[5]:
-    st.markdown('### Privacy, provenance & usage terms')
-    st.write('This service is an independent research interface, not affiliated with the employers or recruiting platforms shown. Every job links to its original source. Availability, completeness, salaries and sponsorship should be confirmed directly with the employer.')
-    st.write('We do not store CV uploads in our job snapshots or GitHub repository, nor transmit them to third-party AI APIs in this version. Uploaded documents are processed transiently by Streamlit infrastructure during the current app session. Avoid sensitive identifiers. No user accounts or behavioral analytics are enabled in this MVP.')
-    st.write('Data sources: the link-only index uses configured published ATS pages, subject to source usage terms; full JD content uses separately authorized ATS boards only. Operators must check API terms, permitted reuse, retention and privacy requirements in each market before publication. Historical job records may contain employer-authored information and are retained in repository snapshots until removed by the operator. Do not include candidate personal data in source files.')
-    st.write('For corrections, use the “Report inaccurate listing” link on a dossier. Do not enter personal information into public GitHub issues. Operator contact and formal privacy notices should be completed before public production launch; this page is operational guidance, not a jurisdiction-specific legal compliance certification.')
-    st.write('Method: locations and requirements inferred by transparent keyword rules. Salary disclosure rate denominator is observed active listings; the market distribution does not represent all vacancies. Visa and language labels mean an explicit phrase was detected or Unknown, never a guarantee. Duplicate candidate keys are review hints, not indiscriminate record deletion.')
+                pending = read('source_candidates.json', [])
+                found = candidates(scan['company'], scan['careers_url'])
+                save_json(DATA / 'source_candidates.json', merge_candidates(pending, found))
+                st.success(f'Đã tìm thấy {len(found)} liên kết ATS; tất cả vẫn chờ duyệt quyền sử dụng.')
+            except Exception:
+                st.warning('Không kiểm tra được trang này. Xem lại URL, robots.txt hoặc kiểm tra thủ công; không bật nguồn.')
+    else:
+        st.info('Chưa có trang được bật kiểm tra tự động. Cập nhật doanh nghiệp trong biểu mẫu phía trên.')
+    pending = read('source_candidates.json', [])
+    if pending:
+        candidate = st.selectbox('Nguồn chờ duyệt', pending, format_func=lambda r: r['company'] + ' · ' + r['provider'] + '/' + r['board'])
+        if st.button('Đưa vào danh sách nguồn ở trạng thái tắt'):
+            save_json(ROOT / 'sources.json', add_pending(config, candidate))
+            st.success('Đã thêm hoặc giữ nguyên nguồn đã có; không thay đổi quyền sử dụng.')
+    st.subheader('Diễn giải JD bằng AI')
+    st.caption('Chỉ quản trị viên tạo nội dung; chỉ gửi JD được cấp quyền, không gửi CV. Kết quả gắn với phiên bản JD và bị ẩn khi JD thay đổi. Có thể phát sinh phí API.')
+    if not ai_configured():
+        st.info('Chưa bật AI. Cần OPENAI_API_KEY, OPENAI_MODEL và JOB_AI_ENABLED=true trong cấu hình bảo mật.')
+    elif jobs:
+        explain_target = st.selectbox('JD cần diễn giải', jobs, format_func=lambda j: j['title'] + ' · ' + j['company'])
+        if st.button('Tạo bản diễn giải tiếng Việt'):
+            source = next((r for r in rows if r['provider'] + ':' + r.get(FIELDS[r['provider']], '') == explain_target.get('source_key')), {})
+            try:
+                result = generate(explain_target, source)
+                explanations[explain_target['id']] = {'description_hash': content_hash(explain_target), 'items': result, 'created_at': datetime.now(timezone.utc).isoformat()}
+                save_json(DATA / 'job_explanations.json', explanations)
+                st.success('Đã lưu bản diễn giải có dẫn chứng gốc để người đọc đối chiếu.')
+            except (ValueError, PermissionError) as error:
+                st.error(str(error))
+            except Exception:
+                st.error('Không kết nối được dịch vụ AI. Chưa lưu nội dung mới.')
+    for label, report in [('JD đầy đủ', status), ('Chỉ mục liên kết', discovery_status)]:
+        st.subheader(label)
+        st.caption('Lần chạy: ' + date(report.get('checked_at')))
+        if report.get('sources'):
+            st.dataframe(pd.DataFrame(report['sources']), hide_index=True)
+        for error in report.get('errors', []):
+            st.error(str(error))
+        if not report.get('sources'):
+            st.info('Chưa có lần thu thập nguồn được cấp quyền.')
+    with st.expander('Kết quả kiểm tra kết nối gần nhất (không xác nhận quyền sử dụng)'):
+        st.json(read('source_probe.json', []))

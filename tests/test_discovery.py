@@ -11,23 +11,23 @@ class DiscoveryTests(unittest.TestCase):
         self.assertNotIn('description',x[0]);self.assertNotIn('content',x[0])
         self.assertNotIn('content=true',endpoint('greenhouse','board'))
     def test_lever_country_filter_and_url(self):
-        jobs=[{'id':'x','text':'Analyst','categories':{'location':'Singapore'},'hostedUrl':'https://jobs.lever.co/example/x','descriptionPlain':'full JD'},
+        jobs=[{'id':'x','text':'Analyst','categories':{'location':'Vietnam'},'hostedUrl':'https://jobs.lever.co/example/x','descriptionPlain':'full JD'},
               {'id':'y','text':'Analyst','categories':{'location':'Berlin'},'hostedUrl':'https://jobs.lever.co/example/y'}]
         x=parse_posts('lever',SRC,jobs)
         self.assertEqual(len(x),1);self.assertEqual(x[0]['title'],'Analyst');self.assertNotIn('descriptionPlain',x[0])
     def test_ashby_unlisted_excluded(self):
-        jobs=[{'id':'one','title':'PM','location':'Singapore','jobUrl':'https://jobs.ashbyhq.com/e/1','isListed':False},
-              {'id':'two','title':'PM','location':'Singapore','jobUrl':'https://jobs.ashbyhq.com/e/2','isListed':True,'descriptionPlain':'do not persist'}]
+        jobs=[{'id':'one','title':'PM','location':'Vietnam','jobUrl':'https://jobs.ashbyhq.com/e/1','isListed':False},
+              {'id':'two','title':'PM','location':'Vietnam','jobUrl':'https://jobs.ashbyhq.com/e/2','isListed':True,'descriptionPlain':'do not persist'}]
         x=parse_posts('ashby',SRC,{'jobs':jobs})
         self.assertEqual(len(x),1);self.assertTrue(x[0]['id'].endswith('two'));self.assertNotIn('descriptionPlain',x[0])
     def test_bad_urls_rejected(self):
-        x=parse_posts('lever',SRC,[{'id':'x','text':'Analyst','categories':{'location':'Singapore'},'hostedUrl':'javascript:alert(1)'}])
+        x=parse_posts('lever',SRC,[{'id':'x','text':'Analyst','categories':{'location':'Vietnam'},'hostedUrl':'javascript:alert(1)'}])
         self.assertEqual(x,[])
     def test_tw_excluded_initial_scope(self):
         x=parse_posts('lever',SRC,[{'id':'x','text':'Analyst','categories':{'location':'Taipei, Taiwan'},'hostedUrl':'https://jobs.lever.co/e/x'}])
         self.assertEqual(x,[])
     def test_two_misses_and_reopening(self):
-        new={'id':'discovery:lever:board:x','source_key':'lever:board','title':'Analyst','company':'Example Employer','location':'Singapore','country':'Singapore','url':'https://jobs.lever.co/e/x','source':'Lever','record_type':'link_only'}
+        new={'id':'discovery:lever:board:x','source_key':'lever:board','title':'Analyst','company':'Example Employer','location':'Vietnam','country':'Vietnam','url':'https://jobs.lever.co/e/x','source':'Lever','record_type':'link_only'}
         a=merge_one({},[new],'lever:board',NOW)
         b=merge_one(a,[],'lever:board',NOW)
         self.assertEqual(b[new['id']]['status'],'active')

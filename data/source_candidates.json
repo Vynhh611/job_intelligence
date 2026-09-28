@@ -1,0 +1,29 @@
+[
+  {
+    "company": "Ninja Van",
+    "provider": "lever",
+    "board": "ninjavan",
+    "careers_url": "https://jobs.lever.co/ninjavan",
+    "found_on": "https://jobs.lever.co/ninjavan",
+    "status": "pending_permission",
+    "discovered_at": "2026-09-28T15:58:59.272985+00:00"
+  },
+  {
+    "company": "Lalamove",
+    "provider": "lever",
+    "board": "lalamove",
+    "careers_url": "https://jobs.lever.co/lalamove",
+    "found_on": "https://jobs.lever.co/lalamove",
+    "status": "pending_permission",
+    "discovered_at": "2026-09-28T15:58:59.273051+00:00"
+  },
+  {
+    "company": "Airwallex",
+    "provider": "ashby",
+    "board": "airwallex",
+    "careers_url": "https://jobs.ashbyhq.com/airwallex",
+    "found_on": "https://jobs.ashbyhq.com/airwallex",
+    "status": "pending_permission",
+    "discovered_at": "2026-09-28T15:58:59.273086+00:00"
+  }
+]

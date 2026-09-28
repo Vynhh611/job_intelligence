@@ -6,12 +6,14 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: job-discovery-snapshot
+  group: job-data-writer
   cancel-in-progress: false
 jobs:
   discover:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,17 +24,17 @@ jobs:
           python-version: '3.12'
           cache: pip
       - name: Install collector dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r requirements-production.txt
       - name: Build source-linked job index (no full descriptions)
         run: python discovery_collector.py
       - name: Commit discovery snapshot
-        if: always()
+        if: always() && env.DATABASE_URL == ''
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/discovered_jobs.json data/discovery_status.json
+          git add data/discovered_jobs.json data/discovery_status.json data/discovery_history.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update source-linked job discovery index'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            git pull --rebase
+            git push
           fi

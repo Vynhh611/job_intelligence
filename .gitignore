@@ -1,0 +1,9 @@
+backups/
+__pycache__/
+*.pyc
+.venv/
+.runtime/
+.env
+.streamlit/secrets.toml
+test-results/
+test-output.log

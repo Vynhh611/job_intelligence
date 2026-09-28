@@ -2,11 +2,18 @@
 import re
 import hashlib
 import unicodedata
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 from datetime import datetime, timezone
 from html import unescape
 
 CATEGORIES = {
+    'Healthcare': ['nurse', 'doctor', 'medical', 'điều dưỡng', 'bác sĩ', 'y tế', 'dược'],
+    'Education': ['teacher', 'education', 'giáo viên', 'giảng viên', 'giáo dục'],
+    'Manufacturing': ['production', 'manufactur', 'quality control', 'sản xuất', 'cơ khí'],
+    'Hospitality': ['hotel', 'restaurant', 'hospitality', 'khách sạn', 'nhà hàng'],
+    'Human Resources': ['human resources', 'recruiter', 'nhân sự', 'tuyển dụng'],
+    'Retail & Sales': ['retail', 'store manager', 'sales', 'bán hàng', 'cửa hàng'],
+    'Construction': ['construction', 'civil engineer', 'xây dựng', 'kiến trúc'],
     'Strategy & Consulting': ['strategy','strategic','consult','transformation','corporate development','management consulting','chiến lược','tư vấn'],
     'Revenue & Pricing': ['revenue growth','pricing','commercial excellence','trade investment','category management','monetization','r GM','price analyst','định giá'],
     'Business Development': ['business development','partnership','account manager','key account','sales development','growth manager','phát triển kinh doanh'],
@@ -26,7 +33,7 @@ SKILLS = {
     'CRM':r'\bcrm\b|salesforce', 'SAP':r'\bsap\b', 'Experimentation':r'\ba/b test|experiment',
 }
 COUNTRIES = {
- 'Vietnam': ['vietnam','viet nam','hanoi','ha noi','hà nội','ho chi minh','hcmc','saigon','sài gòn','đà nẵng','da nang','hai phong','hải phòng','bình dương','binh duong'],
+ 'Vietnam': ['vietnam','viet nam','việt nam','hanoi','ha noi','hà nội','ho chi minh','hồ chí minh','hcmc','saigon','sài gòn','đà nẵng','da nang','hai phong','hải phòng','bình dương','binh duong','đồng nai','dong nai','bắc ninh','bac ninh','cần thơ','can tho','long an','quảng ninh','quang ninh','hưng yên','hung yen','hải dương','hai duong','thanh hóa','thanh hoa','nghệ an','nghe an','nha trang','khánh hòa','khanh hoa','vũng tàu','vung tau','bình phước','binh phuoc','tây ninh','tay ninh','hue','huế','bắc giang','bac giang'],
  'Singapore':['singapore','singapura'],
  'Taiwan':['taiwan','taipei','taichung','kaohsiung','hsinchu','臺灣','台灣','台北','新竹','台中','高雄','桃園','taoyuan'],
 }
@@ -153,7 +160,9 @@ def canonical_job_url(url):
         parts=urlsplit(str(url or ''))
         if parts.scheme!='https' or not parts.hostname:return ''
         path=parts.path.rstrip('/') or '/'
-        return urlunsplit(('https',parts.netloc.lower(),path,'',''))
+        query = urlencode(sorted((k,v) for k,v in parse_qsl(parts.query, keep_blank_values=True)
+                                 if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid')))
+        return urlunsplit(('https',parts.netloc.lower(),path,query,''))
     except ValueError:return ''
 
 def visible_jobs(jobs):
