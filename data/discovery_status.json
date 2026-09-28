@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-09-28T15:19:38.354592+00:00",
+  "successful_sources": 6,
+  "errors": [],
+  "sources": [
+    {
+      "company": "MongoDB",
+      "source_key": "greenhouse:mongodb",
+      "status": "ok",
+      "in_scope": 1,
+      "Singapore": 1,
+      "Vietnam": 0,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    },
+    {
+      "company": "Ninja Van",
+      "source_key": "lever:ninjavan",
+      "status": "ok",
+      "in_scope": 16,
+      "Singapore": 14,
+      "Vietnam": 2,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    },
+    {
+      "company": "Lalamove",
+      "source_key": "lever:lalamove",
+      "status": "ok",
+      "in_scope": 13,
+      "Singapore": 10,
+      "Vietnam": 3,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    },
+    {
+      "company": "WalkMe",
+      "source_key": "lever:walkme",
+      "status": "ok",
+      "in_scope": 2,
+      "Singapore": 2,
+      "Vietnam": 0,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    },
+    {
+      "company": "Airwallex",
+      "source_key": "ashby:airwallex",
+      "status": "ok",
+      "in_scope": 164,
+      "Singapore": 160,
+      "Vietnam": 4,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    },
+    {
+      "company": "Notion",
+      "source_key": "ashby:notion",
+      "status": "ok",
+      "in_scope": 0,
+      "Singapore": 0,
+      "Vietnam": 0,
+      "checked_at": "2026-09-28T15:19:38.354592+00:00"
+    }
+  ],
+  "active_records": 196,
+  "total_records": 196,
+  "mode": "link_only",
+  "full_jd_stored": false
+}
