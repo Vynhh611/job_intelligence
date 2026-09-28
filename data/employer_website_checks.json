@@ -1,657 +1,5 @@
 [
   {
-    "company": "Vietcombank",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://tuyendung.vietcombank.com.vn/viewalljobs/",
-    "platform": "SAP SuccessFactors / employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Techcombank",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://www.techcombankjobs.com/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "VPBank",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://tuyendung.vpbank.com.vn/",
-    "platform": "SAP SuccessFactors / employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "MB Bank",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://tuyendung.mbbank.com.vn/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "ACB",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://www.acbjobs.com.vn/jobs",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Viettel",
-    "country": "Vietnam",
-    "industry": "Telecommunications & Technology",
-    "careers_url": "https://tuyendung.viettel.vn/recruitment-information/search",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "FPT Software",
-    "country": "Vietnam",
-    "industry": "Technology",
-    "careers_url": "https://career.fpt-software.com/jobs-search",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "FPT Telecom",
-    "country": "Vietnam",
-    "industry": "Telecommunications",
-    "careers_url": "https://fptjobs.com/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "VNG",
-    "country": "Vietnam",
-    "industry": "Technology",
-    "careers_url": "https://career.vng.com.vn/en/job-search",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "MoMo",
-    "country": "Vietnam",
-    "industry": "Fintech",
-    "careers_url": "https://momo.careers/jobs-opening",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Vingroup",
-    "country": "Vietnam",
-    "industry": "Conglomerate",
-    "careers_url": "https://tuyendung.vingroup.net/tuyendung",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Samsung Vietnam",
-    "country": "Vietnam",
-    "industry": "Electronics",
-    "careers_url": "https://www.samsung.com/vn/about-us/careers/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Unilever Vietnam",
-    "country": "Vietnam",
-    "industry": "FMCG",
-    "careers_url": "https://careers.unilever.com/en/vietnam",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Nestlé Vietnam",
-    "country": "Vietnam",
-    "industry": "FMCG",
-    "careers_url": "https://www.nestle.com.vn/vi/jobs/search-jobs",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Sea / Shopee",
-    "country": "Vietnam",
-    "industry": "E-commerce & Technology",
-    "careers_url": "https://career.sea.com/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Grab",
-    "country": "Vietnam",
-    "industry": "Technology & Mobility",
-    "careers_url": "https://www.grab.careers/en/jobs/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Lazada",
-    "country": "Vietnam",
-    "industry": "E-commerce",
-    "careers_url": "https://www.lazada.com/en/careers/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Ninja Van",
-    "country": "Vietnam",
-    "industry": "Logistics",
-    "careers_url": "https://jobs.lever.co/ninjavan",
-    "platform": "Lever",
-    "collector_supported": true,
-    "board_identifier": "ninjavan",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Lalamove",
-    "country": "Vietnam",
-    "industry": "Logistics",
-    "careers_url": "https://jobs.lever.co/lalamove",
-    "platform": "Lever",
-    "collector_supported": true,
-    "board_identifier": "lalamove",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Airwallex",
-    "country": "Vietnam",
-    "industry": "Fintech",
-    "careers_url": "https://jobs.ashbyhq.com/airwallex",
-    "platform": "Ashby",
-    "collector_supported": true,
-    "board_identifier": "airwallex",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "DBS",
-    "country": "Singapore",
-    "industry": "Banking",
-    "careers_url": "https://www.dbs.com/careers/default.page",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Sea / Shopee",
-    "country": "Singapore",
-    "industry": "E-commerce & Technology",
-    "careers_url": "https://career.sea.com/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Grab",
-    "country": "Singapore",
-    "industry": "Technology & Mobility",
-    "careers_url": "https://www.grab.careers/en/jobs/",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Amazon",
-    "country": "Singapore",
-    "industry": "Technology & E-commerce",
-    "careers_url": "https://www.amazon.jobs/content/locations/singapore",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Airwallex",
-    "country": "Singapore",
-    "industry": "Fintech",
-    "careers_url": "https://jobs.ashbyhq.com/airwallex",
-    "platform": "Ashby",
-    "collector_supported": true,
-    "board_identifier": "airwallex",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Notion",
-    "country": "Singapore",
-    "industry": "Enterprise Software",
-    "careers_url": "https://jobs.ashbyhq.com/notion",
-    "platform": "Ashby",
-    "collector_supported": true,
-    "board_identifier": "notion",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "MongoDB",
-    "country": "Singapore",
-    "industry": "Enterprise Software",
-    "careers_url": "https://boards.greenhouse.io/mongodb",
-    "platform": "Greenhouse",
-    "collector_supported": true,
-    "board_identifier": "mongodb",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Ninja Van",
-    "country": "Singapore",
-    "industry": "Logistics",
-    "careers_url": "https://jobs.lever.co/ninjavan",
-    "platform": "Lever",
-    "collector_supported": true,
-    "board_identifier": "ninjavan",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Lalamove",
-    "country": "Singapore",
-    "industry": "Logistics",
-    "careers_url": "https://jobs.lever.co/lalamove",
-    "platform": "Lever",
-    "collector_supported": true,
-    "board_identifier": "lalamove",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "WalkMe",
-    "country": "Singapore",
-    "industry": "Enterprise Software",
-    "careers_url": "https://jobs.lever.co/walkme",
-    "platform": "Lever",
-    "collector_supported": true,
-    "board_identifier": "walkme",
-    "integration_status": "Candidate API board; rights review pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
-  },
-  {
-    "company": "Bosch Vietnam",
-    "country": "Vietnam",
-    "industry": "Manufacturing & Technology",
-    "careers_url": "https://jobs.bosch.com/vi/?pages=1&country=vn",
-    "source_url": "https://www.bosch.com.vn/news-and-stories/notice-ensure-authenticity-use-only-official-job-portal/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam.",
-    "linkedin_url": "https://www.linkedin.com/company/bosch-vietnam",
-    "linkedin_evidence_url": "https://www.bosch.com.vn/news-and-stories/notice-ensure-authenticity-use-only-official-job-portal/"
-  },
-  {
-    "company": "P&G Vietnam",
-    "country": "Vietnam",
-    "industry": "FMCG",
-    "careers_url": "https://www.pgcareers.com/apac/en/locations/vietnam",
-    "source_url": "https://www.pgcareers.com/apac/en/locations/vietnam",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "HSBC Vietnam",
-    "country": "Vietnam",
-    "industry": "Banking",
-    "careers_url": "https://portal.careers.hsbc.com/careers?location=vietnam",
-    "source_url": "https://portal.careers.hsbc.com/careers?location=vietnam",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "AEON Vietnam",
-    "country": "Vietnam",
-    "industry": "Retail",
-    "careers_url": "https://tuyendung.aeon.com.vn/",
-    "source_url": "https://tuyendung.aeon.com.vn/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "DHL Supply Chain Vietnam",
-    "country": "Vietnam",
-    "industry": "Logistics",
-    "careers_url": "https://www.dhl.com/vn-vi/home/chuoi-cung-ung/gioi-thieu-ve-chung-toi/viec-lam-tai-dhl-supply-chain.html",
-    "source_url": "https://www.dhl.com/vn-vi/home/chuoi-cung-ung/gioi-thieu-ve-chung-toi/viec-lam-tai-dhl-supply-chain.html",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Vinmec",
-    "country": "Vietnam",
-    "industry": "Healthcare",
-    "careers_url": "https://www.vinmec.com/vie/lam-viec-tai-vinmec/",
-    "source_url": "https://www.vinmec.com/vie/lam-viec-tai-vinmec/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "RMIT Vietnam",
-    "country": "Vietnam",
-    "industry": "Education",
-    "careers_url": "https://www.rmit.edu.vn/vi/gioi-thieu-chung/lam-viec-tai-rmit",
-    "source_url": "https://www.rmit.edu.vn/vi/gioi-thieu-chung/lam-viec-tai-rmit",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "FV Hospital",
-    "country": "Vietnam",
-    "industry": "Healthcare",
-    "careers_url": "https://www.fvhospital.com/en/career-at-fv/career-application/",
-    "source_url": "https://www.fvhospital.com/en/career-at-fv/career-application/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Central Retail Vietnam",
-    "country": "Vietnam",
-    "industry": "Retail",
-    "careers_url": "https://centralretail.com.vn/careers/",
-    "source_url": "https://centralretail.com.vn/careers/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Decathlon Vietnam",
-    "country": "Vietnam",
-    "industry": "Retail",
-    "careers_url": "https://careersdecathlonvn.com/en/recruitments",
-    "source_url": "https://careersdecathlonvn.com/en/recruitments",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Schneider Electric Vietnam",
-    "country": "Vietnam",
-    "industry": "Industrial Automation",
-    "careers_url": "https://www.se.com/vn/vi/about-us/careers/overview/",
-    "source_url": "https://www.se.com/vn/vi/about-us/careers/overview/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "KPMG Vietnam",
-    "country": "Vietnam",
-    "industry": "Audit & Consulting",
-    "careers_url": "https://careers.kpmg.com.vn/",
-    "source_url": "https://kpmg.com/vn/en/careers.html",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "PwC Vietnam",
-    "country": "Vietnam",
-    "industry": "Audit & Consulting",
-    "careers_url": "https://www.pwc.com/vn/en/careers.html",
-    "source_url": "https://www.pwc.com/vn/en/careers.html",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "EY Vietnam",
-    "country": "Vietnam",
-    "industry": "Audit & Consulting",
-    "careers_url": "https://www.ey.com/en_vn/careers/job-search",
-    "source_url": "https://www.ey.com/en_vn/careers/job-search",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Accor Vietnam",
-    "country": "Vietnam",
-    "industry": "Hospitality",
-    "careers_url": "https://careers.accor.com/global/en/vietnam",
-    "source_url": "https://careers.accor.com/global/en/vietnam",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "TH Group",
-    "country": "Vietnam",
-    "industry": "Food & Agriculture",
-    "careers_url": "https://jobs.thgroupglobal.com/",
-    "source_url": "https://jobs.thgroupglobal.com/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_page_review",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Vietjet",
-    "country": "Vietnam",
-    "industry": "Aviation",
-    "careers_url": "https://jobs.vietjetair.com/",
-    "source_url": "https://jobs.vietjetair.com/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Hòa Phát",
-    "country": "Vietnam",
-    "industry": "Manufacturing",
-    "careers_url": "https://www.hoaphat.com.vn/tuyen-dung?page=1",
-    "source_url": "https://www.hoaphat.com.vn/tuyen-dung?page=1",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Tiki",
-    "country": "Vietnam",
-    "industry": "Ecommerce",
-    "careers_url": "https://tuyendung.tiki.vn/",
-    "source_url": "https://tuyendung.tiki.vn/",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
-    "company": "Vietnam Airlines",
-    "country": "Vietnam",
-    "industry": "Aviation",
-    "careers_url": "https://www.vietnamairlines.com/mo/vi/vietnam-airlines/career-with-us",
-    "source_url": "https://www.vietnamairlines.com/mo/vi/vietnam-airlines/career-with-us",
-    "reference_checked_at": "2026-09-28",
-    "verification_method": "official_search_reference",
-    "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Chưa kết nối · chờ xác minh quyền sử dụng",
-    "rights_status": "unreviewed",
-    "page_discovery_enabled": false,
-    "notes": "Liên kết tham khảo tuyển dụng; không xác nhận số vị trí đang mở. Trang toàn cầu có thể cần lọc Việt Nam."
-  },
-  {
     "company": "7-Eleven Vietnam",
     "industry": "Retail",
     "website": "https://7-eleven.vn/",
@@ -665,59 +13,65 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "7-Eleven - Chuỗi cửa hàng tiện lợi và giao gấp (24 trên 7) - Vòng Quay Coca-Cola",
     "source_url": "https://7-eleven.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "ABB Vietnam",
     "industry": "Industrial Automation",
     "website": "https://new.abb.com/vn",
     "country": "Vietnam",
-    "careers_url": "https://careers.abb/global/en/home",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "ABB in Vietnam - Leading digital technologies for industry | abb.com/vn\r\nCSS Flexbox CardsCSS Flexbox Cards",
     "source_url": "https://new.abb.com/vn",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.abb/global/en/home"
+    ]
   },
   {
     "company": "ABBank",
     "industry": "Banking",
     "website": "https://abbank.vn/",
     "country": "Vietnam",
-    "careers_url": "https://careers.abbank.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ | Ngân hàng TMCP ABBank | ABBank",
     "source_url": "https://abbank.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.abbank.vn/"
+    ]
   },
   {
     "company": "AIA Vietnam",
     "industry": "Insurance",
     "website": "https://www.aia.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.aia.com.vn/vi/ve-chung-toi/co-hoi-nghe-nghiep.html",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.aia.com.vn/vi/ve-chung-toi/co-hoi-nghe-nghiep.html",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.aia.com.vn/vi.html"
   },
   {
     "company": "Acecook Vietnam",
@@ -733,42 +87,45 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Acecook Việt Nam - Thương hiệu mì ăn liền an toàn an tâm đến từ Nhật Bản",
     "source_url": "https://acecookvietnam.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Agribank",
     "industry": "Banking",
     "website": "https://www.agribank.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.agribank.com.vn/vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam",
     "source_url": "https://www.agribank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.agribank.com.vn/vn/tuyen-dung"
+    ]
   },
   {
     "company": "Ajinomoto Vietnam",
     "industry": "FMCG",
     "website": "https://www.ajinomoto.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.ajinomoto.com.vn/vi/career-opportunities",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.ajinomoto.com.vn/vi/career-opportunities",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.ajinomoto.com.vn/vi"
   },
   {
     "company": "AkzoNobel Vietnam",
@@ -784,24 +141,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.akzonobel.com/en"
   },
   {
     "company": "Amanotes",
     "industry": "Technology",
     "website": "https://www.amanotes.com/",
     "country": "Vietnam",
-    "careers_url": "https://www.careers.amanotes.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Amanotes | Everyone Can Music",
     "source_url": "https://www.amanotes.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.careers.amanotes.com/"
+    ]
   },
   {
     "company": "An Khang Pharmacy",
@@ -817,8 +177,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Nhà thuốc An Khang - Hệ thống bán lẻ thuốc chính hãng 100%",
     "source_url": "https://www.nhathuocankhang.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Apollo English",
@@ -834,8 +195,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trung tâm tiếng Anh Apollo English - Trung tâm Anh ngữ cho bé",
     "source_url": "https://apollo.edu.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Appota",
@@ -851,8 +213,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Appota - Entertainment Ecosystem",
     "source_url": "https://appota.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Axon Active Vietnam",
@@ -868,7 +231,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://axonactive.com/robots.txt"
   },
   {
     "company": "BEST Express Vietnam",
@@ -884,24 +247,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.best-inc.vn/robots.txt"
   },
   {
     "company": "BIDV",
     "industry": "Banking",
     "website": "https://bidv.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://bidv.com.vn/vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "BIDVTrang Cổng",
     "source_url": "https://bidv.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://bidv.com.vn/vn/tuyen-dung"
+    ]
   },
   {
     "company": "BSR",
@@ -917,7 +283,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='bsr.com.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))"
   },
   {
     "company": "BVBank",
@@ -933,7 +299,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://bvbank.net.vn/robots.txt"
   },
   {
     "company": "Bac A Bank",
@@ -949,7 +315,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.baca-bank.vn/SitePages/trang-chu.aspx"
   },
   {
     "company": "Bao Viet",
@@ -965,41 +331,47 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.baoviet.com.vn/vi"
   },
   {
     "company": "Base.vn",
     "industry": "Technology",
     "website": "https://base.vn/",
     "country": "Vietnam",
-    "careers_url": "https://careers.base.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Base.vn - Nền tảng quản trị doanh nghiệp toàn diện",
     "source_url": "https://base.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.base.vn/"
+    ]
   },
   {
     "company": "Be Group",
     "industry": "Technology & Mobility",
     "website": "https://be.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://be.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Be – Tự hào là một công ty công nghệ Việt, Be mong muốn trở thành cầu nối giữa mọi khách hàng và người cung cấp dịch vụ",
     "source_url": "https://be.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://be.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "Ben Thanh Tourist",
@@ -1015,42 +387,45 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Mạng bán tour du lịch trực tuyến hàng đầu tại Việt Nam | BenThanh Tourist",
     "source_url": "https://benthanhtourist.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Bibica",
     "industry": "FMCG",
     "website": "https://www.bibica.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.bibica.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Bibica - Tinh hoa bánh kẹo Việt",
     "source_url": "https://www.bibica.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.bibica.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "British University Vietnam",
     "industry": "Education",
     "website": "https://www.buv.edu.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.buv.edu.vn/work-for-buv/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.buv.edu.vn/work-for-buv/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://buv.edu.vn/robots.txt"
   },
   {
     "company": "Brother Vietnam",
@@ -1066,7 +441,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.brother.com.vn/vi-vn"
   },
   {
     "company": "C.P. Vietnam",
@@ -1082,8 +457,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "C.P. Viet Nam",
     "source_url": "https://www.cp.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "CIMB Vietnam",
@@ -1099,41 +475,47 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.cimbbank.com.vn/vi/personal/home.html"
   },
   {
     "company": "CJ Foods Vietnam",
     "industry": "FMCG",
     "website": "https://cjfoods.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://cjfoods.com.vn/career",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "CJ Foods Việt NamZalo",
     "source_url": "https://cjfoods.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://cjfoods.com.vn/career"
+    ]
   },
   {
     "company": "CMC Corporation",
     "industry": "Technology",
     "website": "https://www.cmc.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.cmc.com.vn",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Tập đoàn Công nghệ CMC",
     "source_url": "https://www.cmc.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.cmc.com.vn"
+    ]
   },
   {
     "company": "Canon Vietnam",
@@ -1149,7 +531,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://vn.canon"
   },
   {
     "company": "Cargill Vietnam",
@@ -1165,7 +547,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:http://www.cargill.com.vn/"
   },
   {
     "company": "Carlsberg Vietnam",
@@ -1181,7 +563,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://carlsbergvietnam.vn/vi/"
   },
   {
     "company": "Casumina",
@@ -1197,8 +579,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Casumina - Nhà sản xuất lốp xe hàng đầu Việt Nam",
     "source_url": "https://www.casumina.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Central Construction",
@@ -1214,110 +597,133 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "CÔNG TY CỔ PHẦN XÂY DỰNG CENTRAL",
     "source_url": "https://www.centralcons.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.tiktok.com/@central.tuyendung",
+      "https://www.centralcons.vn/career/central-khoi-dong-chien-dich-tuyen-dung-than-toc-2026/",
+      "https://www.centralcons.vn/career/tuyen-dung-thang-06-2026/",
+      "https://www.centralcons.vn/career/tuyen-dung-ky-su-xay-dung-2026/"
+    ]
   },
   {
     "company": "Chubb Life Vietnam",
     "industry": "Insurance",
     "website": "https://www.chubb.com/vn-vn/",
     "country": "Vietnam",
-    "careers_url": "https://careers.chubb.com/global/en/apac",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Chubb Vietnam",
     "source_url": "https://www.chubb.com/vn-vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.chubb.com/global/en/apac"
+    ]
   },
   {
     "company": "Circle K Vietnam",
     "industry": "Retail",
     "website": "https://www.circlek.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.circlek.com.vn/vi/co-hoi-nghe-nghiep-circle-k/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.circlek.com.vn/vi/co-hoi-nghe-nghiep-circle-k/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.circlek.com.vn/vi/"
   },
   {
     "company": "Coca-Cola Vietnam",
     "industry": "FMCG",
     "website": "https://www.coca-cola.com/vn/vi",
     "country": "Vietnam",
-    "careers_url": "https://www.coca-colacompany.com/careers",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Coca-Cola Vietnam",
     "source_url": "https://www.coca-cola.com/vn/vi",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.coca-colacompany.com/careers"
+    ]
   },
   {
     "company": "Coteccons",
     "industry": "Construction",
     "website": "https://www.coteccons.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.coteccons.vn/careers-vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "COTECCONS - Building Futures",
     "source_url": "https://www.coteccons.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.coteccons.vn/careers-vn/"
+    ]
   },
   {
     "company": "DHG Pharma",
     "industry": "Pharmaceuticals",
     "website": "https://dhgpharma.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.dhgpharma.com.vn/vi",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://tuyendung.dhgpharma.com.vn/vi",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://dhgpharma.com.vn/vi"
   },
   {
     "company": "DKSH Vietnam",
     "industry": "Distribution",
     "website": "https://www.dksh.com/vn-en/home",
     "country": "Vietnam",
-    "careers_url": "https://www.dksh.com/vn-en/home/careers",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "DKSH Vietnam: International Market Expansion Services Provider",
     "source_url": "https://www.dksh.com/vn-en/home",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.dksh.com/vn-en/home/careers",
+      "https://www.dksh.com/vn-en/home/careers/life-at-dksh",
+      "https://www.dksh.com/vn-en/home/careers/why-dksh",
+      "https://www.dksh.com/vn-en/home/careers/see-what-you-can-do",
+      "https://www.dksh.com/vn-en/home/careers/workplace-locations",
+      "https://www.dksh.com/vn-en/home/careers/early-careers",
+      "https://www.dksh.com/vn-en/home/careers/employer-of-choice-awards",
+      "https://www.dksh.com/vn-en/home/careers/workplace-locations/vietnam"
+    ]
   },
   {
     "company": "DOHG",
@@ -1333,7 +739,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "[Errno 11001] getaddrinfo failed"
   },
   {
     "company": "DOJI",
@@ -1349,24 +755,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://doji.vn/robots.txt"
   },
   {
     "company": "DRC",
     "industry": "Manufacturing",
     "website": "https://drc.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://drc.com.vn/category/tin-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "DRC Tire - Nhà sản xuất săm lốp hàng đầu Việt Nam",
     "source_url": "https://drc.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://drc.com.vn/category/tin-tuyen-dung/"
+    ]
   },
   {
     "company": "Dabaco",
@@ -1382,7 +791,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://dabaco.vn/robots.txt"
   },
   {
     "company": "Dai-ichi Life Vietnam",
@@ -1398,7 +807,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://dai-ichi-life.com.vn/404"
   },
   {
     "company": "Daikin Vietnam",
@@ -1414,8 +823,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Daikin Vietnam - Không khí lý tưởng mọi không gian",
     "source_url": "https://www.daikin.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "De Heus Vietnam",
@@ -1431,8 +841,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "De Heus Vietnam",
     "source_url": "https://www.deheus.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "EVN",
@@ -1448,8 +859,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang thông tin điện tử tổng hợp - Tập đoàn Điện lực Việt Nam",
     "source_url": "https://www.evn.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Epson Vietnam",
@@ -1465,25 +877,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Epson Vietnam | Home",
     "source_url": "https://www.epson.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Eurowindow",
     "industry": "Construction",
     "website": "https://eurowindow.biz/",
     "country": "Vietnam",
-    "careers_url": "https://eurowindow.biz/tin-tuc/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Eurowindow - Nhà cung cấp giải pháp tổng thể về vật liệu xây dựng xanh hàng đầu Việt Nam",
     "source_url": "https://eurowindow.biz/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://eurowindow.biz/tin-tuc/tuyen-dung"
+    ]
   },
   {
     "company": "Eximbank",
@@ -1499,8 +915,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng thương mại cổ phần Xuất Nhập khẩu Việt Nam",
     "source_url": "https://eximbank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "F88",
@@ -1516,8 +933,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "F88 - Tài Chính Bình Dân - Vay Cầm Cố, Giải Ngân 15p | F88",
     "source_url": "https://f88.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "FE Credit",
@@ -1533,24 +951,23 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.fecredit.com.vn:443/"
   },
   {
     "company": "FPT Retail",
     "industry": "Retail",
     "website": "https://frt.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.frt.vn/Home/Login",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://tuyendung.frt.vn/Home/Login",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://frt.vn/robots.txt"
   },
   {
     "company": "FPTS",
@@ -1566,7 +983,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.fpts.com.vn/robots.txt"
   },
   {
     "company": "FWD Vietnam",
@@ -1582,7 +999,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.fwd.com.vn/vi/"
   },
   {
     "company": "Fahasa",
@@ -1598,8 +1015,11 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Fahasa - Nhà Sách Trực Tuyến Hàng Đầu Việt Nam - FAHASA.COM",
     "source_url": "https://www.fahasa.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.fahasa.com/foreigncategory/personal-development/advice-on-careers-achieving-success.html"
+    ]
   },
   {
     "company": "FamilyMart Vietnam",
@@ -1615,24 +1035,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://famima.vn/robots.txt"
   },
   {
     "company": "Ford Vietnam",
     "industry": "Manufacturing",
     "website": "https://www.ford.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.ford.com.vn/content/na/ford/vi_vn/home/about/recruitment/hr-intro.html",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Xe Ford Việt Nam: Xe Bán Tải, SUV 5 & 7 Chỗ, Xe Tải Van | Ford VNExpandCollapseRight AccentRight AccentRight AccentbackbackbackExpandCollapseExpandCollapseRight AccentRight AccentRight AccentRight AccentbackbackbackbackExpandCollapsebackTài",
     "source_url": "https://www.ford.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.ford.com.vn/content/na/ford/vi_vn/home/about/recruitment/hr-intro.html"
+    ]
   },
   {
     "company": "FrieslandCampina Vietnam",
@@ -1648,25 +1071,41 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Nourishing by nature",
     "source_url": "https://www.frieslandcampina.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Fulbright University Vietnam",
     "industry": "Education",
     "website": "https://fulbright.edu.vn/",
     "country": "Vietnam",
-    "careers_url": "https://fulbright.edu.vn/join-us/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://fulbright.edu.vn/join-us/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://fulbright.edu.vn/robots.txt"
+  },
+  {
+    "company": "GCS Vietnam",
+    "industry": "Technology",
+    "website": "https://www.globalcybersoft.com/",
+    "country": "Vietnam",
+    "careers_url": null,
+    "rights_status": "unreviewed",
+    "page_discovery_enabled": false,
+    "collector_supported": false,
+    "platform": "Not yet identified",
+    "integration_status": "Chưa kết nối · chờ xác minh nguồn",
+    "verification_method": "research_queue",
+    "website_check_status": "unavailable",
+    "reference_checked_at": "2026-09-28",
+    "check_note": "HTTPSConnectionPool(host='www.globalcybersoft.com', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.globalcybersoft.com'. (_ssl.c:10"
   },
   {
     "company": "GELEX",
@@ -1682,8 +1121,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Gelex Group - Sản xuất công nghiệp - Hạ tầng",
     "source_url": "https://gelex.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "GS25 Vietnam",
@@ -1699,58 +1139,65 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://gs25.com.vn/robots.txt"
   },
   {
     "company": "Gemadept",
     "industry": "Logistics",
     "website": "https://www.gemadept.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.gemadept.com.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ - Gemadept Corporation",
     "source_url": "https://www.gemadept.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.gemadept.com.vn/tuyen-dung/"
+    ]
   },
   {
     "company": "Generali Vietnam",
     "industry": "Insurance",
     "website": "https://generali.vn/",
     "country": "Vietnam",
-    "careers_url": "https://generali.vn/page/company/career/career-general",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://generali.vn/page/company/career/career-general",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "website_title": "Generali Việt Nam - Bảo hiểm nhân thọ Ý thành lập 1831 | Gần 200 năm bảo vệ vững chắc",
+    "source_url": "https://generali.vn/",
+    "career_link_candidates": []
   },
   {
     "company": "Giao Hàng Nhanh",
     "industry": "Logistics",
     "website": "https://ghn.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.ghn.vn/recruit?tag=recruit",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Giao Hàng Nhanh: Giao Siêu Nhanh, Giá Siêu Tốt – GHN.VN Giao Hàng Nhanh",
     "source_url": "https://ghn.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.ghn.vn/recruit?tag=recruit"
+    ]
   },
   {
     "company": "Giao Hàng Tiết Kiệm",
@@ -1766,7 +1213,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://ghtk.vn/robots.txt"
   },
   {
     "company": "Golden Gate Group",
@@ -1782,7 +1229,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://ggg.com.vn/robots.txt"
   },
   {
     "company": "GreenFeed Vietnam",
@@ -1798,25 +1245,25 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công ty Cổ phần GREENFEED Việt Nam",
     "source_url": "https://www.greenfeed.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Guardian Vietnam",
     "industry": "Retail",
     "website": "https://www.guardian.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.guardian.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.guardian.com.vn/tuyen-dung",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.guardian.com.vn/"
   },
   {
     "company": "HABECO",
@@ -1832,42 +1279,51 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "HABECO - SỨC BẬT VIỆT NAM",
     "source_url": "https://www.habeco.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "HD SAISON",
     "industry": "Consumer Finance",
     "website": "https://www.hdsaison.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.hdsaison.com.vn/vn/co-hoi-nghe-nghiep.html/p-1",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công ty Tài chính trách nhiệm hữu hạn HD SAISON - HD SAISON Tài chính tiêu dùng",
     "source_url": "https://www.hdsaison.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.hdsaison.com.vn/vn/lien-he-hoi-dap.html",
+      "https://tuyendung.hdsaison.com.vn/vn/co-hoi-nghe-nghiep.html/p-1",
+      "https://tuyendung.hdsaison.com.vn/vn/van-hoa-hd-saison.html"
+    ]
   },
   {
     "company": "HDBank",
     "industry": "Banking",
     "website": "https://hdbank.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://career.hdbank.com.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "HDBank - Mở tài khoản online miễn phí & Lãi suất tiết kiệm online cao",
     "source_url": "https://hdbank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://career.hdbank.com.vn/"
+    ]
   },
   {
     "company": "HSC",
@@ -1883,7 +1339,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.hsc.com.vn/en"
   },
   {
     "company": "Hanwha Life Vietnam",
@@ -1899,24 +1355,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.hanwhalife.com.vn/vi"
   },
   {
     "company": "Haravan",
     "industry": "Technology",
     "website": "https://www.haravan.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.haravan.com",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Haravan - Giải pháp bán hàng đa kênh Omnichannel và Website vượt trội",
     "source_url": "https://www.haravan.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.haravan.com"
+    ]
   },
   {
     "company": "Hasaki",
@@ -1932,8 +1391,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Hasaki.vn | Tiết Kiệm Hơn. Mọi Lúc.",
     "source_url": "https://hasaki.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Heineken Vietnam",
@@ -1949,24 +1409,28 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://heineken-vietnam.com.vn/robots.txt"
   },
   {
     "company": "Highlands Coffee",
     "industry": "Food Services",
     "website": "https://www.highlandscoffee.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://careers.highlandscoffee.com.vn/vi/viec-lam/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Highlands Coffee - Đặt Giao Ngay 19001755",
     "source_url": "https://www.highlandscoffee.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.highlandscoffee.com.vn/vi/trang-chu/",
+      "https://careers.highlandscoffee.com.vn/vi/viec-lam/"
+    ]
   },
   {
     "company": "Hoa Sen Group",
@@ -1982,41 +1446,51 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://hoasengroup.vn/vi/trang-chu/"
   },
   {
     "company": "Home Credit Vietnam",
     "industry": "Consumer Finance",
     "website": "https://www.homecredit.vn/",
     "country": "Vietnam",
-    "careers_url": "https://career.homecredit.vn/vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Home Credit - Tài chính số tận tâm",
     "source_url": "https://www.homecredit.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://career.homecredit.vn/vn/"
+    ]
   },
   {
     "company": "Honda Vietnam",
     "industry": "Manufacturing",
     "website": "https://www.honda.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.honda.com.vn/tuyen-dung/co-hoi-nghe-nghiep",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Honda",
     "source_url": "https://www.honda.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.honda.com.vn/tuyen-dung/evp-tuyen-dung",
+      "https://www.honda.com.vn/tuyen-dung/co-hoi-nghe-nghiep",
+      "https://www.honda.com.vn/tuyen-dung/tin-tuc-tuyen-dung",
+      "https://www.honda.com.vn/tuyen-dung/moi-truong-lam-viec",
+      "https://www.honda.com.vn/tuyen-dung/tin-tuc-tuyen-dung?mobile=1"
+    ]
   },
   {
     "company": "Hong Leong Bank Vietnam",
@@ -2032,92 +1506,109 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.hlbank.com.vn/vi/personal-banking/home.html"
   },
   {
     "company": "Hoàn Mỹ Medical Group",
     "industry": "Healthcare",
     "website": "https://hoanmy.com/",
     "country": "Vietnam",
-    "careers_url": "https://hoanmy.com/career/vi/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Tận tâm chăm sóc | Tập Đoàn Y Khoa Hoàn Mỹ",
     "source_url": "https://hoanmy.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://hoanmy.com/career/vi/"
+    ]
   },
   {
     "company": "Hòa Bình Construction",
     "industry": "Construction",
     "website": "https://hbcg.vn/",
     "country": "Vietnam",
-    "careers_url": "https://hbcg.vn/jobs",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "HOA BINH CONSTRUCTION GROUP",
     "source_url": "https://hbcg.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://hbcg.vn/jobs"
+    ]
   },
   {
     "company": "ILA Vietnam",
     "industry": "Education",
     "website": "https://ila.edu.vn/",
     "country": "Vietnam",
-    "careers_url": "https://career.ila.edu.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trung tâm Anh ngữ ILA: Giáo viên bản xứ, Chất lượng hàng đầu",
     "source_url": "https://ila.edu.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://career.ila.edu.vn/"
+    ]
   },
   {
     "company": "Imexpharm",
     "industry": "Pharmaceuticals",
     "website": "https://www.imexpharm.com/",
     "country": "Vietnam",
-    "careers_url": "https://www.imexpharm.com/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Imexpharm – Công Ty Dược Phẩm Chuẩn EU-GMP Hàng Đầu",
     "source_url": "https://www.imexpharm.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.imexpharm.com/tuyen-dung"
+    ]
   },
   {
     "company": "Indovina Bank",
     "industry": "Banking",
     "website": "https://www.indovinabank.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.indovinabank.com.vn/vi/recruitment",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ | NGÂN HÀNG TNHH INDOVINA",
     "source_url": "https://www.indovinabank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.indovinabank.com.vn/vi/recruitment",
+      "https://www.indovinabank.com.vn/vi/recruitment/grow-glow-ket-noi-moi-co-hoi-nghe-nghiep-tai-ivb",
+      "https://www.indovinabank.com.vn/vi/news-event/ngan-hang-tnhh-indovina-ivb-ghi-dau-soi-dong-tai-ngay-hoi-uel-career-expo-2026"
+    ]
   },
   {
     "company": "Isuzu Vietnam",
@@ -2133,8 +1624,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "General - Trang chủ | ISUZU VIETNAM",
     "source_url": "https://isuzu-vietnam.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "J&T Express Vietnam",
@@ -2150,7 +1642,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://jtexpress.vn/vi"
   },
   {
     "company": "Jollibee Vietnam",
@@ -2166,8 +1658,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Home page",
     "source_url": "https://jollibee.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Jotun Vietnam",
@@ -2183,7 +1676,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.jotun.com/vn-vi"
   },
   {
     "company": "KFC Vietnam",
@@ -2199,92 +1692,103 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://kfcvietnam.com.vn/robots.txt"
   },
   {
     "company": "KIDO Group",
     "industry": "FMCG",
     "website": "https://www.kdc.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.kdc.vn/nghe-nghiep/nhu-cau-tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "TẬP ĐOÀN KIDO\n  ›\n      Trang chủ",
     "source_url": "https://www.kdc.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.kdc.vn/nghe-nghiep/nhu-cau-tuyen-dung"
+    ]
   },
   {
     "company": "KIS Vietnam Securities",
     "industry": "Securities",
     "website": "https://kisvn.vn/",
     "country": "Vietnam",
-    "careers_url": "https://kisvn.vn/ve-kis/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Khách hàng cá nhân - CTCP Chứng khoán KIS Việt Nam",
     "source_url": "https://kisvn.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://kisvn.vn/ve-kis/tuyen-dung"
+    ]
   },
   {
     "company": "KMS Technology",
     "industry": "Technology",
     "website": "https://kms-technology.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.kms-technology.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://careers.kms-technology.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://kms-technology.com/"
   },
   {
     "company": "KienlongBank",
     "industry": "Banking",
     "website": "https://kienlongbank.com/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.kienlongbank.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng Kiên Long",
     "source_url": "https://kienlongbank.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.kienlongbank.com/"
+    ]
   },
   {
     "company": "KiotViet",
     "industry": "Technology",
     "website": "https://www.kiotviet.vn/",
     "country": "Vietnam",
-    "careers_url": "https://about.kiotviet.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "KiotViet - Phần mềm quản lý bán hàng Phổ Biến Nhất",
     "source_url": "https://www.kiotviet.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://about.kiotviet.vn/tuyen-dung/"
+    ]
   },
   {
     "company": "LG Electronics Vietnam",
@@ -2300,8 +1804,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Thiết bị giải trí & Điện tử gia dụng | LG Việt Nam",
     "source_url": "https://www.lg.com/vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "LPBank",
@@ -2317,7 +1822,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://lpbank.com.vn/ca-nhan"
   },
   {
     "company": "LogiGear",
@@ -2333,25 +1838,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "AI-Driven Software Testing & Development Services",
     "source_url": "https://www.logigear.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Lotte Mart Vietnam",
     "industry": "Retail",
     "website": "https://lottemart.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://lottemart.com.vn/tin-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "LOTTE MART Website – Nhà bán lẻ hàng đầu Châu Á",
     "source_url": "https://lottemart.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://lottemart.com.vn/tin-tuyen-dung/"
+    ]
   },
   {
     "company": "Lotteria Vietnam",
@@ -2367,110 +1876,139 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Lotteria Việt Nam",
     "source_url": "https://www.lotteria.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Lộc Trời Group",
     "industry": "Food & Agriculture",
     "website": "https://www.loctroi.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.loctroi.vn/tuyen-dung/co-hoi-nghe-nghiep/101",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Tập Đoàn Lộc Trời – Cùng nông dân phát triển bền vững",
     "source_url": "https://www.loctroi.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.loctroi.vn/tuyen-dung/co-hoi-nghe-nghiep/101"
+    ]
   },
   {
     "company": "MBS",
     "industry": "Securities",
     "website": "https://www.mbs.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://mbs.com.vn/vi-tri-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "MBS - Công ty Cổ phần Chứng khoán MB",
     "source_url": "https://www.mbs.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.mbs.com.vn/tuyen-dung/moi-truong-con-nguoi-mbs/",
+      "https://www.mbs.com.vn/tuyen-dung/chinh-sach-nhan-su-tai-mbs/",
+      "https://mbs.com.vn/vi-tri-tuyen-dung/",
+      "https://mbs.com.vn/tuyen-dung-chuyen-vien-cham-soc-khach-hang-ca-nhan-cao-cap-pcs/",
+      "https://mbs.com.vn/tuyen-dung/moi-truong-con-nguoi-mbs/",
+      "https://mbs.com.vn/tuyen-dung/chinh-sach-nhan-su-tai-mbs/"
+    ]
   },
   {
     "company": "MISA",
     "industry": "Technology",
     "website": "https://www.misa.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.misa.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Tập đoàn MISA: Tiên phong xây dựng Agentic AI dành cho doanh nghiệp, hộ kinh doanh và Chính phủ",
     "source_url": "https://www.misa.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://amis.misa.vn/amis-tuyen-dung/",
+      "https://www.misa.vn/tuyen-dung/",
+      "https://www.misa.vn/tuyen-dung"
+    ]
   },
   {
     "company": "MM Mega Market Vietnam",
     "industry": "Retail",
     "website": "https://mmvietnam.com/",
     "country": "Vietnam",
-    "careers_url": "https://mmvietnam.com/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang Chủ - Trung Tâm MM Mega Market Vietnam",
     "source_url": "https://mmvietnam.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://mmvietnam.com/tuyen-dung/"
+    ]
   },
   {
     "company": "MSB",
     "industry": "Banking",
     "website": "https://www.msb.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.msb.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng MSB - Ngân hàng TMCP Hàng Hải Việt Nam",
     "source_url": "https://www.msb.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.msb.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "Manulife Vietnam",
     "industry": "Insurance",
     "website": "https://www.manulife.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://careers.manulife.com/vn/vi",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Bảo hiểm Manulife Việt Nam",
     "source_url": "https://www.manulife.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.manulife.com.vn/vi/tuyen-dung/dai-su-xanh-phu-quy.html",
+      "https://www.manulife.com.vn/vi/ve-chung-toi/tuyen-dung-tu-van-tai-chinh-kenh-dai-ly.html",
+      "https://www.manulife.com.vn/vi/ve-chung-toi/tuyen-dung-tu-van-bao-hiem-kenh-hop-tac-ngan-hang.html",
+      "https://careers.manulife.com/vn/vi"
+    ]
   },
   {
     "company": "Masan Group",
@@ -2486,8 +2024,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Masan Group: Our journey is the consumers’ journey",
     "source_url": "https://www.masangroup.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Mcredit",
@@ -2503,24 +2042,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://mcredit.com.vn/robots.txt"
   },
   {
     "company": "Medlatec",
     "industry": "Healthcare",
     "website": "https://medlatec.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.medlatec.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Bệnh viện Đa khoa MEDLATEC",
     "source_url": "https://medlatec.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.medlatec.vn/"
+    ]
   },
   {
     "company": "Mercedes-Benz Vietnam",
@@ -2536,24 +2078,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.mercedes-benz.com.vn/"
   },
   {
     "company": "Minh Phú Seafood",
     "industry": "Food & Agriculture",
     "website": "https://minhphu.com/",
     "country": "Vietnam",
-    "careers_url": "https://minhphu.com/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "minhphu.comMINH PHU SEAFOOD CORPORATION. One of the world's leading shrimp suppliers",
     "source_url": "https://minhphu.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://minhphu.com/tuyen-dung/"
+    ]
   },
   {
     "company": "Mirae Asset Securities Vietnam",
@@ -2569,25 +2114,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Mirae Asset Securities (Vietnam) JSCGD co soGD co so",
     "source_url": "https://masvn.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Mitsubishi Motors Vietnam",
     "industry": "Manufacturing",
     "website": "https://www.mitsubishi-motors.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.mitsubishi-motors.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ | Mitsubishi Motors Việt Nam",
     "source_url": "https://www.mitsubishi-motors.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.mitsubishi-motors.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "MobiFone",
@@ -2603,41 +2152,54 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "page_too_large"
   },
   {
     "company": "Mondelez Kinh Do",
     "industry": "FMCG",
     "website": "https://www.mondelezinternational.com/vietnam/",
     "country": "Vietnam",
-    "careers_url": "https://www.mondelezinternational.com/careers/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Vietnam | Mondelēz International, Inc.",
     "source_url": "https://www.mondelezinternational.com/vietnam/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.mondelezinternational.com/careers/",
+      "https://www.mondelezinternational.com/careers/early-careers/",
+      "https://www.mondelezinternational.com/careers/early-careers/australia-and-new-zealand/",
+      "https://www.mondelezinternational.com/careers/early-careers/central-europe/",
+      "https://www.mondelezinternational.com/united-kingdom/early-careers/",
+      "https://www.mondelezinternational.com/united-states/early-careers/",
+      "https://www.mondelezinternational.com/careers/career-areas/",
+      "https://www.mondelezinternational.com/careers/our-world/"
+    ]
   },
   {
     "company": "Mường Thanh Group",
     "industry": "Travel & Hospitality",
     "website": "https://muongthanh.com/",
     "country": "Vietnam",
-    "careers_url": "https://muongthanh.com/tuyen-dung.html",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Mường Thanh - Chuỗi khách sạn tư nhân lớn nhất Đông Dương",
     "source_url": "https://muongthanh.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://muongthanh.com/tuyen-dung.html"
+    ]
   },
   {
     "company": "NCB",
@@ -2653,7 +2215,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.ncb-bank.vn/robots.txt"
   },
   {
     "company": "NTQ Solution",
@@ -2669,7 +2231,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://ntq.com.vn/vi/"
   },
   {
     "company": "Nam A Bank",
@@ -2685,7 +2247,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.namabank.com.vn/robots.txt"
   },
   {
     "company": "Nam Kim Steel",
@@ -2701,41 +2263,47 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='namkimgroup.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by ConnectTimeoutError(<HTTPSConnection(host='namkimgroup.vn', port=443) at 0x28a22043890>, 'Connection to namkimgroup.vn timed out. (connect timeout=5)'))"
   },
   {
     "company": "NashTech",
     "industry": "Technology",
     "website": "https://www.nashtechglobal.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.nashtechglobal.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "IT consulting and technology services | Custom software development company",
     "source_url": "https://www.nashtechglobal.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.nashtechglobal.com/"
+    ]
   },
   {
     "company": "Newtecons",
     "industry": "Construction",
     "website": "https://newtecons.vn/",
     "country": "Vietnam",
-    "careers_url": "https://newtecons.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "NewteconsNEWTECONSN_BlueN_BlueN_Blue",
     "source_url": "https://newtecons.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://newtecons.vn/tuyen-dung/"
+    ]
   },
   {
     "company": "Nhựa Bình Minh",
@@ -2751,7 +2319,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://binhminhplastic.com.vn:443/"
   },
   {
     "company": "Nhựa Tiền Phong",
@@ -2767,8 +2335,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Nhựa Tiền Phong - Trang chủ",
     "source_url": "https://nhuatienphong.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Nippon Paint Vietnam",
@@ -2784,24 +2353,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://nipponpaint.com.vn/vi"
   },
   {
     "company": "Nutifood",
     "industry": "FMCG",
     "website": "https://nutifood.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.nutifood.com.vn",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Nutifood - Giải Pháp Dinh Dưỡng Từ Chuyên Gia | Nutifood",
     "source_url": "https://nutifood.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.nutifood.com.vn"
+    ]
   },
   {
     "company": "OCB",
@@ -2817,75 +2389,91 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.ocb.com.vn/vi/ca-nhan"
   },
   {
     "company": "One Mount",
     "industry": "Technology",
     "website": "https://onemount.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.onemount.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "One Mount",
     "source_url": "https://onemount.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.onemount.com/"
+    ]
   },
   {
     "company": "Orient Software",
     "industry": "Technology",
     "website": "https://www.orientsoftware.com/",
     "country": "Vietnam",
-    "careers_url": "https://www.orientsoftware.com/company/careers/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Software Development Company in Vietnam | Orient Software",
     "source_url": "https://www.orientsoftware.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.orientsoftware.com/company/careers/"
+    ]
   },
   {
     "company": "Orion Vietnam",
     "industry": "FMCG",
     "website": "https://orion.vn/",
     "country": "Vietnam",
-    "careers_url": "https://orion.vn/tuyen-dung/viec-lam/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ - Công ty TNHH Thực phẩm Orion Vina",
     "source_url": "https://orion.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://orion.vn/tuyen-dung/viec-lam/",
+      "https://orion.vn/tuyen-dung/vi-sao-nen-gia-nhap-orion/",
+      "https://orion.vn/tuyen-dung/quy-trinh-tuyen-dung/"
+    ]
   },
   {
     "company": "PAN Group",
     "industry": "Food & Agriculture",
     "website": "https://thepangroup.vn/",
     "country": "Vietnam",
-    "careers_url": "https://thepangroup.vn/about-us/career/careers-at-the-pan-group/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "The PAN Group",
     "source_url": "https://thepangroup.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://thepangroup.vn/about-us/career/",
+      "https://thepangroup.vn/about-us/career/why-the-pan-group/",
+      "https://thepangroup.vn/about-us/career/careers-at-the-pan-group/"
+    ]
   },
   {
     "company": "PGBank",
@@ -2901,7 +2489,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.pgbank.com.vn/robots.txt"
   },
   {
     "company": "PNJ",
@@ -2917,8 +2505,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang Sức Cao Cấp PNJ | Cty Cổ Phần Vàng Bạc Đá Quý Phú Nhuận",
     "source_url": "https://www.pnj.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "PV GAS",
@@ -2934,7 +2523,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.pvgas.com.vn/robots.txt"
   },
   {
     "company": "PV Power",
@@ -2950,24 +2539,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://pvpower.vn/vi"
   },
   {
     "company": "Panasonic Vietnam",
     "industry": "Electronics",
     "website": "https://www.panasonic.com/vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.panasonic.com/vn/corporate/careers.html",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Panasonic Việt Nam – Tìm hiểu về chúng tôi và các sản phẩm",
     "source_url": "https://www.panasonic.com/vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.panasonic.com/vn/corporate/careers.html"
+    ]
   },
   {
     "company": "Payoo",
@@ -2983,7 +2575,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.payoo.vn/robots.txt"
   },
   {
     "company": "Petrolimex",
@@ -2999,8 +2591,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ :: Petrolimex (PLX) - Tập đoàn Xăng dầu Việt Nam",
     "source_url": "https://www.petrolimex.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Pharmacity",
@@ -3015,8 +2608,7 @@
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
     "verification_method": "research_queue",
     "website_check_status": "manual_review",
-    "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "reference_checked_at": "2026-09-28"
   },
   {
     "company": "Phú Quý",
@@ -3032,8 +2624,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Phú Quý",
     "source_url": "https://phuquy.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Phúc Long",
@@ -3049,8 +2642,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Phúc Long Coffee & Tea",
     "source_url": "https://phuclong.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Piaggio Vietnam",
@@ -3066,7 +2660,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.piaggio.com/vn_VI/"
   },
   {
     "company": "Pizza 4P's",
@@ -3082,7 +2676,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://pizza4ps.com/vn"
   },
   {
     "company": "Pizza Hut Vietnam",
@@ -3098,24 +2692,23 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://pizzahut.vn/robots.txt"
   },
   {
     "company": "Prudential Vietnam",
     "industry": "Insurance",
     "website": "https://www.prudential.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.prudential.com.vn/vi/co-hoi-nghe-nghiep/kien-tao-su-nghiep-tu-vi-the-tien-phong/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.prudential.com.vn/vi/co-hoi-nghe-nghiep/kien-tao-su-nghiep-tu-vi-the-tien-phong/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.prudential.com.vn/vi/"
   },
   {
     "company": "Public Bank Vietnam",
@@ -3131,7 +2724,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://publicbank.com.vn/robots.txt"
   },
   {
     "company": "Pymepharco",
@@ -3147,75 +2740,86 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://stadapymepharco.com/robots.txt"
   },
   {
     "company": "REE Corporation",
     "industry": "Energy",
     "website": "https://www.reecorp.com/",
     "country": "Vietnam",
-    "careers_url": "https://www.reecorp.com/tuyen-dung/vi-tri-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ - REE Corporation",
     "source_url": "https://www.reecorp.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.reecorp.com/tuyen-dung/",
+      "https://www.reecorp.com/tuyen-dung/lam-viec-tai-ree/",
+      "https://www.reecorp.com/tuyen-dung/co-hoi-nghe-nghiep/",
+      "https://www.reecorp.com/tuyen-dung/vi-tri-tuyen-dung/"
+    ]
   },
   {
     "company": "Ricons",
     "industry": "Construction",
     "website": "https://www.ricons.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.ricons.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.ricons.vn/tuyen-dung/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='www.ricons.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))"
   },
   {
     "company": "Rikkeisoft",
     "industry": "Technology",
     "website": "https://rikkeisoft.com/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.rikkeisoft.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Rikkeisoft - Beyond Delivery, We Solve What Matters",
     "source_url": "https://rikkeisoft.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.rikkeisoft.com/"
+    ]
   },
   {
     "company": "Rạng Đông",
     "industry": "Manufacturing",
     "website": "https://rangdong.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://rangdong.com.vn/category/tuyen-dung-2026",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Rạng Đông - Dẫn đầu Cung cấp Hệ sinh thái LED 4.0",
     "source_url": "https://rangdong.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://rangdong.com.vn/category/tuyen-dung-2026"
+    ]
   },
   {
     "company": "SABECO",
@@ -3231,75 +2835,87 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.sabeco.com.vn/robots.txt"
   },
   {
     "company": "SHB",
     "industry": "Banking",
     "website": "https://www.shb.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://shbjobs.shb.com.vn/recruitments?work-category=headquarter",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://shbjobs.shb.com.vn/recruitments?work-category=headquarter",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.shb.com.vn/"
   },
   {
     "company": "SJC",
     "industry": "Retail",
     "website": "https://sjc.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://sjc.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang Chủ - CÔNG TY TNHH MTV VÀNG BẠC ĐÁ QUÝ SÀI GÒN - SJC",
     "source_url": "https://sjc.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://sjc.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "SOTRANS",
     "industry": "Logistics",
     "website": "https://sotrans.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://career.sotransgroup.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "SOTRANS – Top 3 Nhà cung cấp dịch vụ logistics Việt Nam !",
     "source_url": "https://sotrans.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://sotrans.com.vn/tuyen-dung/moi-truong-lam-viec/",
+      "https://sotrans.com.vn/tuyen-dung/ung-vien-can-biet/",
+      "https://sotrans.com.vn/tuyen-dung/thong-tin-tuyen-dung/",
+      "https://career.sotransgroup.vn/",
+      "https://sotrans.com.vn/2024/08/sotrans-logistics-canh-bao-gia-mao-tuyen-dung/"
+    ]
   },
   {
     "company": "SSI Securities",
     "industry": "Securities",
     "website": "https://www.ssi.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.ssi.com.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công ty cổ phần chứng khoán SSI",
     "source_url": "https://www.ssi.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.ssi.com.vn/"
+    ]
   },
   {
     "company": "Sacombank",
@@ -3315,24 +2931,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.sacombank.com.vn/ca-nhan.html"
   },
   {
     "company": "Saigon Co.op",
     "industry": "Retail",
     "website": "https://saigonco-op.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.saigonco-op.com.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Liên hiệp Hợp tác xã Thương mại Tp Hồ Chí Minh - Saigon Co.op",
     "source_url": "https://saigonco-op.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.saigonco-op.com.vn/"
+    ]
   },
   {
     "company": "Saigon Newport",
@@ -3348,76 +2967,87 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ | Saigon Newport Corp.(SNP)",
     "source_url": "https://saigonnewport.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Saigon Technology",
     "industry": "Technology",
     "website": "https://saigontechnology.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.saigontechnology.com",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Saigon Technology | AI-Driven Software Development Company in Vietnam",
     "source_url": "https://saigontechnology.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.saigontechnology.com",
+      "https://careers.saigontechnology.com/",
+      "https://careers.saigontechnology.com/blogs"
+    ]
   },
   {
     "company": "Saigonbank",
     "industry": "Banking",
     "website": "https://www.saigonbank.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.saigonbank.com.vn/vi/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ",
     "source_url": "https://www.saigonbank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.saigonbank.com.vn/vi/tuyen-dung"
+    ]
   },
   {
     "company": "Saigontourist Group",
     "industry": "Travel & Hospitality",
     "website": "https://saigontourist.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://saigontourist.com.vn/tuyen-dung",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ | Saigontourist Group| Tận hưởng bản sắc Việt",
     "source_url": "https://saigontourist.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://saigontourist.com.vn/tuyen-dung"
+    ]
   },
   {
     "company": "Saint-Gobain Vietnam",
     "industry": "Construction",
     "website": "https://www.saint-gobain.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.saint-gobain.com.vn/co-hoi-nghe-nghiep",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://www.saint-gobain.com.vn/co-hoi-nghe-nghiep",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.saint-gobain.com.vn/"
   },
   {
     "company": "Sanofi Vietnam",
@@ -3433,42 +3063,50 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Việt NamSanofiSanofi",
     "source_url": "https://www.sanofi.com/vi/vietnam",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Sapo",
     "industry": "Technology",
     "website": "https://www.sapo.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.sapo.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Nền tảng quản lý bán hàng hợp kênh được sử dụng nhiều nhất Việt Namic1Asset 1",
     "source_url": "https://www.sapo.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.sapo.vn/",
+      "https://tuyendung.sapo.vn/?utm_campaign=cpn:tuyen_dung-plm:footer&utm_source=sapo.vn&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=footer_sapo"
+    ]
   },
   {
     "company": "SeABank",
     "industry": "Banking",
     "website": "https://www.seabank.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.seabank.com.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "SeABank - Ngân hàng TMCP Đông Nam Á",
     "source_url": "https://www.seabank.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.seabank.com.vn/"
+    ]
   },
   {
     "company": "Shinhan Bank Vietnam",
@@ -3484,7 +3122,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='shinhan.com.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))"
   },
   {
     "company": "Siemens Vietnam",
@@ -3500,24 +3138,33 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.siemens.com/en-us/"
   },
   {
     "company": "Sika Vietnam",
     "industry": "Construction",
     "website": "https://vnm.sika.com/",
     "country": "Vietnam",
-    "careers_url": "https://vnm.sika.com/en/career/job-opportunities.html",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Sika Vietnam",
     "source_url": "https://vnm.sika.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://vnm.sika.com/vi/career.html",
+      "https://vnm.sika.com/vi/career/be-part-of-the-sika-spirit.html",
+      "https://vnm.sika.com/vi/career/why-work-at-sika.html",
+      "https://vnm.sika.com/vi/career/training-and-development-.html",
+      "https://vnm.sika.com/en/career/job-opportunities.html",
+      "https://vnm.sika.com/vi/career/leadership-programs.html",
+      "https://vnm.sika.com/vi/career/da-dang-va-hoa-nhap.html"
+    ]
   },
   {
     "company": "Sky Mavis",
@@ -3533,24 +3180,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://skymavis.com/robots.txt"
   },
   {
     "company": "SmartOSC",
     "industry": "Technology",
     "website": "https://www.smartosc.com/",
     "country": "Vietnam",
-    "careers_url": "https://careers.smartosc.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "SmartOSC - Your Trusted Digital Transformation Partner",
     "source_url": "https://www.smartosc.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://careers.smartosc.com/"
+    ]
   },
   {
     "company": "Sotatek",
@@ -3566,25 +3216,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "",
     "source_url": "https://www.sotatek.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Standard Chartered Vietnam",
     "industry": "Banking",
     "website": "https://www.sc.com/vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.sc.com/en/careers/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Standard Chartered Việt Nam – Standard Chartered Việt Nammisc savings 01card mastercardcard debitmoney loan serviceadded value growmisc protectionicon-arrow-2icon-arrow-2icon-arrow-2icon-arrow-2icon-arrow-2icon-arrow-2icon-facebookicon-link",
     "source_url": "https://www.sc.com/vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.sc.com/en/careers/"
+    ]
   },
   {
     "company": "Sun Group",
@@ -3599,8 +3253,7 @@
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
     "verification_method": "research_queue",
     "website_check_status": "manual_review",
-    "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "reference_checked_at": "2026-09-28"
   },
   {
     "company": "Sun Life Vietnam",
@@ -3616,7 +3269,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "403 Client Error: Forbidden for url: https://www.sunlife.com.vn/"
   },
   {
     "company": "Suntory PepsiCo Vietnam Beverage",
@@ -3632,8 +3285,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Suntory PepsiCo Việt Nam",
     "source_url": "https://www.suntorypepsico.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "TC Group",
@@ -3649,8 +3303,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Tập đoàn Thành Công | TC Group",
     "source_url": "https://thanhcong.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "TCBS",
@@ -3666,24 +3321,23 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://www.tcbs.com.vn/ca-nhan/"
   },
   {
     "company": "THACO",
     "industry": "Manufacturing",
     "website": "https://thacogroup.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.thaco.com.vn/tieng-viet/jobs-area",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://tuyendung.thaco.com.vn/tieng-viet/jobs-area",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='thacogroup.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))"
   },
   {
     "company": "TMA Solutions",
@@ -3699,25 +3353,25 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "TMA Solutions | Leading Software Outsourcing in Vietnam",
     "source_url": "https://www.tmasolutions.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "TPBank",
     "industry": "Banking",
     "website": "https://tpb.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.tpb.vn/vi",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://tuyendung.tpb.vn/vi",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "400 Client Error: Bad Request for url: https://tpb.vn/robots.txt"
   },
   {
     "company": "The Coffee House",
@@ -3733,7 +3387,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://thecoffeehouse.com/robots.txt"
   },
   {
     "company": "Thế Giới Di Động",
@@ -3749,25 +3403,30 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Chuyên trang Quan hệ Cổ đông MWG",
     "source_url": "https://mwg.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Toyota Vietnam",
     "industry": "Manufacturing",
     "website": "https://www.toyota.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.toyota.com.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Toyota Việt Nam | Trang thông tin chính thức của hãng xe Toyota",
     "source_url": "https://www.toyota.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.toyota.com.vn/tuyen-dung/",
+      "https://www.toyota.com.vn/tuyen-dung/#contact-form"
+    ]
   },
   {
     "company": "Transimex",
@@ -3783,58 +3442,87 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://transimex.com.vn/robots.txt"
   },
   {
     "company": "Traphaco",
     "industry": "Pharmaceuticals",
     "website": "https://traphaco.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://traphaco.com.vn/recruitment",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Traphaco",
     "source_url": "https://traphaco.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://traphaco.com.vn/recruitment"
+    ]
+  },
+  {
+    "company": "Trung Nguyên E-Coffee",
+    "industry": "Food Services",
+    "website": "https://trungnguyenecoffee.com/",
+    "country": "Vietnam",
+    "careers_url": null,
+    "rights_status": "unreviewed",
+    "page_discovery_enabled": false,
+    "collector_supported": false,
+    "platform": "Not yet identified",
+    "integration_status": "Chưa kết nối · chờ xác minh nguồn",
+    "verification_method": "homepage_checked",
+    "website_check_status": "checked",
+    "reference_checked_at": "2026-09-28",
+    "website_title": "Trung Nguyên E-Coffee",
+    "source_url": "https://trungnguyenecoffee.com/",
+    "career_link_candidates": [
+      "https://trungnguyenecoffee.com/tuyen-dung/"
+    ]
   },
   {
     "company": "Trung Nguyên Legend",
     "industry": "FMCG",
     "website": "https://trungnguyenlegend.com/",
     "country": "Vietnam",
-    "careers_url": "https://trungnguyenlegend.com/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trung Nguyên Legend | Tập đoàn chuyên Cà Phê Năng Lượng - Cà Phê Đổi Đời",
     "source_url": "https://trungnguyenlegend.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://trungnguyenlegend.com/tuyen-dung/"
+    ]
   },
   {
     "company": "Tâm Anh Hospital",
     "industry": "Healthcare",
     "website": "https://tamanhhospital.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tamanhhospital.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Bệnh viện Đa khoa Tâm Anh",
     "source_url": "https://tamanhhospital.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tamanhhospital.vn/tuyen-dung/"
+    ]
   },
   {
     "company": "UOB Vietnam",
@@ -3850,25 +3538,36 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "United Overseas Bank",
     "source_url": "https://www.uob.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "VCCorp",
     "industry": "Technology",
     "website": "https://vccorp.vn/",
     "country": "Vietnam",
-    "careers_url": "https://vccorp.vn/tuyen-dung.htm",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công ty cổ phần VCCorp | VCCorp.vn",
     "source_url": "https://vccorp.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://vccorp.vn/tuyen-dung.htm",
+      "https://vccorp.vn/tuyen-dung/lap-trinh-vien-javascript-chuyen-sau-khoi-cong-nghe-noi-dung-2018090715271955.htm",
+      "https://vccorp.vn/tuyen-dung/chuyen-vien-xu-ly-ngon-ngu-nlp-khoi-cong-nghe-noi-dung-20180907115419222.htm",
+      "https://vccorp.vn/tuyen-dung/chuyen-vien-thiet-ke-web-khoi-cong-nghe-noi-dung-20180907112009831.htm",
+      "https://vccorp.vn/tuyen-dung/lap-trinh-vien-net-web-mobile-khoi-cong-nghe-noi-dung-20180907104815347.htm",
+      "https://vccorp.vn/tuyen-dung/network-engineers-20180227145809227.htm",
+      "https://vccorp.vn/tuyen-dung/system-administrator-20180227145622227.htm",
+      "https://vccorp.vn/tuyen-dung/lap-trinh-vien-cocos2dx-20180227145256305.htm"
+    ]
   },
   {
     "company": "VIB",
@@ -3884,42 +3583,49 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Challenge Validation",
     "source_url": "https://www.vib.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "VIMC",
     "industry": "Logistics",
     "website": "https://vimc.co/",
     "country": "Vietnam",
-    "careers_url": "https://vimc.co/chuyen-muc/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang chủ - Tổng công ty Hàng hải Việt Nam-VIMC",
     "source_url": "https://vimc.co/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://vimc.co/chuyen-muc/tuyen-dung/"
+    ]
   },
   {
     "company": "VISSAN",
     "industry": "Food & Agriculture",
     "website": "https://www.vissan.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.vissan.com.vn/thong-tin-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công Ty Cổ phần Việt Nam Kỹ Nghệ Súc Sản (Vissan)",
     "source_url": "https://www.vissan.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.vissan.com.vn/thong-tin-tuyen-dung/"
+    ]
   },
   {
     "company": "VNDirect",
@@ -3935,7 +3641,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "404 Client Error: Not Found for url: https://www.vndirect.com.vn/robots.txt"
   },
   {
     "company": "VNP Group",
@@ -3951,8 +3657,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "VNP Group - Beyond Expectations",
     "source_url": "https://vnpgroup.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "VNPT",
@@ -3968,24 +3675,27 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='vnpt.com.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLError(1, '[SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1082)')))"
   },
   {
     "company": "VNPay",
     "industry": "Fintech",
     "website": "https://vnpay.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.vnpay.vn",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "VNPAY - Công ty Cổ phần Giải pháp Thanh toán Việt Nam",
     "source_url": "https://vnpay.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.vnpay.vn"
+    ]
   },
   {
     "company": "VPS Securities",
@@ -4001,8 +3711,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trang Chủ | VPS - Công ty Cổ phần Chứng khoán VPS",
     "source_url": "https://www.vps.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "VTC Intecom",
@@ -4018,41 +3729,45 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "[Errno 11001] getaddrinfo failed"
   },
   {
     "company": "VUS",
     "industry": "Education",
     "website": "https://vus.edu.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.vus.edu.vn/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_search_reference",
+    "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "source_url": "https://tuyendung.vus.edu.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "page_too_large"
   },
   {
     "company": "Vedan Vietnam",
     "industry": "FMCG",
     "website": "https://vedan.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://vedan.com.vn/tuyen-dung-nhan-vien/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Vedan",
     "source_url": "https://vedan.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://vedan.com.vn/tuyen-dung-nhan-vien/",
+      "https://vedan.com.vn/zh/tuyen-dung-nhan-vien/",
+      "https://vedan.com.vn/tuyen-dung-nhan-vien"
+    ]
   },
   {
     "company": "VietABank",
@@ -4068,7 +3783,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='vietabank.com.vn', port=443): Read timed out. (read timeout=8)"
   },
   {
     "company": "Vietcap",
@@ -4084,25 +3799,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Công ty Cổ phần Chứng khoán Vietcap",
     "source_url": "https://www.vietcap.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "VietinBank",
     "industry": "Banking",
     "website": "https://www.vietinbank.vn/",
     "country": "Vietnam",
-    "careers_url": "https://tuyendung.vietinbank.vn/tuyendung/vi/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng Thương mại Cổ phần Công Thương Việt Nam",
     "source_url": "https://www.vietinbank.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://tuyendung.vietinbank.vn/tuyendung/vi/"
+    ]
   },
   {
     "company": "Vietnam Post",
@@ -4118,7 +3837,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://vnpost.vn/vi"
   },
   {
     "company": "Vietnamobile",
@@ -4134,25 +3853,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Vietnamobile Mạng Siêu Dữ Liệu Quốc Dân",
     "source_url": "https://www.vietnamobile.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Vietravel",
     "industry": "Travel & Hospitality",
     "website": "https://www.vietravel.com/",
     "country": "Vietnam",
-    "careers_url": "https://jobs.vietravel.com/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Vietravel - Nhà Tổ Chức Du Lịch Chuyên Nghiệp",
     "source_url": "https://www.vietravel.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://jobs.vietravel.com/"
+    ]
   },
   {
     "company": "Viettel Post",
@@ -4168,8 +3891,9 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "",
     "source_url": "https://viettelpost.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Viglacera",
@@ -4185,7 +3909,7 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "HTTPSConnectionPool(host='www.viglacera.com.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))"
   },
   {
     "company": "Vinacafé Biên Hòa",
@@ -4201,24 +3925,30 @@
     "verification_method": "research_queue",
     "website_check_status": "unavailable",
     "reference_checked_at": "2026-09-28",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "check_note": "redirect:https://vinacafebienhoa.com/robots.txt"
   },
   {
     "company": "Vinamilk",
     "industry": "FMCG",
     "website": "https://www.vinamilk.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://www.vinamilk.com.vn/recruitment/career-opportunities",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Vinamilk - Thương hiệu sữa hàng đầu Việt Nam EST 1976",
     "source_url": "https://www.vinamilk.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.vinamilk.com.vn/recruitment/vi-sao-chon-vinamilk#jobs",
+      "https://www.vinamilk.com.vn/recruitment/vi-sao-chon-vinamilk#gens",
+      "https://www.vinamilk.com.vn/recruitment/career-opportunities",
+      "https://www.vinamilk.com.vn/recruitment/vi-sao-chon-vinamilk"
+    ]
   },
   {
     "company": "Vĩnh Hoàn",
@@ -4234,25 +3964,31 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Home - VHCHome - VHC",
     "source_url": "https://www.vinhhoan.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Woori Bank Vietnam",
     "industry": "Banking",
     "website": "https://woori.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://woori.com.vn/tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Ngân hàng Woori - Điểm tựa tài chính hàng đầu",
     "source_url": "https://woori.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://woori.com.vn/tuyen-dung/",
+      "https://woori.com.vn/thong-tin-tuyen-dung/",
+      "https://woori.com.vn/huong-dan-tuyen-dung/"
+    ]
   },
   {
     "company": "YOLA",
@@ -4268,25 +4004,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Trung Tâm Tiếng Anh YOLA",
     "source_url": "https://yola.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Yamaha Motor Vietnam",
     "industry": "Manufacturing",
     "website": "https://yamaha-motor.com.vn/",
     "country": "Vietnam",
-    "careers_url": "https://yamaha-motor.com.vn/tuyen-dung-yamaha/thong-diep-tuyen-dung/",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Yamaha Motor Việt Nam - Website chính thức tại Việt Nam",
     "source_url": "https://yamaha-motor.com.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://yamaha-motor.com.vn/tuyen-dung-yamaha/thong-diep-tuyen-dung/"
+    ]
   },
   {
     "company": "ZaloPay",
@@ -4302,25 +4042,29 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Zalopay - Ứng dụng thanh toán tích thưởng",
     "source_url": "https://zalopay.vn/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   },
   {
     "company": "Zuellig Pharma",
     "industry": "Distribution",
     "website": "https://www.zuelligpharma.com/",
     "country": "Vietnam",
-    "careers_url": "https://www.zuelligpharma.com/careers",
+    "careers_url": null,
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
     "collector_supported": false,
     "platform": "Not yet identified",
     "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Making Healthcare More Accessible - Zuellig Pharma",
     "source_url": "https://www.zuelligpharma.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": [
+      "https://www.zuelligpharma.com/careers"
+    ]
   },
   {
     "company": "Điện Quang",
@@ -4336,7 +4080,8 @@
     "verification_method": "homepage_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
+    "website_title": "Thiết bị chiếu sáng cao cấp Điện Quang – Điện Quang Shop",
     "source_url": "https://dienquang.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "career_link_candidates": []
   }
 ]

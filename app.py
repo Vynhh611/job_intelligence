@@ -17,6 +17,7 @@ from services import (vietnam_jobs, display, safe_url, dossier, match_cv, parse_
 from ai_explainer import configured as ai_configured, generate, content_hash, current_explanation
 from source_discovery import candidates, merge_candidates, add_pending
 from salary import disclosed_salary, matches_salary
+from employer_directory import filter_employers, source_stage
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
@@ -110,10 +111,11 @@ with st.sidebar:
     st.markdown('### 🌿 JOB INTELLIGENCE\n**VIETNAM**')
     st.caption('Discover jobs. Understand companies. Plan your career.')
     st.divider()
-    page = st.radio('Khám phá', ['Tìm việc', 'Việc đã lưu', 'Doanh nghiệp', 'CV của tôi', 'Lộ trình nghề nghiệp', 'Thị trường', 'Phương pháp & riêng tư', 'Quản trị nguồn'], on_change=st.query_params.clear)
+    page = st.radio('Khám phá', ['Tìm việc', 'Việc đã lưu', 'Doanh nghiệp', 'CV của tôi', 'Lộ trình nghề nghiệp', 'Thị trường', 'Phương pháp & riêng tư', 'Quản trị nguồn'], key='navigation', on_change=st.query_params.clear)
     st.divider()
     st.caption('Dành riêng cho cơ hội tại Việt Nam')
     st.caption(f'Cập nhật: {date(updated)} · {len(jobs):,} tin đang quan sát')
+    st.caption(f'Danh bạ riêng: {len(watchlist):,} doanh nghiệp / đơn vị')
     st.caption('Dữ liệu từ các nguồn đã đăng ký; không đại diện toàn bộ thị trường Việt Nam.')
 
 
@@ -234,7 +236,23 @@ if job_id:
 
 if page in ('Tìm việc', 'Việc đã lưu'):
     st.markdown('''<div class="hero"><div class="eyebrow">CƠ HỘI MỚI · GÓC NHÌN RÕ RÀNG HƠN</div><h1>Tìm công việc phù hợp.<br>Hiểu rõ trước khi ứng tuyển.</h1><p>Khám phá cơ hội tuyển dụng tại Việt Nam, tìm hiểu doanh nghiệp và đối chiếu yêu cầu công việc với CV của bạn.</p></div>''', unsafe_allow_html=True)
+    if page == 'Tìm việc':
+        a, b, c = st.columns(3)
+        a.metric('Tin việc làm trong hệ thống', len(jobs))
+        b.metric('Doanh nghiệp / đơn vị trong danh bạ', len(watchlist))
+        c.metric('Có liên kết trang tuyển dụng', sum(safe_url(r.get('careers_url')) for r in watchlist))
+        st.caption('Số tin việc làm khác số doanh nghiệp. Danh bạ gồm nguồn tham khảo và mục đang xác minh; truy cập trang doanh nghiệp để xem cơ hội ngoài dữ liệu hiện có.')
+        st.button(f'Khám phá danh bạ {len(watchlist)} doanh nghiệp →', on_click=lambda: st.session_state.update(navigation='Doanh nghiệp'), type='primary')
     query = st.text_input('Bạn đang tìm công việc gì?', placeholder='Chức danh, doanh nghiệp, lĩnh vực hoặc kỹ năng…')
+    if page == 'Tìm việc' and query.strip():
+        employer_matches = filter_employers(watchlist, query)
+        if employer_matches:
+            with st.expander(f'{len(employer_matches)} doanh nghiệp phù hợp trong danh bạ'):
+                for row in employer_matches[:8]:
+                    url = row.get('careers_url') or row.get('website')
+                    st.write(row['company'] + ' · ' + source_stage(row))
+                    if safe_url(url):
+                        st.link_button('Xem nguồn tham khảo: ' + row['company'] + ' ↗', url)
     filtered = jobs if page == 'Tìm việc' else [j for j in jobs if j['id'] in st.session_state.get('saved_jobs', set())]
     with st.expander('Bộ lọc tìm kiếm', expanded=bool(jobs)):
         cols = st.columns(3)
@@ -258,7 +276,7 @@ if page in ('Tìm việc', 'Việc đã lưu'):
         filtered = [j for j in filtered if matches_salary(j, salary_range, salary_ceiling, salary_currency)]
         if salary_range > salary_ceiling:
             st.warning('Mức lương tối thiểu cần nhỏ hơn hoặc bằng mức tối đa.')
-    st.subheader(f'{len(filtered):,} cơ hội' + (' đã lưu' if page == 'Việc đã lưu' else ' dành cho bạn khám phá'))
+    st.subheader(f'{len(filtered):,} tin tuyển dụng' + (' đã lưu' if page == 'Việc đã lưu' else ' trong dữ liệu hiện có'))
     st.caption('Tin mới phát hiện trước · Việc đã lưu chỉ được giữ trong phiên hiện tại.')
     if not filtered:
         st.info('Chưa có công việc phù hợp trong dữ liệu hiện có. Thử bỏ bộ lọc hoặc khám phá các trang tuyển dụng chính thức tại mục Doanh nghiệp.')
@@ -278,14 +296,18 @@ if page in ('Tìm việc', 'Việc đã lưu'):
 
 elif page == 'Doanh nghiệp':
     st.title('Hiểu doanh nghiệp trước khi ứng tuyển')
-    st.caption('Danh bạ trang tuyển dụng chính thức. Có trong danh bạ không đồng nghĩa đang tuyển hoặc đã cho phép thu thập dữ liệu.')
-    st.metric('Doanh nghiệp trong danh bạ Việt Nam', len(watchlist))
+    st.caption('Danh bạ doanh nghiệp, đơn vị và thương hiệu hoạt động tại Việt Nam. Có trong danh bạ không đồng nghĩa đang tuyển hoặc đã cho phép thu thập dữ liệu; các đơn vị cùng tập đoàn có thể được liệt kê riêng.')
+    a, b, c = st.columns(3)
+    a.metric('Doanh nghiệp / đơn vị trong danh bạ', len(watchlist))
+    b.metric('Có liên kết tuyển dụng', sum(safe_url(r.get('careers_url')) for r in watchlist))
+    c.metric('Cần tìm trang tuyển dụng', sum(not safe_url(r.get('careers_url')) for r in watchlist))
     search = st.text_input('Tìm trong danh bạ', placeholder='Tên doanh nghiệp hoặc ngành…')
     industries = st.multiselect('Lọc ngành trong danh bạ', sorted({r.get('industry', 'Chưa phân loại') for r in watchlist}))
-    directory = [r for r in watchlist if (not industries or r.get('industry') in industries) and search.strip().casefold() in (r['company'] + ' ' + r.get('industry', '')).casefold()]
-    st.caption(f'{len(directory)} doanh nghiệp phù hợp · Mở trang chính thức để xem vị trí đang tuyển.')
+    stage = st.selectbox('Tình trạng nguồn tham khảo', ['Tất cả', 'Có liên kết tuyển dụng', 'Đã đọc website · cần tìm trang tuyển dụng', 'Cần xác minh website và trang tuyển dụng'])
+    directory = filter_employers(watchlist, search, industries, stage)
+    st.caption(f'{len(directory)} doanh nghiệp phù hợp · Liên kết tuyển dụng được ưu tiên trước. Website chưa xác minh được ghi rõ trong bảng.')
     if directory:
-        st.dataframe(pd.DataFrame([{'Doanh nghiệp': r['company'], 'Ngành': r.get('industry'), 'Trang tuyển dụng': r.get('careers_url')} for r in sorted(directory, key=lambda r: r['company'].casefold())]), hide_index=True, column_config={'Trang tuyển dụng': st.column_config.LinkColumn('Trang tuyển dụng', display_text='Mở trang chính thức ↗')}, width='stretch')
+        st.dataframe(pd.DataFrame([{'Doanh nghiệp': r['company'], 'Ngành': r.get('industry'), 'Tình trạng': source_stage(r), 'Trang tuyển dụng': r.get('careers_url'), 'Website tham khảo': r.get('website')} for r in directory]), hide_index=True, column_config={'Trang tuyển dụng': st.column_config.LinkColumn('Trang tuyển dụng', display_text='Xem tuyển dụng ↗'), 'Website tham khảo': st.column_config.LinkColumn('Website tham khảo', display_text='Xem website ↗')}, width='stretch', height=460)
     else:
         st.info('Chưa có doanh nghiệp phù hợp trong danh bạ. Thử đổi từ khóa hoặc bỏ bộ lọc.')
     st.divider()
@@ -295,6 +317,10 @@ elif page == 'Doanh nghiệp':
         profile = profiles.get(name, {})
         registry = next((r for r in watchlist if r['company'] == name), {})
         st.subheader(name)
+        if registry:
+            st.caption(source_stage(registry))
+        if safe_url(registry.get('website')):
+            st.link_button('Website tham khảo của doanh nghiệp ↗', registry['website'])
         st.write(profile.get('overview') or 'Chưa có mô tả doanh nghiệp đã xác minh.')
         for label, field in [('Lĩnh vực', 'industry'), ('Trụ sở', 'headquarters'), ('Quy mô', 'size'), ('Công ty mẹ', 'parent_company')]:
             st.write(f'**{label}:** {display(profile.get(field) or registry.get(field))}')
@@ -303,8 +329,8 @@ elif page == 'Doanh nghiệp':
                 st.link_button(label + ' ↗', url)
         st.caption('Ngày xác minh hồ sơ: ' + date(profile.get('verified_at')))
         if registry.get('source_url') and safe_url(registry['source_url']):
-            st.link_button('Nguồn tham chiếu trang tuyển dụng ↗', registry['source_url'])
-            method = 'Đã xem trang chính thức' if registry.get('verification_method') == 'official_page_review' else 'Đã đối chiếu kết quả tìm kiếm từ trang chính thức; cần kiểm tra trực tiếp'
+            st.link_button('Nguồn tham chiếu ↗', registry['source_url'])
+            method = {'official_page_review': 'Đã xem trang chính thức', 'official_search_reference': 'Đã đối chiếu kết quả tìm kiếm từ trang chính thức; cần kiểm tra trực tiếp', 'homepage_checked': 'Đã đọc website; chưa xác nhận các vị trí đang tuyển', 'official_homepage_link': 'Liên kết tuyển dụng được dẫn từ website doanh nghiệp; chưa xác nhận các vị trí đang tuyển'}.get(registry.get('verification_method'), 'Cần xác minh nguồn')
             st.caption(method + ' · ' + date(registry.get('reference_checked_at')))
         if safe_url(registry.get('linkedin_url')) and safe_url(registry.get('linkedin_evidence_url')):
             st.link_button('LinkedIn được doanh nghiệp dẫn chiếu ↗', registry['linkedin_url'])

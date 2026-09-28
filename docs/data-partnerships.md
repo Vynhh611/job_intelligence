@@ -1,6 +1,14 @@
 # Mở rộng nguồn tuyển dụng Việt Nam
 
-Đợt đối chiếu ngày 28/09/2026 bổ sung 20 doanh nghiệp vào danh bạ, nâng tổng số mục Việt Nam lên 40. Đây là số mục tham khảo, không phải số doanh nghiệp đã cấp quyền, số nguồn realtime hay số pháp nhân độc lập đã kiểm toán. Các tập đoàn và đơn vị thành viên có thể cùng xuất hiện.
+Danh bạ hiện có 261 mục doanh nghiệp, đơn vị và thương hiệu tại Việt Nam; 141 mục có liên kết tuyển dụng, 120 mục còn cần tìm hoặc xác minh trang tuyển dụng. Đây là số mục tham khảo, không phải số doanh nghiệp đã cấp quyền, số nguồn realtime hay số pháp nhân độc lập đã kiểm toán. Các tập đoàn và đơn vị thành viên có thể cùng xuất hiện. Số tin việc làm là chỉ tiêu độc lập; đợt này không bổ sung hoặc sửa tin việc làm.
+
+## Đợt mở rộng lên hơn 200 mục
+
+`data/employer_expansion.tsv` là danh sách nghiên cứu thủ công, không phải danh sách được LinkedIn cung cấp. `directory_expansion.py` chỉ kiểm tra robots.txt và trang đầu của 223 website đề xuất, giới hạn 6 tác vụ đồng thời, HTTPS công khai, kích thước và thời gian mỗi yêu cầu; không theo chuyển hướng, không đọc JD. `data/employer_website_checks.json` lưu kết quả kiểm tra và các liên kết ứng viên, kể cả lỗi. Website trả lỗi hoặc không cho kiểm tra vẫn ở trạng thái chưa xác minh, không đồng nghĩa doanh nghiệp không tồn tại.
+
+`scripts/merge_employer_expansion.py` chỉ đưa các liên kết đã rà soát trong danh sách chấp nhận vào danh bạ; không tự chọn mọi URL có chữ careers. Loại liên kết bán sách của Fahasa, liên kết mạng xã hội/bài thông báo đơn lẻ của Central, loại mục GCS Vietnam cần đối chiếu tên hiện tại và Trung Nguyên E-Coffee để giảm trùng nhóm. Thêm 17 nguồn tham chiếu tìm kiếm chính thức trong `data/directory_search_references.json`. Giữ nguyên mục cũ, dữ liệu Singapore và toàn bộ cấu hình quyền thu thập.
+
+`homepage_checked` chỉ xác nhận đã đọc được website, không xác minh tư cách pháp nhân hay địa chỉ văn phòng Việt Nam. `official_homepage_link` ghi nhận đường dẫn tuyển dụng xuất hiện trên website đã đọc, không đảm bảo trang đích đang có vị trí mở. Các trang tuyển dụng toàn cầu cần lọc Vietnam. Trang chủ hiển thị riêng tổng tin, tổng danh bạ và số liên kết tuyển dụng; danh bạ có bộ lọc trạng thái nguồn và tìm kiếm không dấu.
 
 ## Bằng chứng và trạng thái
 
