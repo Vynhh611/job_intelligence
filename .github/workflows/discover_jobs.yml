@@ -2,7 +2,7 @@ name: Discover public job links
 on:
   workflow_dispatch:
   schedule:
-    - cron: '47 0 * * *' # Around 07:47 Vietnam time; GitHub schedules can be delayed.
+    - cron: '47 */6 * * *' # Every 6 hours, ~01:47/07:47/13:47/19:47 Vietnam; may be delayed.
 permissions:
   contents: write
 concurrency:

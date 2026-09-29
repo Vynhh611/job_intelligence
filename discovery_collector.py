@@ -23,7 +23,7 @@ DATA = ROOT / 'data'
 COUNTRIES = {'Vietnam'}
 STORE = None
 SESSION = requests.Session()
-SESSION.headers.update({'User-Agent': 'JobIntelligenceAsia-LinkIndex/1.0'})
+SESSION.headers.update({'User-Agent': 'JobIntelligenceVietnam-LinkIndex/1.0 (+https://github.com/Vynhh611/job_intelligence)'})
 
 
 def read_json(path, default):
@@ -49,7 +49,9 @@ def get_json(url):
             r = SESSION.get(url, timeout=25)
             r.raise_for_status()
             return r.json()
-        except (requests.RequestException, ValueError):
+        except (requests.RequestException, ValueError) as error:
+            if getattr(getattr(error, 'response', None), 'status_code', None) in (401, 403, 429):
+                raise  # Respect access/rate-limit responses; wait until a later scheduled run.
             if attempt == 2:
                 raise
             time.sleep(2 * (attempt + 1))
@@ -65,6 +67,8 @@ def endpoint(provider, board):
     if provider == 'ashby':
         # Even if the response contains description fields, we never persist them.
         return f'https://api.ashbyhq.com/posting-api/job-board/{token}'
+    if provider == 'smartrecruiters':
+        return f'https://api.smartrecruiters.com/v1/companies/{token}/postings?country=vn'
     raise ValueError('Unsupported provider')
 
 
@@ -73,7 +77,7 @@ def parse_posts(provider, source, payload):
     rows = payload if provider == 'lever' else payload.get('jobs', [])
     if not isinstance(rows, list):
         raise ValueError('Unexpected API response (jobs is not a list)')
-    field = {'greenhouse': 'board_token', 'lever': 'site', 'ashby': 'board_name'}[provider]
+    field = {'greenhouse': 'board_token', 'lever': 'site', 'ashby': 'board_name', 'smartrecruiters': 'company_identifier'}[provider]
     board = str(source[field]).strip()
     result = []
     for item in rows:
@@ -85,13 +89,32 @@ def parse_posts(provider, source, payload):
         elif provider == 'lever':
             title, location = item.get('text', ''), (item.get('categories') or {}).get('location', '')
             url, source_id = item.get('hostedUrl', ''), item.get('id')
-        else:
+        elif provider == 'ashby':
             title, location = item.get('title', ''), item.get('location', '')
             url, source_id = item.get('jobUrl', ''), item.get('id') or item.get('jobUrl')
+        else:
+            source_id = item.get('id')
+            title = item.get('name', '')
+            info = item.get('location') or {}
+            if str(info.get('country', '')).lower() not in ('vn', 'vietnam'):
+                continue
+            location = ', '.join(filter(None, [info.get('city'), info.get('region'), 'Vietnam']))
+            url = f'https://jobs.smartrecruiters.com/{quote(board, safe="")}/{quote(str(source_id), safe="")}'
         if not isinstance(location, str):
             location = ''
-        country = infer_country(location)
-        if country not in COUNTRIES or not title or not source_id or not https_url(url):
+        if provider == 'lever':
+            locations = (item.get('categories') or {}).get('allLocations') or [location]
+            if not isinstance(locations, list) or any(not isinstance(v, str) for v in locations):
+                raise ValueError('Invalid Lever locations')
+            vietnam_locations = [v for v in locations if infer_country(v) == 'Vietnam']
+            if vietnam_locations:
+                location = ' / '.join(dict.fromkeys(vietnam_locations))
+            country = 'Vietnam' if vietnam_locations or str(item.get('country', '')).lower() == 'vn' else infer_country(location)
+        else:
+            country = infer_country(location)
+        if not title or not source_id:
+            raise ValueError('Posting missing title or identity; refusing partial snapshot')
+        if country not in COUNTRIES or not https_url(url):
             continue
         result.append({
             'id': f'discovery:{provider}:{board}:{source_id}',
@@ -101,8 +124,12 @@ def parse_posts(provider, source, payload):
             'location': location.strip(),
             'country': country,
             'url': url,
-            'source': provider.capitalize() if provider != 'greenhouse' else 'Greenhouse',
+            'source': {'greenhouse': 'Greenhouse', 'lever': 'Lever', 'ashby': 'Ashby', 'smartrecruiters': 'SmartRecruiters'}[provider],
             'record_type': 'link_only',
+            'source_board_url': source.get('careers_url', ''),
+            'source_published_at': item.get('releasedDate', '') if provider == 'smartrecruiters' else item.get('publishedAt', ''),
+            'employment_type': ((item.get('typeOfEmployment') or {}).get('label', '') if provider == 'smartrecruiters' else (item.get('categories') or {}).get('commitment', '') if provider == 'lever' else item.get('employmentType', '')),
+            'workplace_type': ('Hybrid' if (item.get('location') or {}).get('hybrid') else 'Remote' if (item.get('location') or {}).get('remote') else 'On-site' if (item.get('location') or {}).get('remote') is False else '') if provider == 'smartrecruiters' else item.get('workplaceType', ''),
         })
     return visible_jobs(result)
 
@@ -118,6 +145,7 @@ def merge_one(previous, fresh, source_key, now):
             **item,
             'first_seen': old.get('first_seen', now),
             'last_seen': now,
+            'last_checked_at': now,
             'status': 'active',
             'missed_successful_checks': 0,
             'reopen_count': int(old.get('reopen_count', 0)) + int(old.get('status') == 'closed'),
@@ -126,8 +154,15 @@ def merge_one(previous, fresh, source_key, now):
     for key, old in previous.items():
         if old.get('country') not in COUNTRIES or old.get('source_key') != source_key or key in seen or old.get('status') == 'closed':
             continue
+        # Retries within one collection window must not count as independent misses.
+        last_missing = old.get('last_missing_check_at')
+        if last_missing:
+            elapsed = (datetime.fromisoformat(now) - datetime.fromisoformat(last_missing)).total_seconds()
+            if elapsed < 6 * 3600:
+                continue
         misses = int(old.get('missed_successful_checks', 0)) + 1
-        merged[key] = {**old, 'missed_successful_checks': misses,
+        merged[key] = {**old, 'missed_successful_checks': misses, 'last_checked_at': now,
+                       'last_missing_check_at': now,
                        'status': 'closed' if misses >= 2 else old.get('status', 'active')}
         if misses >= 2:
             merged[key]['closed_detected_at'] = now
@@ -144,7 +179,7 @@ def main():
     now = datetime.now(timezone.utc).isoformat()
     stats, errors = [], []
     successful = 0
-    for provider, field in (('greenhouse', 'board_token'), ('lever', 'site'), ('ashby', 'board_name')):
+    for provider, field in (('greenhouse', 'board_token'), ('lever', 'site'), ('ashby', 'board_name'), ('smartrecruiters', 'company_identifier')):
         for source in config.get(provider, []):
             if not source.get('enabled', True) or not source.get('discovery_enabled', False):
                 continue
@@ -174,11 +209,14 @@ def main():
     history = read_json(DATA / 'discovery_history.json', [])
     for key, item in merged.items():
         old = previous.get(key)
-        if item != old:
+        # Do not append a full history snapshot just because a polling timestamp advanced.
+        ignored = {'last_seen', 'last_checked_at', 'last_missing_check_at'}
+        changed = old is None or {k: v for k, v in item.items() if k not in ignored} != {k: v for k, v in old.items() if k not in ignored}
+        if changed:
             history.append({'job_id': key, 'at': now, 'event': 'first_seen' if old is None else 'snapshot', 'previous': old})
     write_json(DATA / 'discovery_history.json', history)
     write_json(DATA / 'discovered_jobs.json', sorted(merged.values(), key=lambda j: (j.get('last_seen', ''), j['id']), reverse=True))
-    active = [j for j in merged.values() if j.get('status') == 'active']
+    active = [j for j in merged.values() if j.get('status') == 'active' and j.get('country') in COUNTRIES]
     write_json(DATA / 'discovery_status.json', {
         'checked_at': now, 'successful_sources': successful, 'errors': errors,
         'sources': stats, 'active_records': len(active), 'total_records': len(merged),

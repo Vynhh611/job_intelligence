@@ -43,26 +43,26 @@ python -m streamlit run app.py --global.developmentMode false
 
 **Lưu ý triển khai:** cấu hình thay đổi trên giao diện được lưu ở máy đang chạy ứng dụng. Streamlit Cloud không đồng bộ ngược về GitHub và có thể mất thay đổi khi redeploy. Nếu dùng JSON, dùng nút tải `sources.json` để đưa cấu hình đã duyệt vào repo; không cần sửa JSON thủ công. Nên chỉ có một quản trị viên ghi cấu hình tại một thời điểm trong phiên bản lưu bằng tệp này.
 
-Nguồn đầy đủ dùng `authorized=true`; chỉ mục liên kết dùng `discovery_enabled=true`, mặc định false khi chưa có trường này. Quản trị cho phép chọn riêng phạm vi chỉ liên kết hoặc JD đầy đủ; quyền xử lý AI là một lựa chọn riêng. SmartRecruiters được xử lý qua bộ thu thập JD, không qua chỉ mục liên kết.
+Nguồn đầy đủ dùng `authorized=true`; chỉ mục liên kết dùng `discovery_enabled=true`, mặc định false khi chưa có trường này. Quản trị cho phép chọn riêng phạm vi chỉ liên kết hoặc JD đầy đủ; quyền xử lý AI là một lựa chọn riêng. SmartRecruiters hỗ trợ cả hai chế độ; chỉ mục liên kết chỉ gọi danh sách công khai theo quốc gia, không gọi chi tiết JD.
 
 ## Thu thập & lịch sử
 
 - `collector.py`: Greenhouse, Lever, Ashby, SmartRecruiters; chỉ nguồn có quyền mới chạy.
-- `collectors/transport.py`: phân trang Lever, phát hiện trang lặp hoặc phản hồi sai, từ chối coi phản hồi thiếu là danh sách rỗng.
+- `collectors/transport.py`: phân trang Lever và chỉ mục SmartRecruiters, phát hiện trang lặp, tổng thay đổi hoặc phản hồi sai, từ chối coi phản hồi thiếu là danh sách rỗng.
 - `collectors/smartrecruiters.py`: Posting API có phân trang và nội dung chi tiết Việt Nam.
 - `discovery_collector.py`: chỉ lưu metadata/liên kết, không JD; cũng phải bật quyền rõ ràng.
-- Retry/timeout, nhịp nghỉ request; đóng tin sau hai lần kiểm tra thành công liên tiếp không thấy tin. Lỗi request không làm đóng tin.
+- Retry/timeout, nhịp nghỉ request; chỉ mục liên kết đóng tin sau hai lần kiểm tra thành công không thấy tin, cách nhau ít nhất 6 giờ. Lỗi request không làm đóng tin. Tin quá 36 giờ chưa xác nhận hoặc mất khỏi lần kiểm tra đầu có nhãn cần xác nhận.
 - `data/history.json` và `data/discovery_history.json` lưu phiên bản trước khi đổi. Không cắt lịch sử còn 30.000 bản ghi như trước.
 - Loại trùng chỉ với URL đồng nhất, bỏ tham số tracking nhưng giữ mã tin trong query. Không tự gộp hai tin chỉ vì cùng tên/vị trí.
 - Ghi JSON qua tệp tạm rồi đổi tên. Cấu hình cũ tự được sao lưu trước khi lưu nguồn trên giao diện.
 
-Workflow giữ lịch cũ: thu thập JD khoảng 07:17 và liên kết khoảng 07:47 giờ Việt Nam. Các workflow ghi dữ liệu dùng chung khóa chạy để tránh xung đột. CI kiểm thử khi sửa mã/PR. Lịch GitHub có thể trễ. Quyền repository Contents: write cần được cho phép để workflow commit dữ liệu.
+Workflow JD giữ lịch khoảng 07:17 giờ Việt Nam. Chỉ mục liên kết chạy mỗi 6 giờ (~01:47, 07:47, 13:47, 19:47 giờ Việt Nam). Các workflow ghi dữ liệu dùng chung khóa chạy để tránh xung đột. CI kiểm thử khi sửa mã/PR. Lịch GitHub có thể trễ. Quyền repository Contents: write cần được cho phép để workflow commit dữ liệu.
 
 Tài liệu API tham khảo: [Lever public Postings API](https://github.com/lever/postings-api), [SmartRecruiters Posting endpoints](https://developers.smartrecruiters.com/docs/endpoints). Không tự động bật nguồn chỉ vì API trả về thành công.
 
 ## Dữ liệu và quyền còn thiếu
 
-Đã đồng bộ dữ liệu từ GitHub: 196 liên kết lịch sử, trong đó 9 tin Việt Nam được hiển thị trong phạm vi sản phẩm mới. Chưa có JD đầy đủ; tất cả nguồn JD vẫn `authorized=false`. Quyền nguồn chưa được xác nhận, nên không tự bật thu thập mới. Không chèn dữ liệu kiểm thử vào sản phẩm.
+Lượt đồng bộ 29/09/2026 lấy 666 tin Việt Nam từ 11 bảng tuyển dụng công khai: thêm 657 tin, xác nhận lại 9 tin cũ; giữ nguyên 187 bản ghi ngoài Việt Nam. Tất cả nguồn JD vẫn `authorized=false`, AI tắt. Chỉ bật chỉ mục metadata/liên kết trên các nguồn đã rà soát tài liệu API; không coi tài liệu này là hợp đồng cấp phép JD. Xem [nguồn, phạm vi và giới hạn](docs/public-job-sources.md). Không chèn dữ liệu kiểm thử vào sản phẩm.
 
 - LinkedIn, VietnamWorks, TopCV, CareerViet, ITviec, Vieclam24h, Glints: cần hợp đồng/feed/API được phép. Chưa có adapter live cho những nền tảng này.
 - Workday và các portal riêng: chưa có adapter được xác minh. Có thể lưu trang chính thức trong danh bạ chờ tích hợp.
@@ -74,7 +74,7 @@ Tài liệu API tham khảo: [Lever public Postings API](https://github.com/leve
 
 ## Triển khai vào repo hiện có
 
-Giữ cấu hình Streamlit trỏ đến `app.py`; commit/push mã đã kiểm thử vào nhánh triển khai hiện có. Không cần tạo dự án mới. Thiết lập secret quản trị và cấu hình nguồn có quyền trước khi kỳ vọng có việc làm thực. Sau khi cấu hình nguồn trong repo, chạy workflow và kiểm tra bảng sức khỏe nguồn. Chưa thực thi GitHub Actions từ xa trong lần sửa cục bộ này.
+Giữ cấu hình Streamlit trỏ đến `app.py`; commit/push mã đã kiểm thử vào nhánh triển khai hiện có. Không cần tạo dự án mới. Đặt secret quản trị nếu cần thay đổi nguồn bằng giao diện. Chạy `python discovery_collector.py` hoặc workflow `Discover public job links` và kiểm tra bảng sức khỏe nguồn; cấu hình 11 nguồn metadata đã nằm trong repo.
 
 Bản sao trước khi sửa nằm tại `backups/before-vietnam-*`, được Git bỏ qua; không xóa khi chưa kiểm tra. Dữ liệu và cấu hình nguồn gốc được giữ nguyên. Các tài liệu `README_START_HERE.md` và `README_SOURCE_PACK.md` là tài liệu phiên bản cũ; README này mô tả hành vi hiện tại.
 
@@ -83,7 +83,7 @@ Các hợp đồng tích hợp ở integrations.py dành cho feed được cấp
 
 ### Quyền nguồn
 
-Quản trị hiện có danh sách chọn nguồn để sửa trực tiếp và hai phạm vi quyền: chỉ metadata/liên kết hoặc JD đầy đủ. Quyền xử lý JD bằng OpenAI là một lựa chọn riêng, mặc định tắt. Người dùng xác nhận hiện **chưa có nguồn được cấp quyền**, do đó không kích hoạt nguồn nào trong lần nâng cấp này.
+Quản trị có danh sách chọn nguồn và hai phạm vi: chỉ metadata/liên kết hoặc JD đầy đủ. Người dùng chưa có hợp đồng cấp dữ liệu riêng; đợt 29/09 chỉ kết nối chỉ mục metadata công khai có căn cứ API được ghi lại, không đánh dấu JD hoặc AI là đã được cấp phép. Nguồn mới khác vẫn mặc định tắt.
 
 ### Phát hiện ATS có kiểm soát
 

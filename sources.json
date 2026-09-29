@@ -1,5 +1,5 @@
 {
-  "_instructions": "Board identifiers are inferred from public job-board URLs, NOT live-tested API or blanket republication permission. Run Probe candidate boards. Set authorized=true for a source ONLY after confirming your use case is permitted. Keep the existing job snapshots when upgrading.",
+  "_instructions": "authorized=true is reserved for separately confirmed full-JD reuse. discovery_enabled=true enables only a reviewed public metadata/outgoing-link index; see access_basis and permission_url. Public API documentation is not an employer contract. Never enable internal postings or applicant endpoints.",
   "greenhouse": [
     {
       "company": "MongoDB",
@@ -15,14 +15,28 @@
       "site": "ninjavan",
       "enabled": true,
       "authorized": false,
-      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "careers_url": "https://jobs.lever.co/ninjavan",
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://github.com/lever/postings-api",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata"
     },
     {
       "company": "Lalamove",
       "site": "lalamove",
       "enabled": true,
       "authorized": false,
-      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "careers_url": "https://jobs.lever.co/lalamove",
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://github.com/lever/postings-api",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata"
     },
     {
       "company": "WalkMe",
@@ -30,6 +44,34 @@
       "enabled": true,
       "authorized": false,
       "coverage_note": "Official career board observed; selected markets: Singapore. API live response and reuse permission must be checked separately."
+    },
+    {
+      "company": "cargo-partner",
+      "site": "cargo-partner",
+      "careers_url": "https://jobs.lever.co/cargo-partner",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://github.com/lever/postings-api",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "Ataccama",
+      "site": "ataccama",
+      "careers_url": "https://jobs.lever.co/ataccama",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://github.com/lever/postings-api",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
     }
   ],
   "ashby": [
@@ -38,7 +80,14 @@
       "board_name": "airwallex",
       "enabled": true,
       "authorized": false,
-      "coverage_note": "Official career board observed; selected markets: Vietnam, Singapore. API live response and reuse permission must be checked separately."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "careers_url": "https://jobs.ashbyhq.com/airwallex",
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.ashbyhq.com/docs/public-job-posting-api",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata"
     },
     {
       "company": "Notion",
@@ -46,6 +95,92 @@
       "enabled": true,
       "authorized": false,
       "coverage_note": "Official career board observed; selected markets: Singapore. API live response and reuse permission must be checked separately."
+    }
+  ],
+  "smartrecruiters": [
+    {
+      "company": "Bosch Vietnam",
+      "company_identifier": "BoschGroup",
+      "careers_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "Accor Vietnam",
+      "company_identifier": "AccorHotel",
+      "careers_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "KMS Technology",
+      "company_identifier": "KMSTechnology1",
+      "careers_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "SGS Vietnam",
+      "company_identifier": "SGS",
+      "careers_url": "https://careers.smartrecruiters.com/SGS",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "Eurofins Vietnam",
+      "company_identifier": "Eurofins",
+      "careers_url": "https://careers.smartrecruiters.com/Eurofins",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+    },
+    {
+      "company": "Renesas Electronics Vietnam",
+      "company_identifier": "RenesasElectronics",
+      "careers_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+      "enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "discovery_enabled": true,
+      "permission_mode": "links",
+      "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
+      "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
+      "access_basis": "reviewed_public_api_metadata",
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
     }
   ]
 }

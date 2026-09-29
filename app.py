@@ -3,7 +3,7 @@ import hmac
 import json
 import os
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from html import escape
 from pathlib import Path
 from urllib.parse import quote
@@ -18,6 +18,7 @@ from ai_explainer import configured as ai_configured, generate, content_hash, cu
 from source_discovery import candidates, merge_candidates, add_pending
 from salary import disclosed_salary, matches_salary
 from employer_directory import filter_employers, source_stage
+from freshness import freshness, LABELS as FRESHNESS_LABELS
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
@@ -107,6 +108,16 @@ except (StorageError, ValueError, OSError):
     st.stop()
 updated = max(str(status.get('checked_at', '')), str(discovery_status.get('checked_at', '')))
 
+
+def checked_time(value):
+    try:
+        return datetime.fromisoformat(value.replace('Z', '+00:00')).astimezone(timezone(timedelta(hours=7))).strftime('%d/%m/%Y %H:%M') + ' (giờ Việt Nam)'
+    except (ValueError, TypeError, AttributeError):
+        return 'Chưa xác định'
+
+
+connected = [s for provider in FIELDS for s in config.get(provider, []) if s.get('enabled', True) and s.get('discovery_enabled', False)]
+
 with st.sidebar:
     st.markdown('### 🌿 JOB INTELLIGENCE\n**VIETNAM**')
     st.caption('Discover jobs. Understand companies. Plan your career.')
@@ -136,7 +147,8 @@ def card(job, suffix='list'):
         if st.session_state.get('cv_text'):
             results = match_cv(st.session_state.cv_text, job)
             st.caption(f'CV: {sum(r["Phân loại"] == "Đáp ứng" for r in results)}/{len(results)} kỹ năng có dẫn chứng áp dụng; cần xác minh mức thành thạo.' if results else 'CV: JD chưa đủ dữ liệu để đối chiếu.')
-        st.caption(f'{job.get("source", "Nguồn gốc")} · Phát hiện {date(job.get("first_seen"))} · Kiểm tra {date(job.get("last_seen"))}' + (' · Chỉ có liên kết gốc' if not job.get('description') else ''))
+        st.caption(f'{job.get("source", "Nguồn gốc")} · Xác nhận tại nguồn: {checked_time(job.get("last_seen"))}' + (' · Thông tin cơ bản và liên kết gốc' if not job.get('description') else ''))
+        st.caption(FRESHNESS_LABELS[freshness(job)])
         a, b = st.columns(2)
         if a.button('Tìm hiểu công việc →', key=f'open-{suffix}-{job["id"]}', use_container_width=True):
             st.query_params['job'] = job['id']
@@ -151,6 +163,7 @@ def detail(job):
         st.rerun()
     st.caption(job.get('company', '') + ' / ' + job.get('location', ''))
     st.title(job['title'])
+    st.caption(FRESHNESS_LABELS[freshness(job)] + ' · ' + checked_time(job.get('last_seen')))
     if job.get('status') == 'closed':
         st.warning('Tin này không còn được quan sát tại nguồn. Kiểm tra lại với nhà tuyển dụng.')
     left, right = st.columns([1.8, 1], gap='large')
@@ -237,10 +250,22 @@ if job_id:
 if page in ('Tìm việc', 'Việc đã lưu'):
     st.markdown('''<div class="hero"><div class="eyebrow">CƠ HỘI MỚI · GÓC NHÌN RÕ RÀNG HƠN</div><h1>Tìm công việc phù hợp.<br>Hiểu rõ trước khi ứng tuyển.</h1><p>Khám phá cơ hội tuyển dụng tại Việt Nam, tìm hiểu doanh nghiệp và đối chiếu yêu cầu công việc với CV của bạn.</p></div>''', unsafe_allow_html=True)
     if page == 'Tìm việc':
-        a, b, c = st.columns(3)
+        a, b, c, d = st.columns(4)
         a.metric('Tin việc làm trong hệ thống', len(jobs))
         b.metric('Doanh nghiệp / đơn vị trong danh bạ', len(watchlist))
         c.metric('Có liên kết trang tuyển dụng', sum(safe_url(r.get('careers_url')) for r in watchlist))
+        d.metric('Nguồn đồng bộ thành công', discovery_status.get('successful_sources', 0))
+        st.caption('Đồng bộ dự kiến mỗi 6 giờ · Lượt gần nhất: ' + checked_time(discovery_status.get('checked_at')) + '. Nguồn đang công khai tin không đảm bảo doanh nghiệp còn nhận hồ sơ tại thời điểm bạn ứng tuyển.')
+        stale = sum(freshness(j) != 'recent' for j in jobs)
+        if stale:
+            st.warning(f'{stale} tin cần kiểm tra lại hoặc đang chờ xác nhận; xem trạng thái ở từng tin.')
+        if discovery_status.get('errors'):
+            st.warning('Một số nguồn cập nhật chưa thành công. Tin của nguồn lỗi giữ lần xác nhận trước, không tự đánh dấu hết hạn.')
+        with st.expander('Nguồn đang kết nối và lần kiểm tra gần nhất'):
+            reports = discovery_status.get('sources', [])
+            if reports:
+                st.dataframe(pd.DataFrame([{'Doanh nghiệp': r.get('company'), 'Trạng thái': 'Thành công' if r.get('status') == 'ok' else 'Chưa cập nhật được', 'Tin Việt Nam ở lượt này': r.get('in_scope'), 'Kiểm tra lúc': checked_time(r.get('checked_at'))} for r in reports]), hide_index=True, width='stretch')
+            st.caption('Chỉ lưu thông tin cơ bản từ bảng tuyển dụng/API công khai và dẫn về tin gốc. Chưa có thỏa thuận sao chép toàn bộ JD; danh bạ không phải số nguồn đã kết nối.')
         st.caption('Số tin việc làm khác số doanh nghiệp. Danh bạ gồm nguồn tham khảo và mục đang xác minh; truy cập trang doanh nghiệp để xem cơ hội ngoài dữ liệu hiện có.')
         st.button(f'Khám phá danh bạ {len(watchlist)} doanh nghiệp →', on_click=lambda: st.session_state.update(navigation='Doanh nghiệp'), type='primary')
     query = st.text_input('Bạn đang tìm công việc gì?', placeholder='Chức danh, doanh nghiệp, lĩnh vực hoặc kỹ năng…')
@@ -330,14 +355,16 @@ elif page == 'Doanh nghiệp':
         st.caption('Ngày xác minh hồ sơ: ' + date(profile.get('verified_at')))
         if registry.get('source_url') and safe_url(registry['source_url']):
             st.link_button('Nguồn tham chiếu ↗', registry['source_url'])
-            method = {'official_page_review': 'Đã xem trang chính thức', 'official_search_reference': 'Đã đối chiếu kết quả tìm kiếm từ trang chính thức; cần kiểm tra trực tiếp', 'homepage_checked': 'Đã đọc website; chưa xác nhận các vị trí đang tuyển', 'official_homepage_link': 'Liên kết tuyển dụng được dẫn từ website doanh nghiệp; chưa xác nhận các vị trí đang tuyển'}.get(registry.get('verification_method'), 'Cần xác minh nguồn')
+            method = {'official_page_review': 'Đã xem trang chính thức', 'official_search_reference': 'Đã đối chiếu kết quả tìm kiếm từ trang chính thức; cần kiểm tra trực tiếp', 'homepage_checked': 'Đã đọc website; chưa xác nhận các vị trí đang tuyển', 'official_homepage_link': 'Liên kết tuyển dụng được dẫn từ website doanh nghiệp; chưa xác nhận các vị trí đang tuyển', 'public_api_checked': 'Đã đối chiếu bảng tuyển dụng qua API công khai'}.get(registry.get('verification_method'), 'Cần xác minh nguồn')
             st.caption(method + ' · ' + date(registry.get('reference_checked_at')))
         if safe_url(registry.get('linkedin_url')) and safe_url(registry.get('linkedin_evidence_url')):
             st.link_button('LinkedIn được doanh nghiệp dẫn chiếu ↗', registry['linkedin_url'])
             st.link_button('Bằng chứng liên kết LinkedIn ↗', registry['linkedin_evidence_url'])
         else:
             st.caption('Chưa đối chiếu liên kết LinkedIn cho doanh nghiệp này.')
-        if registry.get('rights_status') == 'unreviewed':
+        if any(s.get('company') == name for s in connected):
+            st.caption('Đã kết nối chỉ mục tin công khai: thông tin cơ bản và liên kết gốc; chưa bật sao chép JD đầy đủ hoặc diễn giải AI.')
+        elif registry.get('rights_status') == 'unreviewed':
             st.caption('Nguồn mới: chưa kết nối tự động, đang chờ xác minh quyền sử dụng dữ liệu.')
         own = [j for j in archive if j.get('company') == name]
         live = [j for j in jobs if j.get('company') == name]
@@ -451,9 +478,9 @@ elif page == 'Quản trị nguồn':
         st.subheader('Thêm / cập nhật / tắt nguồn ATS')
         company = st.text_input('Tên doanh nghiệp', value=editing.get('company', ''))
         url = st.text_input('URL trang tuyển dụng ATS', value=edit_url, placeholder='https://jobs.lever.co/tên-doanh-nghiệp')
-        permission = st.text_input('URL bằng chứng cho phép lưu và công bố dữ liệu', value=editing.get('permission_url', ''))
+        permission = st.text_input('Căn cứ sử dụng nguồn: tài liệu API, điều khoản hoặc thỏa thuận', value=editing.get('permission_url', ''))
         permission_mode = st.radio('Phạm vi được cấp quyền', ['full', 'links'], index=1 if editing.get('permission_mode') == 'links' else 0, format_func=lambda v: 'JD đầy đủ và liên kết' if v == 'full' else 'Chỉ thông tin cơ bản và liên kết')
-        enabled = st.checkbox('Tôi đã xác minh quyền sử dụng và muốn kích hoạt thu thập', value=bool(editing.get('enabled') and (editing.get('authorized') or editing.get('discovery_enabled'))))
+        enabled = st.checkbox('Tôi đã rà soát phạm vi sử dụng và muốn kích hoạt thu thập', value=bool(editing.get('enabled') and (editing.get('authorized') or editing.get('discovery_enabled'))))
         ai_allowed = st.checkbox('Quyền sử dụng cũng cho phép gửi JD đến OpenAI để diễn giải', value=bool(editing.get('ai_authorized')))
         submitted = st.form_submit_button('Lưu nguồn')
     if submitted:

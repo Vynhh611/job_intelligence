@@ -126,13 +126,11 @@ def register_source(config, company, url, permission='', enabled=False, permissi
         raise ValueError('Cần liên kết bằng chứng cho phép sử dụng dữ liệu trước khi kích hoạt.')
     if permission_mode not in ('full', 'links'):
         raise ValueError('Phạm vi sử dụng dữ liệu không hợp lệ.')
-    if enabled and permission_mode == 'links' and provider == 'smartrecruiters':
-        raise ValueError('SmartRecruiters hiện cần quyền JD; chưa hỗ trợ chế độ chỉ liên kết.')
     updated = json.loads(json.dumps(config))
     entries = updated.setdefault(provider, [])
     old = next((s for s in entries if s.get(FIELDS[provider]) == board), None)
     item = {**(old or {}), 'company': company.strip(), FIELDS[provider]: board, 'careers_url': url,
-            'enabled': enabled, 'authorized': enabled and permission_mode == 'full', 'discovery_enabled': enabled and provider != 'smartrecruiters',
+            'enabled': enabled, 'authorized': enabled and permission_mode == 'full', 'discovery_enabled': enabled and permission_mode == 'links',
             'permission_mode': permission_mode, 'ai_authorized': enabled and permission_mode == 'full' and ai_authorized,
             'permission_url': permission, 'permission_checked_at': datetime.now(timezone.utc).isoformat() if enabled else None}
     if old is None:

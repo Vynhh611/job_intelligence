@@ -1,6 +1,6 @@
 # Mở rộng nguồn tuyển dụng Việt Nam
 
-Danh bạ hiện có 261 mục doanh nghiệp, đơn vị và thương hiệu tại Việt Nam; 141 mục có liên kết tuyển dụng, 120 mục còn cần tìm hoặc xác minh trang tuyển dụng. Đây là số mục tham khảo, không phải số doanh nghiệp đã cấp quyền, số nguồn realtime hay số pháp nhân độc lập đã kiểm toán. Các tập đoàn và đơn vị thành viên có thể cùng xuất hiện. Số tin việc làm là chỉ tiêu độc lập; đợt này không bổ sung hoặc sửa tin việc làm.
+Đợt danh bạ 28/09 có 261 mục, 141 liên kết tuyển dụng và 120 mục cần tìm hoặc xác minh nguồn. Đợt 29/09 bổ sung 5 đơn vị có tin thực tế, nâng danh bạ lên 266 mục và 146 liên kết. Đây không phải số doanh nghiệp cấp phép hay số pháp nhân độc lập. [Lượt đồng bộ thực tế](public-job-sources.md) đã lấy 666 tin Việt Nam từ 11 nguồn; số tin và số mục danh bạ là các chỉ tiêu riêng.
 
 ## Đợt mở rộng lên hơn 200 mục
 
@@ -14,7 +14,7 @@ Danh bạ hiện có 261 mục doanh nghiệp, đơn vị và thương hiệu t�
 
 `data/employer_references_20260928.json` lưu danh sách bổ sung và nguồn tham chiếu. Danh bạ ứng dụng nằm trong `data/company_watchlist.json`; giữ nguyên các mục cũ và mục Singapore. `official_page_review` nghĩa là đã xem nội dung trang chính thức; `official_search_reference` chỉ đối chiếu được kết quả tìm kiếm trên tên miền chính thức. Ngày tham chiếu không phải ngày cập nhật việc làm. Chưa xác nhận liên kết LinkedIn cho mọi doanh nghiệp; chỉ hiện khi có URL và bằng chứng từ doanh nghiệp (hiện có Bosch Vietnam).
 
-Mọi nguồn bổ sung có `rights_status=unreviewed` và `page_discovery_enabled=false`. Không thay đổi `sources.json`, không tự cấp quyền thu thập, không sao chép JD. Danh bạ cung cấp đường dẫn để người dùng xem và ứng tuyển tại nguồn. Khi nguồn được duyệt, ghi nhận riêng phạm vi cho phép lưu, hiển thị lại, tần suất, thời hạn và xử lý bằng AI; sau đó cấu hình bộ thu thập thích hợp trong quản trị. Có mặt trên LinkedIn không làm LinkedIn trở thành nguồn dữ liệu của tin lấy từ website doanh nghiệp.
+Đợt danh bạ ban đầu không bật nguồn. Đợt 29/09 ghi rõ `access_basis=reviewed_public_api_metadata` cho 11 bảng được kết nối trong `sources.json`; phạm vi chỉ là metadata và liên kết, `authorized=false` và AI tắt. Tài liệu API không phải thỏa thuận cấp phép của doanh nghiệp. Các nguồn khác vẫn cần rà soát; không tự cấp quyền JD chỉ vì có URL công khai. Có mặt trên LinkedIn không làm LinkedIn trở thành nguồn dữ liệu của tin lấy từ website doanh nghiệp.
 
 ## Tìm hiểu thỏa thuận LinkedIn
 
