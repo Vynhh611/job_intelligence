@@ -60,7 +60,7 @@ def sentences(text):
 
 
 def dossier(job):
-    lines = sentences(job.get('description', ''))
+    lines = sentences(matching_text(job))
     groups = {
         'Ưu tiên': r'preferred|nice to have|advantage|ưu tiên|lợi thế',
         'Kinh nghiệm': r'experience|years|kinh nghiệm|\d+\s*năm',

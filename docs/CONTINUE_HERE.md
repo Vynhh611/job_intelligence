@@ -46,4 +46,4 @@ PowerShell, thư viện trong .runtime. Đặt PYTHONPATH tới .runtime rồi c
 - Snapshot hiện có 747 tin active, 736 được thấy ở lượt mới nhất và 11 đang chờ xác nhận lần mất đầu; 747 JD đã có (lịch sử JD được giữ). Xem JSON để có số mới nhất.
 - Rà soát 266 mục: 120 thiếu URL tuyển dụng; các trang còn lại có báo cáo data/directory_source_audit.json, tách nguồn connected / cần adapter / cần kiểm tra truy cập. FPT Software trả 403: không vượt chặn. MoMo có 111 tin trên trang nhưng chưa nhập vì phân trang API cần adapter đầy đủ; không lấy riêng 12 tin trang đầu rồi nhận là toàn bộ.
 - Đã thêm tìm kiếm và phân trang cho việc làm từng doanh nghiệp, số tin và tình trạng đồng bộ trong bảng danh bạ. Ô trống không có nghĩa không tuyển dụng.
-- JD, địa điểm, CV: 64 kiểm thử đạt; 13 kiểm thử trang/nguồn gần nhất đạt. Streamlit có lỗi import sau hot update; requirements có marker rebuild, cần kiểm tra live sau push.
+- JD, địa điểm, CV: 64 kiểm thử đạt; 13 kiểm thử trang/nguồn gần nhất đạt. Lỗi import sau hot update đã hết sau rebuild; website đã xác nhận trực tiếp 747 tin/14 nguồn, JD Bosch Hà Nội đầy đủ và trang CV có danh sách + tìm kiếm. CI commit 65e5332 thành công.

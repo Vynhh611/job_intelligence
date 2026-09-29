@@ -45,6 +45,7 @@ class JobExperienceTests(unittest.TestCase):
         fetch.assert_not_called()
 
     def test_rank_search_and_unknown(self):
+        self.assertNotIn('Embedded systems', enrich({'title': 'Sales', 'description': 'We provide embedded finance.'})['skills'])
         jobs = [enrich(dict(id='1', title='Data Engineer', company='A', description='Build Python SQL pipelines.')),
                 enrich(dict(id='2', title='Sales Executive', company='B', description='Sales and customer service.')),
                 enrich(dict(id='3', title='Python vacancy', company='C'))]

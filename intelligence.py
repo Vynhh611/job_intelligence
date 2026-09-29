@@ -25,7 +25,7 @@ CATEGORIES = {
 }
 SKILLS = {
     'C++': r'\bc\+\+', 'Java': r'\bjava\b', 'JavaScript': r'\bjavascript\b|\btypescript\b',
-    'Embedded systems': r'\bembedded\b|\bfirmware\b', 'Linux': r'\blinux\b',
+    'Embedded systems': r'\bembedded\s+(?:software|systems?|development|automotive|engineer(?:ing)?)\b|\bfirmware\b', 'Linux': r'\blinux\b',
     'Testing': r'\btesting\b|kiểm thử', 'AutoCAD': r'\bautocad\b',
     'Quality assurance': r'\bquality assurance\b|\biso 17025\b|đảm bảo chất lượng',
     'Customer service': r'\bcustomer service\b|chăm sóc khách hàng',
