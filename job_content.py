@@ -90,11 +90,17 @@ def collect_content(records, config, previous, fetch, now):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--missing-only', action='store_true', help='Bootstrap newly connected postings without refetching existing descriptions')
+    args = parser.parse_args()
     root = Path(__file__).resolve().parent
     store = configured_store()
     records = load(root / 'data/discovered_jobs.json', [], store)
     config = load(root / 'sources.json', {}, store)
     previous = load(root / 'data/job_content.json', {}, store)
+    if args.missing_only:
+        records = [r for r in records if r['id'] not in previous]
     session = requests.Session()
     session.headers['User-Agent'] = 'JobIntelligenceVietnam/1.0 (+https://github.com/Vynhh611/job_intelligence)'
     def fetch(url):

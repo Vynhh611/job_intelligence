@@ -1,0 +1,1984 @@
+[
+  {
+    "company": "Vietcombank",
+    "careers_url": "https://tuyendung.vietcombank.com.vn/viewalljobs/",
+    "checked_at": "2026-09-29T06:54:47.051492+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Techcombank",
+    "careers_url": "https://www.techcombankjobs.com/",
+    "checked_at": "2026-09-29T06:54:47.051844+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VPBank",
+    "careers_url": "https://tuyendung.vpbank.com.vn/",
+    "checked_at": "2026-09-29T06:54:47.053111+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MB Bank",
+    "careers_url": "https://tuyendung.mbbank.com.vn/",
+    "checked_at": "2026-09-29T06:54:47.053651+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.mbbank.com.vn/",
+    "candidates": []
+  },
+  {
+    "company": "ACB",
+    "careers_url": "https://www.acbjobs.com.vn/jobs",
+    "checked_at": "2026-09-29T06:54:48.608914+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://www.acbjobs.com.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Viettel",
+    "careers_url": "https://tuyendung.viettel.vn/recruitment-information/search",
+    "checked_at": "2026-09-29T06:54:48.764980+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error:  for url: https://tuyendung.viettel.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "FPT Software",
+    "careers_url": "https://career.fpt-software.com/jobs-search",
+    "checked_at": "2026-09-29T06:54:48.826808+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "FPT Telecom",
+    "careers_url": "https://fptjobs.com/",
+    "checked_at": "2026-09-29T06:54:48.869022+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://fptjobs.com/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "VNG",
+    "careers_url": "https://career.vng.com.vn/en/job-search",
+    "checked_at": "2026-09-29T06:54:49.170726+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MoMo",
+    "careers_url": "https://momo.careers/jobs-opening",
+    "checked_at": "2026-09-29T06:54:49.302231+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://momo.careers/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Vingroup",
+    "careers_url": "https://tuyendung.vingroup.net/tuyendung",
+    "checked_at": "2026-09-29T06:54:49.548514+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Samsung Vietnam",
+    "careers_url": "https://www.samsung.com/vn/about-us/careers/",
+    "checked_at": "2026-09-29T06:54:49.805363+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Unilever Vietnam",
+    "careers_url": "https://careers.unilever.com/en/vietnam",
+    "checked_at": "2026-09-29T06:54:50.513668+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Nestlé Vietnam",
+    "careers_url": "https://www.nestle.com.vn/vi/jobs/search-jobs",
+    "checked_at": "2026-09-29T06:54:50.927021+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.nestle.com.vn/vi/jobs/search-jobs",
+    "candidates": []
+  },
+  {
+    "company": "Sea / Shopee",
+    "careers_url": "https://career.sea.com/",
+    "checked_at": "2026-09-29T06:54:50.984996+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Grab",
+    "careers_url": "https://www.grab.careers/en/jobs/",
+    "checked_at": "2026-09-29T06:54:51.893179+00:00",
+    "status": "connected",
+    "candidates": []
+  },
+  {
+    "company": "Lazada",
+    "careers_url": "https://www.lazada.com/en/careers/",
+    "checked_at": "2026-09-29T06:54:53.431072+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Ninja Van",
+    "careers_url": "https://jobs.lever.co/ninjavan",
+    "checked_at": "2026-09-29T06:54:54.029951+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Ninja Van",
+        "provider": "lever",
+        "board": "ninjavan",
+        "careers_url": "https://jobs.lever.co/ninjavan",
+        "found_on": "https://jobs.lever.co/ninjavan",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Lalamove",
+    "careers_url": "https://jobs.lever.co/lalamove",
+    "checked_at": "2026-09-29T06:54:54.030122+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Lalamove",
+        "provider": "lever",
+        "board": "lalamove",
+        "careers_url": "https://jobs.lever.co/lalamove",
+        "found_on": "https://jobs.lever.co/lalamove",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Airwallex",
+    "careers_url": "https://jobs.ashbyhq.com/airwallex",
+    "checked_at": "2026-09-29T06:54:54.030159+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Airwallex",
+        "provider": "ashby",
+        "board": "airwallex",
+        "careers_url": "https://jobs.ashbyhq.com/airwallex",
+        "found_on": "https://jobs.ashbyhq.com/airwallex",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Bosch Vietnam",
+    "careers_url": "https://jobs.bosch.com/vi/?pages=1&country=vn",
+    "checked_at": "2026-09-29T06:54:54.030184+00:00",
+    "status": "connected",
+    "candidates": []
+  },
+  {
+    "company": "P&G Vietnam",
+    "careers_url": "https://www.pgcareers.com/apac/en/locations/vietnam",
+    "checked_at": "2026-09-29T06:54:54.499173+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "HSBC Vietnam",
+    "careers_url": "https://portal.careers.hsbc.com/careers?location=vietnam",
+    "checked_at": "2026-09-29T06:54:55.677543+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "AEON Vietnam",
+    "careers_url": "https://tuyendung.aeon.com.vn/",
+    "checked_at": "2026-09-29T06:54:55.828102+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.aeon.com.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "DHL Supply Chain Vietnam",
+    "careers_url": "https://www.dhl.com/vn-vi/home/chuoi-cung-ung/gioi-thieu-ve-chung-toi/viec-lam-tai-dhl-supply-chain.html",
+    "checked_at": "2026-09-29T06:54:56.065117+00:00",
+    "status": "needs_review",
+    "reason": "HTTPSConnectionPool(host='www.dhl.com', port=443): Read timed out. (read timeout=20)",
+    "candidates": []
+  },
+  {
+    "company": "Vinmec",
+    "careers_url": "https://www.vinmec.com/vie/lam-viec-tai-vinmec/",
+    "checked_at": "2026-09-29T06:54:57.003748+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "RMIT Vietnam",
+    "careers_url": "https://www.rmit.edu.vn/vi/gioi-thieu-chung/lam-viec-tai-rmit",
+    "checked_at": "2026-09-29T06:54:57.431150+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "FV Hospital",
+    "careers_url": "https://www.fvhospital.com/en/career-at-fv/career-application/",
+    "checked_at": "2026-09-29T06:54:58.444241+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Central Retail Vietnam",
+    "careers_url": "https://centralretail.com.vn/careers/",
+    "checked_at": "2026-09-29T06:54:58.667186+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Decathlon Vietnam",
+    "careers_url": "https://careersdecathlonvn.com/en/recruitments",
+    "checked_at": "2026-09-29T06:54:59.533820+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Schneider Electric Vietnam",
+    "careers_url": "https://www.se.com/vn/vi/about-us/careers/overview/",
+    "checked_at": "2026-09-29T06:55:00.615086+00:00",
+    "status": "needs_review",
+    "reason": "Trang vượt giới hạn 1 MB.",
+    "candidates": []
+  },
+  {
+    "company": "KPMG Vietnam",
+    "careers_url": "https://careers.kpmg.com.vn/",
+    "checked_at": "2026-09-29T06:55:01.269643+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "PwC Vietnam",
+    "careers_url": "https://www.pwc.com/vn/en/careers.html",
+    "checked_at": "2026-09-29T06:55:02.531002+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.pwc.com/vn/en/careers.html",
+    "candidates": []
+  },
+  {
+    "company": "EY Vietnam",
+    "careers_url": "https://www.ey.com/en_vn/careers/job-search",
+    "checked_at": "2026-09-29T06:55:03.009788+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Accor Vietnam",
+    "careers_url": "https://careers.accor.com/global/en/vietnam",
+    "checked_at": "2026-09-29T06:55:04.070389+00:00",
+    "status": "connected",
+    "candidates": []
+  },
+  {
+    "company": "TH Group",
+    "careers_url": "https://jobs.thgroupglobal.com/",
+    "checked_at": "2026-09-29T06:55:04.362874+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Vietjet",
+    "careers_url": "https://jobs.vietjetair.com/",
+    "checked_at": "2026-09-29T06:55:06.655847+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://jobs.vietjetair.com/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Hòa Phát",
+    "careers_url": "https://www.hoaphat.com.vn/tuyen-dung?page=1",
+    "checked_at": "2026-09-29T06:55:07.002208+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Tiki",
+    "careers_url": "https://tuyendung.tiki.vn/",
+    "checked_at": "2026-09-29T06:55:07.094271+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Vietnam Airlines",
+    "careers_url": "https://www.vietnamairlines.com/mo/vi/vietnam-airlines/career-with-us",
+    "checked_at": "2026-09-29T06:55:07.858450+00:00",
+    "status": "needs_review",
+    "reason": "Trang vượt giới hạn 1 MB.",
+    "candidates": []
+  },
+  {
+    "company": "7-Eleven Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:08.924843+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "ABB Vietnam",
+    "careers_url": "https://careers.abb/global/en/home",
+    "checked_at": "2026-09-29T06:55:08.924856+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "ABBank",
+    "careers_url": "https://careers.abbank.vn/",
+    "checked_at": "2026-09-29T06:55:09.064531+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://careers.abbank.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "AIA Vietnam",
+    "careers_url": "https://www.aia.com.vn/vi/ve-chung-toi/co-hoi-nghe-nghiep.html",
+    "checked_at": "2026-09-29T06:55:09.503387+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Acecook Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:10.494642+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Agribank",
+    "careers_url": "https://www.agribank.com.vn/vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:10.494669+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Ajinomoto Vietnam",
+    "careers_url": "https://www.ajinomoto.com.vn/vi/career-opportunities",
+    "checked_at": "2026-09-29T06:55:11.021702+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "AkzoNobel Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:13.691493+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Amanotes",
+    "careers_url": "https://www.careers.amanotes.com/",
+    "checked_at": "2026-09-29T06:55:13.691510+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://www.careers.amanotes.com/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "An Khang Pharmacy",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.220213+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Apollo English",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.220227+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Appota",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.220230+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Axon Active Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.220233+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "BEST Express Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.220236+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "BIDV",
+    "careers_url": "https://bidv.com.vn/vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:14.220238+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "BSR",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.261176+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "BVBank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.261192+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Bac A Bank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.261198+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Bao Viet",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.261202+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Base.vn",
+    "careers_url": "https://careers.base.vn/",
+    "checked_at": "2026-09-29T06:55:14.261205+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://careers.base.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Be Group",
+    "careers_url": "https://be.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:14.330477+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Ben Thanh Tourist",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:14.606697+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Bibica",
+    "careers_url": "https://www.bibica.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:14.606709+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "British University Vietnam",
+    "careers_url": "https://www.buv.edu.vn/work-for-buv/",
+    "checked_at": "2026-09-29T06:55:15.510199+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Brother Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:15.711448+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "C.P. Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:15.711460+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "CIMB Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:15.711463+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "CJ Foods Vietnam",
+    "careers_url": "https://cjfoods.com.vn/career",
+    "checked_at": "2026-09-29T06:55:15.711466+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "CMC Corporation",
+    "careers_url": "https://tuyendung.cmc.com.vn",
+    "checked_at": "2026-09-29T06:55:15.910305+00:00",
+    "status": "needs_review",
+    "reason": "[Errno 11001] getaddrinfo failed",
+    "candidates": []
+  },
+  {
+    "company": "Canon Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:16.020649+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Cargill Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:16.020670+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Carlsberg Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:16.020677+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Casumina",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:16.020683+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Central Construction",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:16.020689+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Chubb Life Vietnam",
+    "careers_url": "https://careers.chubb.com/global/en/apac",
+    "checked_at": "2026-09-29T06:55:16.020694+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Circle K Vietnam",
+    "careers_url": "https://www.circlek.com.vn/vi/co-hoi-nghe-nghiep-circle-k/",
+    "checked_at": "2026-09-29T06:55:16.515804+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Coca-Cola Vietnam",
+    "careers_url": "https://www.coca-colacompany.com/careers",
+    "checked_at": "2026-09-29T06:55:17.102639+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Coteccons",
+    "careers_url": "https://www.coteccons.vn/careers-vn/",
+    "checked_at": "2026-09-29T06:55:17.462568+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "DHG Pharma",
+    "careers_url": "https://tuyendung.dhgpharma.com.vn/vi",
+    "checked_at": "2026-09-29T06:55:18.279621+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "DKSH Vietnam",
+    "careers_url": "https://www.dksh.com/vn-en/home/careers",
+    "checked_at": "2026-09-29T06:55:19.315660+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "DOHG",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.182237+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "DOJI",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.182256+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "DRC",
+    "careers_url": "https://drc.com.vn/category/tin-tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:20.182260+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Dabaco",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379212+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Dai-ichi Life Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379240+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Daikin Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379242+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "De Heus Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379245+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "EVN",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379247+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Epson Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:20.379249+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Eurowindow",
+    "careers_url": "https://eurowindow.biz/tin-tuc/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:20.379251+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Eximbank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:21.348226+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "F88",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:21.348485+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "FE Credit",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:21.348495+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "FPT Retail",
+    "careers_url": "https://tuyendung.frt.vn/Home/Login",
+    "checked_at": "2026-09-29T06:55:21.348502+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "FPTS",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:22.489168+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "FWD Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:22.489182+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Fahasa",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:22.489185+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "FamilyMart Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:22.489188+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Ford Vietnam",
+    "careers_url": "https://www.ford.com.vn/content/na/ford/vi_vn/home/about/recruitment/hr-intro.html",
+    "checked_at": "2026-09-29T06:55:22.489190+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.ford.com.vn/content/na/ford/vi_vn/home/about/recruitment/hr-intro.html",
+    "candidates": []
+  },
+  {
+    "company": "FrieslandCampina Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:22.834295+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Fulbright University Vietnam",
+    "careers_url": "https://fulbright.edu.vn/join-us/",
+    "checked_at": "2026-09-29T06:55:22.834309+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://fulbright.edu.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "GELEX",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:23.031996+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "GS25 Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:23.032011+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Gemadept",
+    "careers_url": "https://www.gemadept.com.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:23.032015+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Generali Vietnam",
+    "careers_url": "https://generali.vn/page/company/career/career-general",
+    "checked_at": "2026-09-29T06:55:23.532749+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Giao Hàng Nhanh",
+    "careers_url": "https://tuyendung.ghn.vn/recruit?tag=recruit",
+    "checked_at": "2026-09-29T06:55:24.073321+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Giao Hàng Tiết Kiệm",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:24.585147+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Golden Gate Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:24.585165+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "GreenFeed Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:24.585169+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Guardian Vietnam",
+    "careers_url": "https://www.guardian.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:24.585174+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.guardian.com.vn/tuyen-dung",
+    "candidates": []
+  },
+  {
+    "company": "HABECO",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:25.069627+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "HD SAISON",
+    "careers_url": "https://tuyendung.hdsaison.com.vn/vn/co-hoi-nghe-nghiep.html/p-1",
+    "checked_at": "2026-09-29T06:55:25.069641+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "HDBank",
+    "careers_url": "https://career.hdbank.com.vn/",
+    "checked_at": "2026-09-29T06:55:25.325787+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "HSC",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:26.408505+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Hanwha Life Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:26.408521+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Haravan",
+    "careers_url": "https://careers.haravan.com",
+    "checked_at": "2026-09-29T06:55:26.408526+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Hasaki",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:26.785658+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Heineken Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:26.785672+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Highlands Coffee",
+    "careers_url": "https://careers.highlandscoffee.com.vn/vi/viec-lam/",
+    "checked_at": "2026-09-29T06:55:26.785675+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Hoa Sen Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:27.061870+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Home Credit Vietnam",
+    "careers_url": "https://career.homecredit.vn/vn/",
+    "checked_at": "2026-09-29T06:55:27.061884+00:00",
+    "status": "needs_review",
+    "reason": "HTTPSConnectionPool(host='career.homecredit.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))",
+    "candidates": []
+  },
+  {
+    "company": "Honda Vietnam",
+    "careers_url": "https://www.honda.com.vn/tuyen-dung/co-hoi-nghe-nghiep",
+    "checked_at": "2026-09-29T06:55:27.353944+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Hong Leong Bank Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:28.435057+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Hoàn Mỹ Medical Group",
+    "careers_url": "https://hoanmy.com/career/vi/",
+    "checked_at": "2026-09-29T06:55:28.435070+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Hòa Bình Construction",
+    "careers_url": "https://hbcg.vn/jobs",
+    "checked_at": "2026-09-29T06:55:29.081238+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "ILA Vietnam",
+    "careers_url": "https://career.ila.edu.vn/",
+    "checked_at": "2026-09-29T06:55:29.611766+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://career.ila.edu.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Imexpharm",
+    "careers_url": "https://www.imexpharm.com/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:30.532514+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Indovina Bank",
+    "careers_url": "https://www.indovinabank.com.vn/vi/recruitment",
+    "checked_at": "2026-09-29T06:55:30.534087+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Isuzu Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:31.359831+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "J&T Express Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:31.359845+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Jollibee Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:31.359847+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Jotun Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:31.359850+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "KFC Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:31.359853+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "KIDO Group",
+    "careers_url": "https://www.kdc.vn/nghe-nghiep/nhu-cau-tuyen-dung",
+    "checked_at": "2026-09-29T06:55:31.359855+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "KIS Vietnam Securities",
+    "careers_url": "https://kisvn.vn/ve-kis/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:31.965451+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "KMS Technology",
+    "careers_url": "https://careers.kms-technology.com/",
+    "checked_at": "2026-09-29T06:55:32.653361+00:00",
+    "status": "connected",
+    "reason": "403 Client Error: Forbidden for url: https://careers.kms-technology.com/",
+    "candidates": []
+  },
+  {
+    "company": "KienlongBank",
+    "careers_url": "https://tuyendung.kienlongbank.com/",
+    "checked_at": "2026-09-29T06:55:33.299043+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "KiotViet",
+    "careers_url": "https://about.kiotviet.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:33.659677+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://about.kiotviet.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "LG Electronics Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:33.845152+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "LPBank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:33.845207+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "LogiGear",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:33.845217+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Lotte Mart Vietnam",
+    "careers_url": "https://lottemart.com.vn/tin-tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:33.845224+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Lotteria Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:34.738377+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Lộc Trời Group",
+    "careers_url": "https://www.loctroi.vn/tuyen-dung/co-hoi-nghe-nghiep/101",
+    "checked_at": "2026-09-29T06:55:34.738391+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MBS",
+    "careers_url": "https://mbs.com.vn/vi-tri-tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:34.942213+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "MISA",
+    "careers_url": "https://www.misa.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:36.317601+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MM Mega Market Vietnam",
+    "careers_url": "https://mmvietnam.com/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:36.563786+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MSB",
+    "careers_url": "https://www.msb.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:37.116134+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Manulife Vietnam",
+    "careers_url": "https://careers.manulife.com/vn/vi",
+    "checked_at": "2026-09-29T06:55:39.077063+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://careers.manulife.com/vn/vi",
+    "candidates": []
+  },
+  {
+    "company": "Masan Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:39.200524+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Mcredit",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:39.200548+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Medlatec",
+    "careers_url": "https://tuyendung.medlatec.vn/",
+    "checked_at": "2026-09-29T06:55:39.200555+00:00",
+    "status": "needs_review",
+    "reason": "unknown encoding: utf-8,gbk",
+    "candidates": []
+  },
+  {
+    "company": "Mercedes-Benz Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:39.431878+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Minh Phú Seafood",
+    "careers_url": "https://minhphu.com/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:39.431890+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Mirae Asset Securities Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:40.091836+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Mitsubishi Motors Vietnam",
+    "careers_url": "https://www.mitsubishi-motors.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:40.091859+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "MobiFone",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:40.819446+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Mondelez Kinh Do",
+    "careers_url": "https://www.mondelezinternational.com/careers/",
+    "checked_at": "2026-09-29T06:55:40.819478+00:00",
+    "status": "needs_review",
+    "reason": "Trang vượt giới hạn 1 MB.",
+    "candidates": []
+  },
+  {
+    "company": "Mường Thanh Group",
+    "careers_url": "https://muongthanh.com/tuyen-dung.html",
+    "checked_at": "2026-09-29T06:55:41.209331+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "NCB",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:41.471972+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "NTQ Solution",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:41.471985+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Nam A Bank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:41.471988+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Nam Kim Steel",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:41.471991+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "NashTech",
+    "careers_url": "https://careers.nashtechglobal.com/",
+    "checked_at": "2026-09-29T06:55:41.471993+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://careers.nashtechglobal.com/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Newtecons",
+    "careers_url": "https://newtecons.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:42.035140+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Nhựa Bình Minh",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:42.515417+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Nhựa Tiền Phong",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:42.515430+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Nippon Paint Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:42.515433+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Nutifood",
+    "careers_url": "https://tuyendung.nutifood.com.vn",
+    "checked_at": "2026-09-29T06:55:42.515436+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "OCB",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:42.559719+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "One Mount",
+    "careers_url": "https://careers.onemount.com/",
+    "checked_at": "2026-09-29T06:55:42.559744+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://careers.onemount.com/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Orient Software",
+    "careers_url": "https://www.orientsoftware.com/company/careers/",
+    "checked_at": "2026-09-29T06:55:42.989111+00:00",
+    "status": "needs_review",
+    "reason": "Trang vượt giới hạn 1 MB.",
+    "candidates": []
+  },
+  {
+    "company": "Orion Vietnam",
+    "careers_url": "https://orion.vn/tuyen-dung/viec-lam/",
+    "checked_at": "2026-09-29T06:55:43.681662+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "PAN Group",
+    "careers_url": "https://thepangroup.vn/about-us/career/careers-at-the-pan-group/",
+    "checked_at": "2026-09-29T06:55:43.922122+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "PGBank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.741783+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "PNJ",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.741802+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "PV GAS",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.741807+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "PV Power",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.741811+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Panasonic Vietnam",
+    "careers_url": "https://www.panasonic.com/vn/corporate/careers.html",
+    "checked_at": "2026-09-29T06:55:44.741814+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.panasonic.com/vn/corporate/careers.html",
+    "candidates": []
+  },
+  {
+    "company": "Payoo",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.869982+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Petrolimex",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.869997+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Pharmacity",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870001+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Phú Quý",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870004+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Phúc Long",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870007+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Piaggio Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870010+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Pizza 4P's",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870012+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Pizza Hut Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:44.870014+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Prudential Vietnam",
+    "careers_url": "https://www.prudential.com.vn/vi/co-hoi-nghe-nghiep/kien-tao-su-nghiep-tu-vi-the-tien-phong/",
+    "checked_at": "2026-09-29T06:55:44.870017+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Public Bank Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:45.974917+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Pymepharco",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:45.974946+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "REE Corporation",
+    "careers_url": "https://www.reecorp.com/tuyen-dung/vi-tri-tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:45.974950+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Ricons",
+    "careers_url": "https://www.ricons.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:46.296609+00:00",
+    "status": "needs_review",
+    "reason": "HTTPSConnectionPool(host='www.ricons.vn', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))",
+    "candidates": []
+  },
+  {
+    "company": "Rikkeisoft",
+    "careers_url": "https://tuyendung.rikkeisoft.com/",
+    "checked_at": "2026-09-29T06:55:46.405697+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Rạng Đông",
+    "careers_url": "https://rangdong.com.vn/category/tuyen-dung-2026",
+    "checked_at": "2026-09-29T06:55:46.773291+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "SABECO",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:47.481651+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "SHB",
+    "careers_url": "https://shbjobs.shb.com.vn/recruitments?work-category=headquarter",
+    "checked_at": "2026-09-29T06:55:47.481665+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://shbjobs.shb.com.vn/recruitments?work-category=headquarter",
+    "candidates": []
+  },
+  {
+    "company": "SJC",
+    "careers_url": "https://sjc.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:47.814403+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "SOTRANS",
+    "careers_url": "https://career.sotransgroup.vn/",
+    "checked_at": "2026-09-29T06:55:47.861463+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://career.sotransgroup.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "SSI Securities",
+    "careers_url": "https://tuyendung.ssi.com.vn/",
+    "checked_at": "2026-09-29T06:55:48.188586+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Sacombank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:48.745533+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Saigon Co.op",
+    "careers_url": "https://tuyendung.saigonco-op.com.vn/",
+    "checked_at": "2026-09-29T06:55:48.745546+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Saigon Newport",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:49.271171+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Saigon Technology",
+    "careers_url": "https://careers.saigontechnology.com",
+    "checked_at": "2026-09-29T06:55:49.271195+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Saigonbank",
+    "careers_url": "https://www.saigonbank.com.vn/vi/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:49.483971+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Saigontourist Group",
+    "careers_url": "https://saigontourist.com.vn/tuyen-dung",
+    "checked_at": "2026-09-29T06:55:50.600444+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Saint-Gobain Vietnam",
+    "careers_url": "https://www.saint-gobain.com.vn/co-hoi-nghe-nghiep",
+    "checked_at": "2026-09-29T06:55:50.860136+00:00",
+    "status": "needs_review",
+    "reason": "403 Client Error: Forbidden for url: https://www.saint-gobain.com.vn/co-hoi-nghe-nghiep",
+    "candidates": []
+  },
+  {
+    "company": "Sanofi Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:51.163809+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Sapo",
+    "careers_url": "https://tuyendung.sapo.vn/",
+    "checked_at": "2026-09-29T06:55:51.163823+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "SeABank",
+    "careers_url": "https://tuyendung.seabank.com.vn/",
+    "checked_at": "2026-09-29T06:55:51.401873+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.seabank.com.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Shinhan Bank Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:51.762557+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Siemens Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:51.762580+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Sika Vietnam",
+    "careers_url": "https://vnm.sika.com/en/career/job-opportunities.html",
+    "checked_at": "2026-09-29T06:55:51.762587+00:00",
+    "status": "connected",
+    "candidates": []
+  },
+  {
+    "company": "Sky Mavis",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:52.318785+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "SmartOSC",
+    "careers_url": "https://careers.smartosc.com/",
+    "checked_at": "2026-09-29T06:55:52.318801+00:00",
+    "status": "connected",
+    "candidates": []
+  },
+  {
+    "company": "Sotatek",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:52.845379+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Standard Chartered Vietnam",
+    "careers_url": "https://www.sc.com/en/careers/",
+    "checked_at": "2026-09-29T06:55:52.845394+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Sun Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:53.459831+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Sun Life Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:53.459845+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Suntory PepsiCo Vietnam Beverage",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:53.459849+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "TC Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:53.459852+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "TCBS",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:53.459855+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "THACO",
+    "careers_url": "https://tuyendung.thaco.com.vn/tieng-viet/jobs-area",
+    "checked_at": "2026-09-29T06:55:53.459857+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "TMA Solutions",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:54.252634+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "TPBank",
+    "careers_url": "https://tuyendung.tpb.vn/vi",
+    "checked_at": "2026-09-29T06:55:54.252647+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.tpb.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "The Coffee House",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:54.339689+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Thế Giới Di Động",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:54.339703+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Toyota Vietnam",
+    "careers_url": "https://www.toyota.com.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:54.339707+00:00",
+    "status": "needs_review",
+    "reason": "Trang chuyển hướng; cập nhật URL đích chính thức trước khi kiểm tra.",
+    "candidates": []
+  },
+  {
+    "company": "Transimex",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:54.576622+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Traphaco",
+    "careers_url": "https://traphaco.com.vn/recruitment",
+    "checked_at": "2026-09-29T06:55:54.576650+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Trung Nguyên Legend",
+    "careers_url": "https://trungnguyenlegend.com/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:55.057311+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Tâm Anh Hospital",
+    "careers_url": "https://tamanhhospital.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:55.752631+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "UOB Vietnam",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:55.973759+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VCCorp",
+    "careers_url": "https://vccorp.vn/tuyen-dung.htm",
+    "checked_at": "2026-09-29T06:55:55.973773+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VIB",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:57.462610+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VIMC",
+    "careers_url": "https://vimc.co/chuyen-muc/tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:57.462628+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VISSAN",
+    "careers_url": "https://www.vissan.com.vn/thong-tin-tuyen-dung/",
+    "checked_at": "2026-09-29T06:55:58.090452+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VNDirect",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:58.492252+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VNP Group",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:58.492294+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VNPT",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:58.492301+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VNPay",
+    "careers_url": "https://tuyendung.vnpay.vn",
+    "checked_at": "2026-09-29T06:55:58.492307+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VPS Securities",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:58.584473+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VTC Intecom",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:58.584487+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VUS",
+    "careers_url": "https://tuyendung.vus.edu.vn/",
+    "checked_at": "2026-09-29T06:55:58.584490+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.vus.edu.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Vedan Vietnam",
+    "careers_url": "https://vedan.com.vn/tuyen-dung-nhan-vien/",
+    "checked_at": "2026-09-29T06:55:59.585455+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "VietABank",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:59.938087+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Vietcap",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:55:59.938100+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "VietinBank",
+    "careers_url": "https://tuyendung.vietinbank.vn/tuyendung/vi/",
+    "checked_at": "2026-09-29T06:55:59.938103+00:00",
+    "status": "needs_review",
+    "reason": "404 Client Error: Not Found for url: https://tuyendung.vietinbank.vn/robots.txt",
+    "candidates": []
+  },
+  {
+    "company": "Vietnam Post",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:00.244898+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Vietnamobile",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:00.244913+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Vietravel",
+    "careers_url": "https://jobs.vietravel.com/",
+    "checked_at": "2026-09-29T06:56:00.244916+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Viettel Post",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:00.424835+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Viglacera",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:00.424849+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Vinacafé Biên Hòa",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:00.424852+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Vinamilk",
+    "careers_url": "https://www.vinamilk.com.vn/recruitment/career-opportunities",
+    "checked_at": "2026-09-29T06:56:00.424854+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Vĩnh Hoàn",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:01.169469+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Woori Bank Vietnam",
+    "careers_url": "https://woori.com.vn/tuyen-dung/",
+    "checked_at": "2026-09-29T06:56:01.169494+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "YOLA",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:01.864641+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Yamaha Motor Vietnam",
+    "careers_url": "https://yamaha-motor.com.vn/tuyen-dung-yamaha/thong-diep-tuyen-dung/",
+    "checked_at": "2026-09-29T06:56:01.864657+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "ZaloPay",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:03.014570+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "Zuellig Pharma",
+    "careers_url": "https://www.zuelligpharma.com/careers",
+    "checked_at": "2026-09-29T06:56:03.014585+00:00",
+    "status": "custom_portal_needs_adapter",
+    "candidates": []
+  },
+  {
+    "company": "Điện Quang",
+    "careers_url": null,
+    "checked_at": "2026-09-29T06:56:03.578274+00:00",
+    "status": "missing_careers_url",
+    "candidates": []
+  },
+  {
+    "company": "cargo-partner",
+    "careers_url": "https://jobs.lever.co/cargo-partner",
+    "checked_at": "2026-09-29T06:56:03.578289+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "cargo-partner",
+        "provider": "lever",
+        "board": "cargo-partner",
+        "careers_url": "https://jobs.lever.co/cargo-partner",
+        "found_on": "https://jobs.lever.co/cargo-partner",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Ataccama",
+    "careers_url": "https://jobs.lever.co/ataccama",
+    "checked_at": "2026-09-29T06:56:03.578308+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Ataccama",
+        "provider": "lever",
+        "board": "ataccama",
+        "careers_url": "https://jobs.lever.co/ataccama",
+        "found_on": "https://jobs.lever.co/ataccama",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "SGS Vietnam",
+    "careers_url": "https://careers.smartrecruiters.com/SGS",
+    "checked_at": "2026-09-29T06:56:03.578319+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "SGS Vietnam",
+        "provider": "smartrecruiters",
+        "board": "SGS",
+        "careers_url": "https://careers.smartrecruiters.com/SGS",
+        "found_on": "https://careers.smartrecruiters.com/SGS",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Eurofins Vietnam",
+    "careers_url": "https://careers.smartrecruiters.com/Eurofins",
+    "checked_at": "2026-09-29T06:56:03.578328+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Eurofins Vietnam",
+        "provider": "smartrecruiters",
+        "board": "Eurofins",
+        "careers_url": "https://careers.smartrecruiters.com/Eurofins",
+        "found_on": "https://careers.smartrecruiters.com/Eurofins",
+        "status": "pending_permission"
+      }
+    ]
+  },
+  {
+    "company": "Renesas Electronics Vietnam",
+    "careers_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+    "checked_at": "2026-09-29T06:56:03.578337+00:00",
+    "status": "connected",
+    "candidates": [
+      {
+        "company": "Renesas Electronics Vietnam",
+        "provider": "smartrecruiters",
+        "board": "RenesasElectronics",
+        "careers_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+        "found_on": "https://careers.smartrecruiters.com/RenesasElectronics",
+        "status": "pending_permission"
+      }
+    ]
+  }
+]

@@ -98,6 +98,7 @@ jobs = vietnam_jobs(raw)
 archive = vietnam_jobs(raw, active_only=False)
 profiles = read('company_profiles.json', {})
 watchlist = [r for r in read('company_watchlist.json', []) if r.get('country') == 'Vietnam']
+source_audit = {r['company']: r for r in read('directory_source_audit.json', [])}
 for job in jobs:
     job['industry'] = profiles.get(job.get('company'), {}).get('industry') or next((r.get('industry') for r in watchlist if r.get('company') == job.get('company')), None)
 status = read('run_status.json', {})
@@ -350,7 +351,10 @@ elif page == 'Doanh nghiệp':
     directory = filter_employers(watchlist, search, industries, stage)
     st.caption(f'{len(directory)} doanh nghiệp phù hợp · Liên kết tuyển dụng được ưu tiên trước. Website chưa xác minh được ghi rõ trong bảng.')
     if directory:
-        st.dataframe(pd.DataFrame([{'Doanh nghiệp': r['company'], 'Ngành': r.get('industry'), 'Tình trạng': source_stage(r), 'Trang tuyển dụng': r.get('careers_url'), 'Website tham khảo': r.get('website')} for r in directory]), hide_index=True, column_config={'Trang tuyển dụng': st.column_config.LinkColumn('Trang tuyển dụng', display_text='Xem tuyển dụng ↗'), 'Website tham khảo': st.column_config.LinkColumn('Website tham khảo', display_text='Xem website ↗')}, width='stretch', height=460)
+        connected_names = {s.get('company') for s in connected}
+        job_counts = Counter(j.get('company') for j in jobs)
+        st.dataframe(pd.DataFrame([{'Doanh nghiệp': r['company'], 'Tin trong hệ thống': job_counts[r['company']] if r['company'] in connected_names else None, 'Đồng bộ': 'Đã kết nối' if r['company'] in connected_names else 'Chưa kết nối', 'Ngành': r.get('industry'), 'Tình trạng': source_stage(r), 'Trang tuyển dụng': r.get('careers_url'), 'Website tham khảo': r.get('website')} for r in directory]), hide_index=True, column_config={'Trang tuyển dụng': st.column_config.LinkColumn('Trang tuyển dụng', display_text='Xem tuyển dụng ↗'), 'Website tham khảo': st.column_config.LinkColumn('Website tham khảo', display_text='Xem website ↗')}, width='stretch', height=460)
+        st.caption('Ô số tin để trống nghĩa là chưa kết nối, không có nghĩa doanh nghiệp ngừng tuyển dụng.')
     else:
         st.info('Chưa có doanh nghiệp phù hợp trong danh bạ. Thử đổi từ khóa hoặc bỏ bộ lọc.')
     st.divider()
@@ -381,9 +385,13 @@ elif page == 'Doanh nghiệp':
         else:
             st.caption('Chưa đối chiếu liên kết LinkedIn cho doanh nghiệp này.')
         if any(s.get('company') == name for s in connected):
-            st.caption('Đã kết nối chỉ mục tin công khai: thông tin cơ bản và liên kết gốc; chưa bật sao chép JD đầy đủ hoặc diễn giải AI.')
+            st.caption('Đã kết nối nguồn tuyển dụng công khai; JD và trạng thái tin được cập nhật định kỳ. Chưa bật diễn giải AI.')
         elif registry.get('rights_status') == 'unreviewed':
             st.caption('Nguồn mới: chưa kết nối tự động, đang chờ xác minh quyền sử dụng dữ liệu.')
+        if not any(s.get('company') == name for s in connected):
+            audit = source_audit.get(name, {})
+            reason = {'missing_careers_url': 'Cần xác minh trang tuyển dụng chính thức.', 'custom_portal_needs_adapter': 'Trang tuyển dụng dùng hệ thống riêng; cần bổ sung bộ đọc dữ liệu.', 'needs_review': 'Chưa đọc tự động được trang tuyển dụng; cần kiểm tra đường dẫn hoặc điều kiện truy cập.', 'ats_found': 'Đã tìm thấy hệ thống tuyển dụng, đang chờ kiểm tra và kết nối.'}.get(audit.get('status'), 'Nguồn chưa được kết nối.')
+            st.info(reason + ' Bạn vẫn có thể xem tuyển dụng tại liên kết gốc của doanh nghiệp.')
         own = [j for j in archive if j.get('company') == name]
         live = [j for j in jobs if j.get('company') == name]
         a, b, c = st.columns(3)
@@ -393,7 +401,14 @@ elif page == 'Doanh nghiệp':
         st.caption('Đánh giá nhân viên: chưa có dữ liệu được cấp quyền. Không tạo điểm uy tín hoặc lời chứng thực giả.')
         if own:
             st.dataframe(pd.DataFrame([{'Chức danh': j['title'], 'Trạng thái': j.get('status', 'active'), 'Phát hiện': date(j.get('first_seen')), 'Số lần mở lại': j.get('reopen_count', 0)} for j in own]), hide_index=True)
-        for job in live[:12]:
+        company_query = st.text_input('Tìm công việc tại doanh nghiệp', key='company-job-search')
+        company_jobs = [r['job'] for r in rank_jobs('', live, company_query)]
+        signature = (name, company_query, len(company_jobs))
+        if st.session_state.get('company-page-signature') != signature:
+            st.session_state['company-job-page'] = 1
+            st.session_state['company-page-signature'] = signature
+        company_page = st.number_input('Trang việc làm doanh nghiệp', min_value=1, max_value=max(1, (len(company_jobs)+11)//12), step=1, key='company-job-page')
+        for job in company_jobs[(company_page-1)*12:company_page*12]:
             card(job, 'company')
 
 elif page == 'CV của tôi':

@@ -4129,5 +4129,777 @@
     "at": "2026-09-29T01:21:08.218615+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000152103629",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000152103629",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Test Engineer (Manual/QA/QC)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000152103629",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-09-28T08:11:39.798Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152111371",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000152111371",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[ETA] Embedded Software Developer - Flash Bootloader",
+      "location": "Ho Chi Minh cỉty, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152111371",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-28T08:45:18.467Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000151754499",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000151754499",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[BGSV] 30 Fresher Embedded Software Engineers (C/C++) - One Day Offer",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000151754499",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-25T03:11:11.380Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000151590889",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000151590889",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EPC] Senior Embedded Software Engineer (with Joining Bonus) _ In-Vehicle Network Communication for EU Project",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000151590889",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-24T11:04:43.105Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000151231628",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000151231628",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[ETA] AUTOSAR Embedded Software Engineer (2-3 years of experience)",
+      "location": "Ho Chi Minh City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000151231628",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-23T02:50:50.654Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000150942294",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000150942294",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EPC] Senior Test Engineer (Embedded Automotive Testing)",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000150942294",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-22T06:54:14.986Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000149773179",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000149773179",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[SX/BSV] SAP Project Manager",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000149773179",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-16T04:52:37.166Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000148655057",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000148655057",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[SX/BSV-VN] Embedded Test Engineer Intern",
+      "location": "Ha Noi, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000148655057",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-10T01:40:48.979Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000145049109",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000145049109",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[PJ-SDS] Sales Manager – Industrial Software & IT/Engineering Services",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000145049109",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-08-24T01:01:42.856Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000140375519",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000140375519",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EHV] Embedded Software Engineer (Hardware-related Software)",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000140375519",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-07-29T02:55:28.818Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000139924420",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000139924420",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EHV] Embedded Hardware Software Specialist (HSW)",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000139924420",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-07-27T07:13:55.118Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-09-29T01:31:53.731397+00:00",
+      "last_checked_at": "2026-09-29T01:31:53.731397+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152335949",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152335630",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152332959",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152324331",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152322629",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152320399",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152325199",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152315769",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152315649",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000152337619",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152321499",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152140280",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152068569",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000151765409",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000151320451",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000151320164",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000151044155",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000150981069",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000150666319",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000150349040",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000150037390",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000150018969",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000149562399",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000148149519",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147908829",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147846689",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147407959",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147192955",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147179529",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000145479944",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000145416309",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000145409809",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000145228075",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144675669",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144511679",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144489490",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144452594",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144452589",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144297219",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144294728",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144238594",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144236179",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144227389",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144024714",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144023829",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144020198",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000144003539",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000143979179",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000143797040",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000143235030",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000143235309",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000143038390",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000142566409",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000139550697",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000139014499",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000137557749",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000137363369",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000136432620",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000136148341",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000136146509",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000134929229",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000134444489",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000131811829",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000127795765",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000126720342",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000122383854",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000122385079",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:743999681869777",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:743999680129035",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:743999656755153",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:743999656528034",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:106195595",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:106195541",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SmartOSC:90845842",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000152087789",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000150837597",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000148964861",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000148966839",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000148966719",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000146877750",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000143774839",
+    "at": "2026-09-29T07:00:20.921064+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]

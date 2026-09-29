@@ -203,6 +203,54 @@
       "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
       "public_description_enabled": true,
       "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
+    },
+    {
+      "company": "Grab",
+      "company_identifier": "Grab",
+      "careers_url": "https://www.grab.careers/en/jobs/",
+      "enabled": true,
+      "discovery_enabled": true,
+      "public_description_enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "permission_mode": "links",
+      "access_basis": "reviewed_public_api_metadata",
+      "evidence_url": "https://www.grab.careers/en/jobs/744000152321499/assistant-manager-self-serve-business-strategy-planning/",
+      "permission_url": "https://developers.smartrecruiters.com/docs/posting-api",
+      "description_access_basis": "Public posting API; user requested JD and local CV comparison. Not a contractual license.",
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "company": "SmartOSC",
+      "company_identifier": "SmartOSC",
+      "careers_url": "https://careers.smartosc.com/",
+      "enabled": true,
+      "discovery_enabled": true,
+      "public_description_enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "permission_mode": "links",
+      "access_basis": "reviewed_public_api_metadata",
+      "evidence_url": "https://careers.smartrecruiters.com/SmartOSC",
+      "permission_url": "https://developers.smartrecruiters.com/docs/posting-api",
+      "description_access_basis": "Public posting API; user requested JD and local CV comparison. Not a contractual license.",
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "company": "Sika Vietnam",
+      "company_identifier": "SikaAG",
+      "careers_url": "https://vnm.sika.com/en/career/job-opportunities.html",
+      "enabled": true,
+      "discovery_enabled": true,
+      "public_description_enabled": true,
+      "authorized": false,
+      "ai_authorized": false,
+      "permission_mode": "links",
+      "access_basis": "reviewed_public_api_metadata",
+      "evidence_url": "https://jobs.smartrecruiters.com/sikaag/744000150837597",
+      "permission_url": "https://developers.smartrecruiters.com/docs/posting-api",
+      "description_access_basis": "Public posting API; user requested JD and local CV comparison. Not a contractual license.",
+      "reviewed_at": "2026-09-29"
     }
   ]
 }

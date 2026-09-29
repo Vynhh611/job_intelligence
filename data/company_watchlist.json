@@ -170,10 +170,12 @@
     "industry": "Technology & Mobility",
     "careers_url": "https://www.grab.careers/en/jobs/",
     "platform": "Employer portal",
-    "collector_supported": false,
-    "board_identifier": null,
-    "integration_status": "Official careers page; integration pending",
-    "notes": "Official careers page; exact job availability and ability to republish require confirmation."
+    "collector_supported": true,
+    "board_identifier": "Grab",
+    "integration_status": "Public API connected: metadata and job descriptions",
+    "notes": "Official careers page; exact job availability and ability to republish require confirmation.",
+    "verification_method": "public_api_checked",
+    "verification_url": "https://www.grab.careers/en/jobs/744000152321499/assistant-manager-self-serve-business-strategy-planning/"
   },
   {
     "company": "Lazada",
@@ -3517,14 +3519,16 @@
     "careers_url": "https://vnm.sika.com/en/career/job-opportunities.html",
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
-    "collector_supported": false,
+    "collector_supported": true,
     "platform": "Not yet identified",
-    "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "integration_status": "Public API connected: metadata and job descriptions",
+    "verification_method": "public_api_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
     "source_url": "https://vnm.sika.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn.",
+    "board_identifier": "SikaAG",
+    "verification_url": "https://jobs.smartrecruiters.com/sikaag/744000150837597"
   },
   {
     "company": "Sky Mavis",
@@ -3550,14 +3554,16 @@
     "careers_url": "https://careers.smartosc.com/",
     "rights_status": "unreviewed",
     "page_discovery_enabled": false,
-    "collector_supported": false,
+    "collector_supported": true,
     "platform": "Not yet identified",
-    "integration_status": "Chưa kết nối · chờ xác minh nguồn",
-    "verification_method": "official_homepage_link",
+    "integration_status": "Public API connected: metadata and job descriptions",
+    "verification_method": "public_api_checked",
     "website_check_status": "checked",
     "reference_checked_at": "2026-09-28",
     "source_url": "https://www.smartosc.com/",
-    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn."
+    "notes": "Mục tham khảo, chưa kết nối dữ liệu việc làm. Trang toàn cầu cần lọc Việt Nam. Không xác nhận mọi vị trí còn tuyển hoặc mọi đơn vị có hồ sơ LinkedIn.",
+    "board_identifier": "SmartOSC",
+    "verification_url": "https://careers.smartrecruiters.com/SmartOSC"
   },
   {
     "company": "Sotatek",

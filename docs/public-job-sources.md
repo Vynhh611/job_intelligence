@@ -38,3 +38,6 @@ Lịch sử chỉ thêm sự kiện khi metadata/trạng thái thay đổi, khô
 
 ## Thay đổi phạm vi theo yêu cầu người dùng 29/09
 Người dùng yêu cầu hiển thị JD đầy đủ khi mở tin, thêm thông tin công việc và xếp hạng đối chiếu CV. public_description_enabled=true chỉ bật đọc nội dung posting công khai qua API của các nguồn đã kết nối; không biểu thị hợp đồng cấp quyền và không bật AI. JD được lưu riêng, kèm API URL, URL gốc và thời điểm lấy; HTML chuyển thành văn bản, loại script/style. Khi nguồn trả lỗi giữ bản trước và thời điểm trước; 401/403/429 dừng nguồn đó. CV không gửi ra ngoài.
+
+## Mở rộng từ danh bạ (29/09, lượt chiều)
+Grab: 57 tin, bảng Grab, đối chiếu liên kết ứng tuyển từ grab.careers. SmartOSC: 7 tin, bảng SmartOSC. Sika Vietnam: 7 tin, bảng SikaAG, nội dung posting ghi Sika Vietnam. Cả ba đã có trong danh bạ; tổng 14 nguồn. Bộ định kỳ lấy đầy đủ phân trang và JD như các nguồn trước. Báo cáo rà soát toàn danh bạ: data/directory_source_audit.json. Phạm vi chưa bao phủ toàn bộ 266 doanh nghiệp.

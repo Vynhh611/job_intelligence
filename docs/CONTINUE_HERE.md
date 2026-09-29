@@ -40,3 +40,10 @@ PowerShell, thư viện trong .runtime. Đặt PYTHONPATH tới .runtime rồi c
 - locations.py chuẩn hóa bí danh Hà Nội, TP.HCM và các địa điểm; giữ source_location để xem địa chỉ gốc, tách địa điểm đa thành phố trong bộ lọc.
 - services.rank_jobs: xếp hạng từ khóa/kỹ năng có thể giải thích, không dự đoán trúng tuyển. CV chỉ trong bộ nhớ phiên. Tìm kiếm luôn có, 12 tin mỗi trang, JD thiếu không được chấm 0 giả.
 - Trang chi tiết hiển thị đầy đủ các section từ nguồn trước phần trích xuất; phòng ban, kinh nghiệm, hợp đồng, ngày đăng, địa chỉ gốc nếu có.
+
+## Cập nhật danh bạ chiều 29/09
+- Đã kết nối thêm đúng doanh nghiệp trong danh bạ: Grab 57, SmartOSC 7, Sika Vietnam 7; tổng 14 nguồn. Không thêm doanh nghiệp mới để tăng số danh bạ.
+- Snapshot hiện có 747 tin active, 736 được thấy ở lượt mới nhất và 11 đang chờ xác nhận lần mất đầu; 747 JD đã có (lịch sử JD được giữ). Xem JSON để có số mới nhất.
+- Rà soát 266 mục: 120 thiếu URL tuyển dụng; các trang còn lại có báo cáo data/directory_source_audit.json, tách nguồn connected / cần adapter / cần kiểm tra truy cập. FPT Software trả 403: không vượt chặn. MoMo có 111 tin trên trang nhưng chưa nhập vì phân trang API cần adapter đầy đủ; không lấy riêng 12 tin trang đầu rồi nhận là toàn bộ.
+- Đã thêm tìm kiếm và phân trang cho việc làm từng doanh nghiệp, số tin và tình trạng đồng bộ trong bảng danh bạ. Ô trống không có nghĩa không tuyển dụng.
+- JD, địa điểm, CV: 64 kiểm thử đạt; 13 kiểm thử trang/nguồn gần nhất đạt. Streamlit có lỗi import sau hot update; requirements có marker rebuild, cần kiểm tra live sau push.

@@ -1,3 +1,4 @@
+# Public JD and CV comparison release: rebuild the Streamlit runtime after module changes.
 streamlit>=1.40,<2
 pandas>=2.2,<3
 requests>=2.32,<3
