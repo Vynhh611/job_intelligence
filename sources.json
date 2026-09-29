@@ -22,7 +22,9 @@
       "permission_mode": "links",
       "permission_url": "https://github.com/lever/postings-api",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
-      "access_basis": "reviewed_public_api_metadata"
+      "access_basis": "reviewed_public_api_metadata",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Lalamove",
@@ -36,7 +38,9 @@
       "permission_mode": "links",
       "permission_url": "https://github.com/lever/postings-api",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
-      "access_basis": "reviewed_public_api_metadata"
+      "access_basis": "reviewed_public_api_metadata",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "WalkMe",
@@ -57,7 +61,9 @@
       "permission_url": "https://github.com/lever/postings-api",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Ataccama",
@@ -71,7 +77,9 @@
       "permission_url": "https://github.com/lever/postings-api",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     }
   ],
   "ashby": [
@@ -87,7 +95,9 @@
       "permission_mode": "links",
       "permission_url": "https://developers.ashbyhq.com/docs/public-job-posting-api",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
-      "access_basis": "reviewed_public_api_metadata"
+      "access_basis": "reviewed_public_api_metadata",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Notion",
@@ -110,7 +120,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Accor Vietnam",
@@ -124,7 +136,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "KMS Technology",
@@ -138,7 +152,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "SGS Vietnam",
@@ -152,7 +168,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Eurofins Vietnam",
@@ -166,7 +184,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     },
     {
       "company": "Renesas Electronics Vietnam",
@@ -180,7 +200,9 @@
       "permission_url": "https://developers.smartrecruiters.com/docs/endpoints",
       "permission_checked_at": "2026-09-29T01:21:07.597110+00:00",
       "access_basis": "reviewed_public_api_metadata",
-      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing."
+      "coverage_note": "Vietnam only. Reviewed documented public postings endpoint for a factual title/location/outgoing-link index. API documentation is not an employer contract or blanket republication license. No full JD, applicant data, login or AI processing.",
+      "public_description_enabled": true,
+      "description_access_basis": "Public posting API; user requested job detail display and local CV comparison on 2026-09-29. Not a contractual license or AI authorization."
     }
   ]
 }

@@ -13,7 +13,7 @@ import streamlit as st
 from storage import load, save, configured_store, StorageError
 from intelligence import new_in_last_days, evidence_snippet, skill_tags
 from services import (vietnam_jobs, display, safe_url, dossier, match_cv, parse_cv,
-                      register_source, CAREERS, FIELDS)
+                      register_source, CAREERS, FIELDS, rank_jobs)
 from ai_explainer import configured as ai_configured, generate, content_hash, current_explanation
 from source_discovery import candidates, merge_candidates, add_pending
 from salary import disclosed_salary, matches_salary
@@ -92,6 +92,8 @@ def match_panel(job):
 
 
 raw = read('jobs.json', []) + read('discovered_jobs.json', [])
+job_content = read('job_content.json', {})
+raw = [{**j, **job_content.get(j.get('id'), {})} for j in raw]
 jobs = vietnam_jobs(raw)
 archive = vietnam_jobs(raw, active_only=False)
 profiles = read('company_profiles.json', {})
@@ -169,6 +171,18 @@ def detail(job):
     left, right = st.columns([1.8, 1], gap='large')
     d = dossier(job)
     with left:
+        st.subheader('Job description · Mô tả đầy đủ')
+        if job.get('sections'):
+            st.caption('Nội dung từ nguồn tuyển dụng · Cập nhật JD: ' + checked_time(job.get('fetched_at')))
+            if freshness({'last_seen': job.get('fetched_at'), 'status': 'active'}) == 'stale':
+                st.warning('Bản JD này chưa được cập nhật gần đây. Kiểm tra bản gốc trước khi ứng tuyển.')
+            for section in job['sections']:
+                st.markdown('**' + escape(section['title']) + '**')
+                st.text(section['text'])
+        elif job.get('description'):
+            st.text(job['description'])
+        else:
+            st.warning('Chưa tải được nội dung JD từ nguồn. Bạn có thể đọc bản gốc bằng liên kết bên cạnh.')
         st.subheader('Tổng quan công việc')
         explanation = current_explanation(job, explanations)
         if explanation:
@@ -216,6 +230,9 @@ def detail(job):
             st.caption('Chưa đủ dữ liệu để ước tính mức lương đáng tin cậy.')
             for label, field in [('Địa điểm', 'location'), ('Hình thức làm việc', 'workplace_type'), ('Kinh nghiệm', 'experience'), ('Loại hợp đồng', 'employment_type')]:
                 st.write(f'**{label}:** {display(job.get(field))}')
+            st.write('**Phòng ban:** ' + display(job.get('department')))
+            st.caption('Địa chỉ nguyên bản: ' + job.get('source_location', ''))
+            st.caption('Ngày đăng tại nguồn: ' + date(job.get('source_published_at')))
             st.caption(f'Phát hiện: {date(job.get("first_seen"))}\n\nKiểm tra: {date(job.get("last_seen"))}')
             st.link_button('Mở tin gốc / Ứng tuyển ↗', job['url'], use_container_width=True)
             save_button(job, 'detail')
@@ -265,7 +282,7 @@ if page in ('Tìm việc', 'Việc đã lưu'):
             reports = discovery_status.get('sources', [])
             if reports:
                 st.dataframe(pd.DataFrame([{'Doanh nghiệp': r.get('company'), 'Trạng thái': 'Thành công' if r.get('status') == 'ok' else 'Chưa cập nhật được', 'Tin Việt Nam ở lượt này': r.get('in_scope'), 'Kiểm tra lúc': checked_time(r.get('checked_at'))} for r in reports]), hide_index=True, width='stretch')
-            st.caption('Chỉ lưu thông tin cơ bản từ bảng tuyển dụng/API công khai và dẫn về tin gốc. Chưa có thỏa thuận sao chép toàn bộ JD; danh bạ không phải số nguồn đã kết nối.')
+            st.caption('Thông tin và JD được cập nhật từ API tuyển dụng công khai, kèm liên kết gốc. Danh bạ không phải số nguồn đã kết nối.')
         st.caption('Số tin việc làm khác số doanh nghiệp. Danh bạ gồm nguồn tham khảo và mục đang xác minh; truy cập trang doanh nghiệp để xem cơ hội ngoài dữ liệu hiện có.')
         st.button(f'Khám phá danh bạ {len(watchlist)} doanh nghiệp →', on_click=lambda: st.session_state.update(navigation='Doanh nghiệp'), type='primary')
     query = st.text_input('Bạn đang tìm công việc gì?', placeholder='Chức danh, doanh nghiệp, lĩnh vực hoặc kỹ năng…')
@@ -283,7 +300,8 @@ if page in ('Tìm việc', 'Việc đã lưu'):
         cols = st.columns(3)
         selections = {}
         for index, (label, field) in enumerate([('Địa điểm', 'location'), ('Doanh nghiệp', 'company'), ('Chức năng công việc', 'category'), ('Hình thức làm việc', 'workplace_type'), ('Kinh nghiệm', 'experience'), ('Loại hợp đồng', 'employment_type'), ('Ngành doanh nghiệp', 'industry')]):
-            selections[field] = cols[index % 3].multiselect(label, sorted({display(j.get(field)) for j in jobs}))
+            options = sorted({city for j in jobs for city in j.get('locations', [])}) if field == 'location' else sorted({display(j.get(field)) for j in jobs})
+            selections[field] = cols[index % 3].multiselect(label, options)
         cols = st.columns(3)
         recency = cols[0].selectbox('Thời điểm phát hiện', ['Tất cả', '7 ngày qua', '30 ngày qua'])
         disclosed = cols[1].checkbox('Chỉ tin công bố lương')
@@ -295,7 +313,7 @@ if page in ('Tìm việc', 'Việc đã lưu'):
             salary_range = s2.number_input('Từ / tháng', min_value=0, value=0, step=1000)
             salary_ceiling = s3.number_input('Đến / tháng', min_value=0, value=100000000 if salary_currency == 'VND' else 10000, step=1000)
             st.caption('Chỉ lọc lương nhà tuyển dụng công bố có tiền tệ và kỳ trả lương rõ ràng; không quy đổi ngoại tệ hoặc suy đoán lương tháng.')
-    filtered = [j for j in filtered if query.casefold() in ' '.join(str(j.get(k, '')) for k in ('title', 'company', 'description', 'category', 'skills')).casefold() and all(not values or display(j.get(field)) in values for field, values in selections.items()) and (not disclosed or j.get('salary_text')) and (not languages or set(languages).issubset(j.get('language_requirements', []))) and (recency == 'Tất cả' or new_in_last_days([j], 7 if recency == '7 ngày qua' else 30))]
+    filtered = [j for j in filtered if query.casefold() in ' '.join(str(j.get(k, '')) for k in ('title', 'company', 'description', 'category', 'skills')).casefold() and all(not values or (bool(set(values) & set(j.get('locations', []))) if field == 'location' else display(j.get(field)) in values) for field, values in selections.items()) and (not disclosed or j.get('salary_text')) and (not languages or set(languages).issubset(j.get('language_requirements', []))) and (recency == 'Tất cả' or new_in_last_days([j], 7 if recency == '7 ngày qua' else 30))]
     filtered.sort(key=lambda j: j.get('first_seen', ''), reverse=True)
     if salary_filter:
         filtered = [j for j in filtered if matches_salary(j, salary_range, salary_ceiling, salary_currency)]
@@ -396,11 +414,35 @@ elif page == 'CV của tôi':
             st.session_state.pop('cv_text', None)
             st.error('Không đọc được CV. Kiểm tra định dạng, giới hạn dung lượng/trang và dùng tệp có văn bản, không mã hóa.')
     st.caption('Đáp ứng: có câu mô tả áp dụng kỹ năng. Đáp ứng một phần: chỉ nhắc tới kỹ năng. Chưa tìm thấy: không có từ khóa trong phần văn bản đọc được. Chưa đánh giá số năm kinh nghiệm, trình độ hoặc tính xác thực.')
-    if jobs:
-        chosen = st.selectbox('Chọn công việc để đối chiếu', jobs, format_func=lambda j: j['title'] + ' · ' + j['company'])
-        match_panel(chosen)
+    cv_query = st.text_input('Tìm công việc để đối chiếu CV', placeholder='Tên công việc, doanh nghiệp, kỹ năng hoặc địa điểm…', key='cv-search')
+    sort_order = st.selectbox('Sắp xếp công việc', ['Phù hợp nhất với CV', 'Mới nhất', 'Tên công việc'], key='cv-sort')
+    ranking = rank_jobs(st.session_state.get('cv_text', ''), jobs, cv_query)
+    if sort_order == 'Mới nhất':
+        ranking.sort(key=lambda r: r['job'].get('first_seen', ''), reverse=True)
+    elif sort_order == 'Tên công việc':
+        ranking.sort(key=lambda r: r['job']['title'].casefold())
+    st.subheader(f'{len(ranking)} công việc có thể đối chiếu')
+    st.caption('Điểm tương đồng văn bản: 65% tỷ lệ kỹ năng trùng + 35% từ khóa JD có trong CV (ưu tiên từ đặc trưng). Không phải xác suất trúng tuyển; chưa đánh giá mức thành thạo, kinh nghiệm và mọi điều kiện bắt buộc.')
+    if not st.session_state.get('cv_text'):
+        st.info('Tải CV để xếp hạng theo mức tương đồng. Bạn vẫn có thể tìm và xem mọi công việc bên dưới.')
+    if not ranking:
+        st.info('Không tìm thấy công việc. Thử từ khóa khác hoặc xóa nội dung tìm kiếm.')
     else:
-        st.info('Chưa có JD Việt Nam để đối chiếu. CV sẽ không được đưa vào bộ thu thập dữ liệu.')
+        signature = (cv_query, sort_order, len(ranking))
+        if st.session_state.get('cv-page-signature') != signature:
+            st.session_state['cv-page'] = 1
+            st.session_state['cv-page-signature'] = signature
+        cv_page = st.number_input('Trang đối chiếu', min_value=1, max_value=max(1, (len(ranking)+11)//12), step=1, key='cv-page')
+        for result in ranking[(cv_page-1)*12:cv_page*12]:
+            job = result['job']
+            if result['score'] is not None:
+                st.markdown(f'**Tương đồng CV: {result["score"]}/100 · {len(result["matched"])}/{result["required"]} kỹ năng trùng**')
+                st.caption('Từ khóa chung: ' + ', '.join(result['keywords']) if result['keywords'] else 'Chưa tìm thấy từ khóa chung.')
+            elif st.session_state.get('cv_text'):
+                st.caption('Chưa có JD để chấm điểm; công việc được giữ trong kết quả tìm kiếm.')
+            card(job, 'cv')
+            with st.expander('Xem dẫn chứng đối chiếu · ' + job['title']):
+                match_panel(job)
 
 elif page == 'Lộ trình nghề nghiệp':
     st.title('Hình dung bước tiếp theo của bạn')
@@ -443,7 +485,7 @@ elif page == 'Thị trường':
 
 elif page == 'Phương pháp & riêng tư':
     st.title('Rõ nguồn dữ liệu. Rõ giới hạn.')
-    st.markdown('''- **Việc làm:** nguồn ATS có quyền sử dụng được xác nhận; tin thiếu hai lần kiểm tra thành công liên tiếp mới được ghi nhận đóng.
+    st.markdown('''- **Việc làm:** dữ liệu từ API tuyển dụng công khai hoặc nguồn được cấp quyền, kèm liên kết và thời điểm kiểm tra. Truy cập API công khai không đồng nghĩa có hợp đồng dữ liệu riêng; tin thiếu hai lần kiểm tra thành công cách ít nhất 6 giờ mới được ghi nhận đóng.
 - **Phân tích:** trích xuất từ khóa theo quy tắc. Bản diễn giải AI chỉ hiển thị khi quản trị đã tạo từ JD được cấp quyền; nội dung được gắn nhãn và kèm câu gốc để đối chiếu.
 - **Lương:** chỉ hiển thị nội dung nguồn công bố. Chưa có bộ dữ liệu được cấp quyền để ước tính thị trường.
 - **CV và việc đã lưu:** chỉ tồn tại trong phiên hiện tại; không lưu vào kho mã hoặc gửi đến AI bên ngoài. Xóa CV bằng nút tại CV của tôi.

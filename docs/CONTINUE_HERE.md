@@ -10,14 +10,14 @@
 - SmartRecruiters: Bosch Vietnam 272, Accor Vietnam 114, KMS Technology 9, SGS Vietnam 136, Eurofins Vietnam 100, Renesas Electronics Vietnam 15.
 - Lever: Ninja Van 2, Lalamove 3, cargo-partner 10, Ataccama 1. Ashby: Airwallex 4.
 - Danh bạ 266 mục doanh nghiệp/đơn vị/thương hiệu, 146 liên kết tuyển dụng, 120 mục cần tìm hoặc xác minh. Chỉ 11 nguồn kết nối, chưa phủ việc làm 200–500 doanh nghiệp.
-- Chỉ lưu metadata và URL gốc; không JD đầy đủ, không dữ liệu ứng viên. authorized=false và ai_authorized=false. discovery_enabled=true có access_basis=reviewed_public_api_metadata và tài liệu API. Không coi tài liệu API là hợp đồng cấp phép của doanh nghiệp. Người dùng chưa có hợp đồng dữ liệu riêng. Đọc docs/public-job-sources.md.
+- Cập nhật theo yêu cầu người dùng 29/09: bổ sung JD công khai trong data/job_content.json qua job_content.py, tách khỏi chỉ mục metadata; không dữ liệu ứng viên. authorized=false và ai_authorized=false. discovery_enabled=true có access_basis=reviewed_public_api_metadata và tài liệu API. Không coi tài liệu API là hợp đồng cấp phép của doanh nghiệp. Người dùng chưa có hợp đồng dữ liệu riêng. Đọc docs/public-job-sources.md.
 - Kiểm tra một URL tin mỗi nguồn: 11/11 HTTP 200. Tin đang public không đảm bảo HR còn nhận hồ sơ.
 - Workflow discover_jobs.yml dự kiến mỗi 6 giờ (GitHub có thể trễ). Hai lần không thấy cách ít nhất 6 giờ mới đóng. Lần mất đầu và quá 36 giờ chưa xác nhận có nhãn. Lỗi/thiếu trang/sai schema giữ snapshot cũ; xuất hiện lại thì mở lại.
 - Đã giữ commit b4fdff7 (Dev Container) từ remote. Lấy hash triển khai mới nhất bằng git log và CI, không dùng hash bàn giao cũ.
 
 ## Tiếp tục
 1. Kiểm tra trạng thái nguồn, website và workflow thực tế. Mở rộng nguồn có thể dùng theo ngành/doanh nghiệp, ưu tiên thêm tin thật.
-2. Ghi căn cứ, phạm vi sử dụng cho từng nguồn. Không tự bật JD/AI, không vượt CAPTCHA/login/hạn chế; nguồn chưa dùng được phải có lý do cụ thể.
+2. Ghi căn cứ, phạm vi sử dụng cho từng nguồn. JD công khai đã được người dùng yêu cầu hiển thị và đối chiếu tại chỗ; public_description_enabled là cấu hình riêng, không phải giấy phép hợp đồng. Không tự bật AI, không vượt CAPTCHA/login/hạn chế; nguồn chưa dùng được phải có lý do cụ thể.
 3. Không gửi email/biểu mẫu hoặc mua dịch vụ nếu chưa được yêu cầu. Không tạo tin giả, không khẳng định toàn bộ doanh nghiệp trong danh bạ đã được kết nối.
 4. Đối chiếu dữ liệu cũ và Git/remote trước khi đẩy; duy trì dữ liệu Singapore và những thay đổi của người dùng.
 
@@ -34,3 +34,9 @@
 PowerShell, thư viện trong .runtime. Đặt PYTHONPATH tới .runtime rồi chạy python -m unittest discover -s tests -v và python discovery_collector.py. Công cụ có thể cần quyền đọc runtime/mạng. Git mạng dùng C:/Users/admin/AppData/Local/GitHubDesktop/app-3.6.6/resources/app/git/cmd/git.exe. Không in thông tin xác thực.
 
 Đã có luồng cập nhật website qua main. Không chạy lại dò toàn cầu TSMG lớn; phân trang có giới hạn thời gian. Không giả định tab trình duyệt/tiến trình local còn tồn tại. Đối chiếu kết quả kiểm tra, dữ liệu và CI mới nhất trước khi tiếp tục.
+
+## Trải nghiệm JD / địa điểm / CV (29/09)
+- job_content.py lấy các mục JD từ API công khai của 11 nguồn đã kết nối. Workflow chạy sau discovery; lỗi giữ bản JD cũ và fetched_at cũ. Không thay authorized/ai_authorized thành true.
+- locations.py chuẩn hóa bí danh Hà Nội, TP.HCM và các địa điểm; giữ source_location để xem địa chỉ gốc, tách địa điểm đa thành phố trong bộ lọc.
+- services.rank_jobs: xếp hạng từ khóa/kỹ năng có thể giải thích, không dự đoán trúng tuyển. CV chỉ trong bộ nhớ phiên. Tìm kiếm luôn có, 12 tin mỗi trang, JD thiếu không được chấm 0 giả.
+- Trang chi tiết hiển thị đầy đủ các section từ nguồn trước phần trích xuất; phòng ban, kinh nghiệm, hợp đồng, ngày đăng, địa chỉ gốc nếu có.

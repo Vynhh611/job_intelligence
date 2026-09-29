@@ -24,6 +24,12 @@ CATEGORIES = {
     'Marketing & Brand': ['marketing','branding','digital marketing','performance marketing','consumer insights'],
 }
 SKILLS = {
+    'C++': r'\bc\+\+', 'Java': r'\bjava\b', 'JavaScript': r'\bjavascript\b|\btypescript\b',
+    'Embedded systems': r'\bembedded\b|\bfirmware\b', 'Linux': r'\blinux\b',
+    'Testing': r'\btesting\b|kiểm thử', 'AutoCAD': r'\bautocad\b',
+    'Quality assurance': r'\bquality assurance\b|\biso 17025\b|đảm bảo chất lượng',
+    'Customer service': r'\bcustomer service\b|chăm sóc khách hàng',
+    'Sales': r'\bsales\b|bán hàng', 'Accounting': r'\baccounting\b|kế toán',
     'SQL': r'\bsql\b', 'Python':r'\bpython\b', 'Excel':r'\bexcel\b', 'Power BI':r'\bpower\s?bi\b',
     'Tableau':r'\btableau\b','R':r'\br\s+(?:programming|language|studio)\b|\brstudio\b',
     'Forecasting':r'forecast(?:ing)?|dự báo', 'Pricing':r'pric(?:e|ing)|định giá',

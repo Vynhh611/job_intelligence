@@ -3,9 +3,12 @@ import io
 import json
 import re
 import zipfile
+from copy import deepcopy
+from functools import lru_cache
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
 from intelligence import enrich, plain, SKILLS, skill_tags, visible_jobs
+from locations import location_tags, folded
 
 UNKNOWN = 'Chưa công bố'
 FIELDS = {'greenhouse': 'board_token', 'lever': 'site', 'ashby': 'board_name', 'smartrecruiters': 'company_identifier'}
@@ -19,12 +22,22 @@ def safe_url(value):
         return False
 
 
+@lru_cache(maxsize=4096)
+def _enriched_record(serialized):
+    return enrich(json.loads(serialized))
+
+
 def vietnam_jobs(records, active_only=True):
     result = []
     for record in records:
         if not isinstance(record, dict) or not record.get('id') or not record.get('title'):
             continue
-        job = enrich(record)
+        job = deepcopy(_enriched_record(json.dumps(record, ensure_ascii=False, sort_keys=True)))
+        if job.get('sections'):
+            job['skills'] = skill_tags(matching_text(job))
+        job['source_location'] = record.get('source_location') or record.get('location', '')
+        job['locations'] = location_tags(job['source_location'])
+        job['location'] = ' / '.join(job['locations'])
         if display(job.get('experience')) == UNKNOWN:
             found = re.search(r'\b\d+(?:\s*[-–]\s*\d+)?\+?\s*(?:years?(?: of)? experience|năm kinh nghiệm)', job['description'], re.I)
             if found:
@@ -68,18 +81,49 @@ def dossier(job):
     return {'overview': lines[0] if lines else '', 'duties': duties[:8], 'requirements': requirements}
 
 
+def matching_text(job):
+    if job.get('sections'):
+        return '\n'.join(s['text'] for s in job['sections'] if s.get('title') != 'Về doanh nghiệp')
+    return job.get('description', '')
+
+
 def match_cv(cv, job):
     """Literal evidence is partial; never claim competence from a keyword."""
     report = []
     for skill in job.get('skills', []):
         pattern = SKILLS[skill]
-        jd = next((s for s in sentences(job.get('description')) if re.search(pattern, s, re.I)), '')
+        jd = next((s for s in sentences(matching_text(job)) if re.search(pattern, s, re.I)), '')
         evidence = next((s for s in sentences(cv) if re.search(pattern, s, re.I)), '')
         applied = bool(evidence and re.search(r'built|developed|delivered|managed|used|implemented|created|analyzed|xây dựng|sử dụng|triển khai|phân tích|quản lý', evidence, re.I))
         report.append({'Yêu cầu': skill, 'Phân loại': 'Đáp ứng' if applied else 'Đáp ứng một phần' if evidence else 'Chưa tìm thấy',
                        'Dẫn chứng JD': jd, 'Dẫn chứng CV': evidence or 'Không tìm thấy trong văn bản đã trích xuất.',
                        'Gợi ý': 'Bổ sung kết quả và phạm vi dự án để xác minh mức thành thạo.' if evidence else 'Bổ sung trải nghiệm liên quan nếu có; không khai kỹ năng chưa sở hữu.'})
     return report
+
+
+def rank_jobs(cv, jobs, query=''):
+    """Transparent lexical relevance, not hiring probability. No external CV calls."""
+    import math
+    from collections import Counter
+    stop = set('the and for with that this from your you our are will have has can all job work company team experience skills requirements vietnam trong cong viec va cua voi cac cho mot duoc'.split())
+    def tokens(text):
+        return {t for t in re.findall(r'[a-z][a-z0-9+#.]*', folded(text)) if len(t) > 2 and t not in stop}
+    candidates = [j for j in jobs if all(word in folded(' '.join(str(j.get(k, '')) for k in ('title','company','location','description','skills'))) for word in folded(query).split())]
+    docs = [tokens(j.get('title', '') + ' ' + matching_text(j)) for j in jobs]
+    frequency = Counter(t for doc in docs for t in doc)
+    weights = {t: math.log(1 + len(jobs) / n) for t, n in frequency.items()}
+    cv_tokens = tokens(cv)
+    output = []
+    for job in candidates:
+        report = match_cv(cv, job) if cv else []
+        matched = [r['Yêu cầu'] for r in report if r['Phân loại'] != 'Chưa tìm thấy']
+        terms = tokens(job.get('title', '') + ' ' + matching_text(job))
+        overlap = terms & cv_tokens
+        lexical = sum(weights.get(t, 0) for t in overlap) / max(1, sum(weights.get(t, 0) for t in terms))
+        skill_ratio = len(matched) / len(report) if report else lexical
+        score = round(100 * (.65 * skill_ratio + .35 * lexical), 1) if cv and job.get('description') else None
+        output.append({'job': job, 'score': score, 'matched': matched, 'required': len(report), 'keywords': sorted(overlap, key=lambda t: (-weights.get(t, 0), t))[:8]})
+    return sorted(output, key=lambda r: (r['score'] is None, -(r['score'] or 0), -len(r['matched']), r['job']['title'].casefold(), r['job']['id']))
 
 
 def parse_cv(data, filename):

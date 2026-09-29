@@ -51,6 +51,8 @@ Nguồn đầy đủ dùng `authorized=true`; chỉ mục liên kết dùng `dis
 - `collectors/transport.py`: phân trang Lever và chỉ mục SmartRecruiters, phát hiện trang lặp, tổng thay đổi hoặc phản hồi sai, từ chối coi phản hồi thiếu là danh sách rỗng.
 - `collectors/smartrecruiters.py`: Posting API có phân trang và nội dung chi tiết Việt Nam.
 - `discovery_collector.py`: chỉ lưu metadata/liên kết, không JD; cũng phải bật quyền rõ ràng.
+- `job_content.py`: cập nhật JD công khai riêng cho nguồn có `public_description_enabled`, kèm các mục nhiệm vụ/yêu cầu/quyền lợi và thời điểm lấy. Chạy sau discovery trong lịch 6 giờ; không bật quyền AI hoặc gửi CV.
+- Địa điểm được chuẩn hóa thành lựa chọn tỉnh/thành duy nhất; địa chỉ nguyên bản còn trong trang chi tiết. Mục CV luôn có tìm kiếm, danh sách phân trang và xếp hạng tương đồng có dẫn chứng.
 - Retry/timeout, nhịp nghỉ request; chỉ mục liên kết đóng tin sau hai lần kiểm tra thành công không thấy tin, cách nhau ít nhất 6 giờ. Lỗi request không làm đóng tin. Tin quá 36 giờ chưa xác nhận hoặc mất khỏi lần kiểm tra đầu có nhãn cần xác nhận.
 - `data/history.json` và `data/discovery_history.json` lưu phiên bản trước khi đổi. Không cắt lịch sử còn 30.000 bản ghi như trước.
 - Loại trùng chỉ với URL đồng nhất, bỏ tham số tracking nhưng giữ mã tin trong query. Không tự gộp hai tin chỉ vì cùng tên/vị trí.
