@@ -5511,5 +5511,185 @@
     "at": "2026-09-29T22:40:40.841576+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000151765409",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000151765409",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Senior Software Engineer, Backend - Agent Experience",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000151765409",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-09-25T06:07:51.363Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T07:00:20.921064+00:00",
+      "last_seen": "2026-09-29T22:40:40.841576+00:00",
+      "last_checked_at": "2026-09-29T22:40:40.841576+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147407959",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000147407959",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Senior Software Engineer, Backend",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000147407959",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-09-04T03:10:52.556Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T07:00:20.921064+00:00",
+      "last_seen": "2026-09-29T22:40:40.841576+00:00",
+      "last_checked_at": "2026-09-29T22:40:40.841576+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000147179529",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000147179529",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Assistant Marketing Manager, B2B",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000147179529",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-09-03T08:20:23.385Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T07:00:20.921064+00:00",
+      "last_seen": "2026-09-29T22:40:40.841576+00:00",
+      "last_checked_at": "2026-09-29T22:40:40.841576+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152589389",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152589299",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152588369",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152587636",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152587609",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152582897",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152570991",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152584999",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152584839",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000152584669",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000152588178",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000152587479",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000152587809",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000152587279",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152585089",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152585079",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000152584709",
+    "at": "2026-09-30T06:01:10.951021+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
