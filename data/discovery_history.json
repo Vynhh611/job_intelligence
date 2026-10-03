@@ -8522,5 +8522,31 @@
       "missed_successful_checks": 0,
       "reopen_count": 0
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000141450019",
+    "at": "2026-10-03T16:45:56.633413+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000141450019",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Chef de Cuisine",
+      "location": "Phu Quoc, Kien Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000141450019",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-08-04T09:30:26.336Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-03T12:04:41.273597+00:00",
+      "last_checked_at": "2026-10-03T12:04:41.273597+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
   }
 ]
