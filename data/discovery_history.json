@@ -8470,5 +8470,57 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-10-02T13:13:56.479488+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000132072539",
+    "at": "2026-10-03T12:04:41.273597+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:RenesasElectronics:744000132072539",
+      "source_key": "smartrecruiters:RenesasElectronics",
+      "company": "Renesas Electronics Vietnam",
+      "title": "Full-Stack / Platform Engineer – Engineering Tools",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000132072539",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+      "source_published_at": "2026-06-14T14:56:11.205Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-03T05:48:53.056022+00:00",
+      "last_checked_at": "2026-10-03T05:48:53.056022+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000124570419",
+    "at": "2026-10-03T12:04:41.273597+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:RenesasElectronics:744000124570419",
+      "source_key": "smartrecruiters:RenesasElectronics",
+      "company": "Renesas Electronics Vietnam",
+      "title": "Senior SCCM/MECM Engineer",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000124570419",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+      "source_published_at": "2026-05-05T07:15:02.065Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-03T05:48:53.056022+00:00",
+      "last_checked_at": "2026-10-03T05:48:53.056022+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
   }
 ]
