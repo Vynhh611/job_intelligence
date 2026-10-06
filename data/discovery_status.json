@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-06T06:53:47.007366+00:00",
+  "checked_at": "2026-10-06T18:39:08.828046+00:00",
   "successful_sources": 14,
   "errors": [],
   "sources": [
@@ -9,7 +9,7 @@
       "status": "ok",
       "in_scope": 2,
       "Vietnam": 2,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Lalamove",
@@ -17,7 +17,7 @@
       "status": "ok",
       "in_scope": 4,
       "Vietnam": 4,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "cargo-partner",
@@ -25,7 +25,7 @@
       "status": "ok",
       "in_scope": 10,
       "Vietnam": 10,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Ataccama",
@@ -33,7 +33,7 @@
       "status": "ok",
       "in_scope": 1,
       "Vietnam": 1,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Airwallex",
@@ -41,7 +41,7 @@
       "status": "ok",
       "in_scope": 4,
       "Vietnam": 4,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Bosch Vietnam",
@@ -49,15 +49,15 @@
       "status": "ok",
       "in_scope": 273,
       "Vietnam": 273,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Accor Vietnam",
       "source_key": "smartrecruiters:AccorHotel",
       "status": "ok",
-      "in_scope": 107,
-      "Vietnam": 107,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "in_scope": 118,
+      "Vietnam": 118,
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "KMS Technology",
@@ -65,23 +65,23 @@
       "status": "ok",
       "in_scope": 11,
       "Vietnam": 11,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "SGS Vietnam",
       "source_key": "smartrecruiters:SGS",
       "status": "ok",
-      "in_scope": 141,
-      "Vietnam": 141,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "in_scope": 140,
+      "Vietnam": 140,
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Eurofins Vietnam",
       "source_key": "smartrecruiters:Eurofins",
       "status": "ok",
-      "in_scope": 104,
-      "Vietnam": 104,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "in_scope": 106,
+      "Vietnam": 106,
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Renesas Electronics Vietnam",
@@ -89,7 +89,7 @@
       "status": "ok",
       "in_scope": 14,
       "Vietnam": 14,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Grab",
@@ -97,7 +97,7 @@
       "status": "ok",
       "in_scope": 61,
       "Vietnam": 61,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "SmartOSC",
@@ -105,7 +105,7 @@
       "status": "ok",
       "in_scope": 7,
       "Vietnam": 7,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     },
     {
       "company": "Sika Vietnam",
@@ -113,11 +113,11 @@
       "status": "ok",
       "in_scope": 6,
       "Vietnam": 6,
-      "checked_at": "2026-10-06T06:53:47.007366+00:00"
+      "checked_at": "2026-10-06T18:39:08.828046+00:00"
     }
   ],
-  "active_records": 758,
-  "total_records": 1029,
+  "active_records": 769,
+  "total_records": 1053,
   "mode": "link_only",
   "full_jd_stored": false
 }
