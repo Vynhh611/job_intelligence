@@ -11670,5 +11670,183 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-10-07T13:59:39.543518+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152585089",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000152585089",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Senior Software Engineer, Backend - Agent Experience",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000152585089",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-09-30T03:27:43.969Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-30T06:01:10.951021+00:00",
+      "last_seen": "2026-10-07T23:20:12.593321+00:00",
+      "last_checked_at": "2026-10-07T23:20:12.593321+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000152585079",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000152585079",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Senior Software Engineer, Backend",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000152585079",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-09-30T03:26:53.277Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-30T06:01:10.951021+00:00",
+      "last_seen": "2026-10-07T23:20:12.593321+00:00",
+      "last_checked_at": "2026-10-07T23:20:12.593321+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000149502949",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000149502949",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch R&D – Internship] Simulation Engineering Intern",
+      "location": "Ho Chi Minh City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000149502949",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-15T04:55:12.553Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-07T23:20:12.593321+00:00",
+      "last_checked_at": "2026-10-07T23:20:12.593321+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000145651119",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000145651119",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP – Internship] Logistics Intern",
+      "location": "An Phuoc Commune, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000145651119",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-08-26T04:04:42.971Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-07T23:20:12.593321+00:00",
+      "last_checked_at": "2026-10-07T23:20:12.593321+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000142785269",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000142785269",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP – Internship] Learning & Development Intern",
+      "location": "An Phuoc Commune, Dong Nai, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000142785269",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-08-11T04:25:35.972Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-07T23:20:12.593321+00:00",
+      "last_checked_at": "2026-10-07T23:20:12.593321+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000154350000",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000154344130",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000154302375",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000154236871",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000154345129",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000154352918",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000154310950",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000154310252",
+    "at": "2026-10-08T06:41:35.316505+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
