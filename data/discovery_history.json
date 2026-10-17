@@ -19358,5 +19358,57 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-10-16T11:56:36.909769+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000150271989",
+    "at": "2026-10-17T21:01:03.840017+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000150271989",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Chief Security (National Under Local Contract) - Pullman Phu Quoc Beach Resort",
+      "location": "Phu Quoc, Kien Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000150271989",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-09-18T03:08:58.945Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-17T15:58:16.025437+00:00",
+      "last_checked_at": "2026-10-17T15:58:16.025437+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000150271379",
+    "at": "2026-10-17T21:01:03.840017+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000150271379",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Assistant Chief Security (National Under Local Contract) - Pullman Phu Quoc Beach Resort",
+      "location": "Phu Quoc, Kien Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000150271379",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-09-18T02:59:38.894Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-17T15:58:16.025437+00:00",
+      "last_checked_at": "2026-10-17T15:58:16.025437+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
   }
 ]
