@@ -19502,5 +19502,32 @@
     "at": "2026-10-18T16:09:31.693896+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000154927739",
+    "at": "2026-10-18T21:04:24.901930+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:SGS:744000154927739",
+      "source_key": "smartrecruiters:SGS",
+      "company": "SGS Vietnam",
+      "title": "Project Secretary (Chinese-speaking)",
+      "location": "Đông Ngạc, Hà Nội, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/SGS/744000154927739",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/SGS",
+      "source_published_at": "2026-10-12T06:27:23.661Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-12T06:36:32.309992+00:00",
+      "last_seen": "2026-10-18T05:11:40.805347+00:00",
+      "last_checked_at": "2026-10-18T11:46:04.283936+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-18T11:46:04.283936+00:00"
+    }
   }
 ]
