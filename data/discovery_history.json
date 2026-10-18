@@ -19496,5 +19496,11 @@
     "at": "2026-10-18T11:46:04.283936+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000156185759",
+    "at": "2026-10-18T16:09:31.693896+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
