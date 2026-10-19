@@ -1,5 +1,10 @@
 {
-  "checked_at": "2026-10-19T14:01:23.246542+00:00",
+  "checked_at": "2026-10-19T22:39:40.119436+00:00",
   "descriptions": 1036,
-  "errors": []
+  "errors": [
+    {
+      "id": "discovery:lever:ataccama:60541df4-41c9-4f4c-a848-f448ef0af356",
+      "error": "HTTPError"
+    }
+  ]
 }
