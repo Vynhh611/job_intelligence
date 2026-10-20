@@ -21966,5 +21966,83 @@
     "at": "2026-10-20T12:16:53.173224+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156509579",
+    "at": "2026-10-20T17:34:10.153050+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000156509579",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Full-stack Test Engineer (Manual, Automation)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000156509579",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-20T09:30:02.924Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T12:16:53.173224+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156504802",
+    "at": "2026-10-20T17:34:10.153050+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000156504802",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Full-stack Test Engineer (Manual, Automation), based in Da Nang",
+      "location": "Da Nang City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000156504802",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-20T09:24:42.267Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T12:16:53.173224+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000089234360",
+    "at": "2026-10-20T17:34:10.153050+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000089234360",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[SO] Senior UX Designer",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000089234360",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2025-10-22T10:54:06.675Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T12:16:53.173224+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
   }
 ]
