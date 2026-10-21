@@ -1,10 +1,5 @@
 {
-  "checked_at": "2026-10-21T05:22:13.538272+00:00",
-  "descriptions": 1059,
-  "errors": [
-    {
-      "id": "discovery:ashby:airwallex:3d42ba1d-4b63-4f45-a00d-904967678970",
-      "error": "KeyError"
-    }
-  ]
+  "checked_at": "2026-10-21T12:28:33.497157+00:00",
+  "descriptions": 1069,
+  "errors": []
 }
