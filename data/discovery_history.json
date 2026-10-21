@@ -23318,5 +23318,11 @@
     "at": "2026-10-21T12:28:18.431881+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156815579",
+    "at": "2026-10-21T17:41:25.069481+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
