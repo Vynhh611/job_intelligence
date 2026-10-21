@@ -22488,5 +22488,404 @@
     "at": "2026-10-20T21:55:51.093034+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000152740267",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:SGS:744000152740267",
+      "source_key": "smartrecruiters:SGS",
+      "company": "SGS Vietnam",
+      "title": "Senior Sales Executive (Chinese Speaking)",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/SGS/744000152740267",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/SGS",
+      "source_published_at": "2026-09-30T17:47:37.452Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-30T22:39:30.953242+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156510539",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000156510539",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Senior Full-stack Test Engineer (Manual, Automation), based in Da Nang",
+      "location": "Da Nang City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000156510539",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-20T09:36:02.617Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000154588848",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000154588848",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Test Engineer (Manual/QA/QC), based in Da Nang",
+      "location": "Da Nang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000154588848",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-09T05:30:39.769Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-09T06:48:11.629029+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000156220899",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Eurofins:744000156220899",
+      "source_key": "smartrecruiters:Eurofins",
+      "company": "Eurofins Vietnam",
+      "title": "[HCM - D1] O5 Country Quality Manager (Textile background)",
+      "location": "Ho Chi Minh City, Room No. C5, 4th Floor, IBC Building, 01A Me Linh Square, Ben Nghe Ward, District 1, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Eurofins/744000156220899",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/Eurofins",
+      "source_published_at": "2026-10-19T01:34:32.610Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-19T05:23:18.288575+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000155170829",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000155170829",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EMN] Mechanical Engineer Intern (6-month fulltime Internship)",
+      "location": "Thành phố Hồ Chí Minh, Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000155170829",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-13T06:30:43.421Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-13T14:37:06.066981+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000151528339",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000151528339",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EPC] 4 Senior Embedded Software Engineer (with Joining Bonus )",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000151528339",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-24T05:01:30.405Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:ashby:airwallex:3d42ba1d-4b63-4f45-a00d-904967678970",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:ashby:airwallex:3d42ba1d-4b63-4f45-a00d-904967678970",
+      "source_key": "ashby:airwallex",
+      "company": "Airwallex",
+      "title": "Customer Success Manager, SME & Growth",
+      "location": "VN - Ho Chi Minh City",
+      "country": "Vietnam",
+      "url": "https://jobs.ashbyhq.com/airwallex/3d42ba1d-4b63-4f45-a00d-904967678970",
+      "source": "Ashby",
+      "record_type": "link_only",
+      "source_board_url": "https://jobs.ashbyhq.com/airwallex",
+      "source_published_at": "2026-09-21T04:24:43.563+00:00",
+      "employment_type": "FullTime",
+      "workplace_type": "OnSite",
+      "first_seen": "2026-09-28T15:19:38.354592+00:00",
+      "last_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156509579",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000156509579",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Full-stack Test Engineer (Manual, Automation)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000156509579",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-20T09:30:02.924Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T17:34:10.153050+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-20T17:34:10.153050+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156504802",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000156504802",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Full-stack Test Engineer (Manual, Automation), based in Da Nang",
+      "location": "Da Nang City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000156504802",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-20T09:24:42.267Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T17:34:10.153050+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-20T17:34:10.153050+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000089234360",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000089234360",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[SO] Senior UX Designer",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000089234360",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2025-10-22T10:54:06.675Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-20T12:16:53.173224+00:00",
+      "last_checked_at": "2026-10-20T17:34:10.153050+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-20T17:34:10.153050+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000153120339",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000153120339",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[ESC] Automotive AUTOSAR Base SW Developer (all levels)",
+      "location": "Ho Chi Minh, Tan Binh Ward, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000153120339",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-02T08:13:01.124Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-02T13:13:56.479488+00:00",
+      "last_seen": "2026-10-20T05:22:53.369690+00:00",
+      "last_checked_at": "2026-10-20T21:55:51.093034+00:00",
+      "status": "closed",
+      "missed_successful_checks": 2,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-20T21:55:51.093034+00:00",
+      "closed_detected_at": "2026-10-20T21:55:51.093034+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156707599",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156705079",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156475673",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156460204",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156460360",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000156502462",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156705539",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000156704059",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156705249",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703659",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703579",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703289",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000156710049",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000156709789",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000156703720",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000156487639",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000156705769",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SikaAG:744000156460059",
+    "at": "2026-10-21T05:22:03.923737+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
