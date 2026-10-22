@@ -24147,5 +24147,107 @@
     "at": "2026-10-22T12:30:50.231962+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703659",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:SGS:744000156703659",
+      "source_key": "smartrecruiters:SGS",
+      "company": "SGS Vietnam",
+      "title": "MEP Engineer – Building & Infrastructure (B&I)",
+      "location": "Thành phố Hồ Chí Minh, Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/SGS/744000156703659",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/SGS",
+      "source_published_at": "2026-10-21T02:38:15.355Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-21T05:22:03.923737+00:00",
+      "last_seen": "2026-10-22T12:30:50.231962+00:00",
+      "last_checked_at": "2026-10-22T12:30:50.231962+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703579",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:SGS:744000156703579",
+      "source_key": "smartrecruiters:SGS",
+      "company": "SGS Vietnam",
+      "title": "Construction Manager - Building and Infrastructure (B&I)",
+      "location": "Thành phố Hồ Chí Minh, Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/SGS/744000156703579",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/SGS",
+      "source_published_at": "2026-10-21T02:37:22.129Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-21T05:22:03.923737+00:00",
+      "last_seen": "2026-10-22T12:30:50.231962+00:00",
+      "last_checked_at": "2026-10-22T12:30:50.231962+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000156703289",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:SGS:744000156703289",
+      "source_key": "smartrecruiters:SGS",
+      "company": "SGS Vietnam",
+      "title": "CSA Engineer -  B&I (Building & Infrastructure)",
+      "location": "Thành phố Hồ Chí Minh, Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/SGS/744000156703289",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/SGS",
+      "source_published_at": "2026-10-21T02:32:14.000Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-21T05:22:03.923737+00:00",
+      "last_seen": "2026-10-22T12:30:50.231962+00:00",
+      "last_checked_at": "2026-10-22T12:30:50.231962+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157174730",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157150719",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157149960",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157146387",
+    "at": "2026-10-22T17:40:02.499375+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
