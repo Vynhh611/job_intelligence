@@ -25271,5 +25271,165 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-10-23T12:11:19.615101+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000137582490",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:RenesasElectronics:744000137582490",
+      "source_key": "smartrecruiters:RenesasElectronics",
+      "company": "Renesas Electronics Vietnam",
+      "title": "Sr EDA Engineer",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000137582490",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+      "source_published_at": "2026-07-14T03:18:41.247Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-25T21:16:05.861457+00:00",
+      "last_checked_at": "2026-10-25T21:16:05.861457+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157419139",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000157419139",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EOM] Admin Intern (Outsourcing Management)",
+      "location": "Tân Bình, Thành phố Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000157419139",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-23T08:59:33.395Z",
+      "employment_type": "Intern",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-23T12:11:19.615101+00:00",
+      "last_seen": "2026-10-25T21:16:05.861457+00:00",
+      "last_checked_at": "2026-10-25T21:16:05.861457+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157386595",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000157386595",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP – Internship] Lean Manufacturing Intern",
+      "location": "An Phuoc Commune, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000157386595",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-23T05:53:20.688Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-23T12:11:19.615101+00:00",
+      "last_seen": "2026-10-25T21:16:05.861457+00:00",
+      "last_checked_at": "2026-10-25T21:16:05.861457+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157034729",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000157034729",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[ETA] Embedded Firmware Engineer",
+      "location": "Ho Chi Minh City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000157034729",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-22T04:26:54.228Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-22T05:26:02.314509+00:00",
+      "last_seen": "2026-10-25T21:16:05.861457+00:00",
+      "last_checked_at": "2026-10-25T21:16:05.861457+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152570991",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000152570991",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch R&D – Internship] Testing & Validation Intern",
+      "location": "Ho Chi Minh City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152570991",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-30T01:24:11.410Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-30T06:01:10.951021+00:00",
+      "last_seen": "2026-10-25T21:16:05.861457+00:00",
+      "last_checked_at": "2026-10-25T21:16:05.861457+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157721129",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157718210",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157717649",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157713336",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000157703277",
+    "at": "2026-10-26T05:24:41.552908+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
