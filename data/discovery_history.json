@@ -26417,5 +26417,61 @@
     "at": "2026-10-27T12:43:04.055125+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000141630159",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000141630159",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EMC] NEO Vehicle Autosar Embedded SW Engineer (01 Year Contract)",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000141630159",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-08-05T02:29:28.771Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-27T12:43:04.055125+00:00",
+      "last_checked_at": "2026-10-27T12:43:04.055125+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157952619",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157951834",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000158042229",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000157997299",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000157987619",
+    "at": "2026-10-27T18:21:17.420753+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
