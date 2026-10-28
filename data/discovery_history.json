@@ -26580,5 +26580,171 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-10-27T12:43:04.055125+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157713336",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000157713336",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EOM] Admin Intern (Outsourcing Management)",
+      "location": "Tân Bình, Thành phố Hồ Chí Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000157713336",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-26T02:08:17.249Z",
+      "employment_type": "Intern",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-26T05:24:41.552908+00:00",
+      "last_seen": "2026-10-27T22:39:34.233213+00:00",
+      "last_checked_at": "2026-10-27T22:39:34.233213+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157080647",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000157080647",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP - Internship] Manufacturing Admin Intern",
+      "location": "An Phuoc Commune, Dong Nai, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000157080647",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-22T09:21:10.474Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-22T12:30:50.231962+00:00",
+      "last_seen": "2026-10-27T22:39:34.233213+00:00",
+      "last_checked_at": "2026-10-27T22:39:34.233213+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000147408229",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000147408229",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "Financial Controlling Intern",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000147408229",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-04T03:16:35.717Z",
+      "employment_type": "Intern",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-27T18:21:17.420753+00:00",
+      "last_checked_at": "2026-10-27T22:39:34.233213+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-27T22:39:34.233213+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000141630159",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000141630159",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EMC] NEO Vehicle Autosar Embedded SW Engineer (01 Year Contract)",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000141630159",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-08-05T02:29:28.771Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-10-27T12:43:04.055125+00:00",
+      "last_checked_at": "2026-10-27T18:21:17.420753+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-10-27T18:21:17.420753+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000158207569",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000158207214",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157995659",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157994529",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000157951759",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000157981429",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157998564",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157998209",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157996005",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000157997159",
+    "at": "2026-10-28T06:21:06.767741+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
