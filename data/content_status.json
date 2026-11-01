@@ -1,5 +1,10 @@
 {
-  "checked_at": "2026-11-01T06:53:52.914936+00:00",
-  "descriptions": 1168,
-  "errors": []
+  "checked_at": "2026-11-01T18:09:06.947957+00:00",
+  "descriptions": 1170,
+  "errors": [
+    {
+      "id": "discovery:lever:lalamove:a5fa6414-24f1-433a-9f0f-b531efc7433c",
+      "error": "HTTPError"
+    }
+  ]
 }
