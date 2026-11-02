@@ -1,10 +1,5 @@
 {
-  "checked_at": "2026-11-01T22:27:56.183572+00:00",
-  "descriptions": 1170,
-  "errors": [
-    {
-      "id": "discovery:lever:lalamove:a5fa6414-24f1-433a-9f0f-b531efc7433c",
-      "error": "HTTPError"
-    }
-  ]
+  "checked_at": "2026-11-02T06:53:53.404586+00:00",
+  "descriptions": 1173,
+  "errors": []
 }
