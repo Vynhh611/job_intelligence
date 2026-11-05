@@ -34035,5 +34035,225 @@
     "at": "2026-11-05T07:26:52.855984+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000159371815",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Eurofins:744000159371815",
+      "source_key": "smartrecruiters:Eurofins",
+      "company": "Eurofins Vietnam",
+      "title": "[IT Delivery Center] Cloud Security Analyst",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Eurofins/744000159371815",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/Eurofins",
+      "source_published_at": "2026-11-03T12:20:39.560Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-03T19:51:08.783734+00:00",
+      "last_seen": "2026-11-05T07:26:52.855984+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156463549",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000156463549",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[SO] Senior Data Analyst – Databricks / Modern Data Platform",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000156463549",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-20T04:57:37.139Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-20T21:55:51.093034+00:00",
+      "last_seen": "2026-11-05T07:26:52.855984+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159287619",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000159287619",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP – Internship] Production Engineering Intern",
+      "location": "An Phuoc Commune, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000159287619",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-11-03T02:11:05.180Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-03T07:17:24.063236+00:00",
+      "last_seen": "2026-11-04T20:04:35.774733+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-05T07:26:52.855984+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159061534",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000159061534",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "Managing Director, Bosch Vietnam",
+      "location": "District 2, Thu Duc City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000159061534",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-11-02T07:13:39.911Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-02T21:57:16.303066+00:00",
+      "last_seen": "2026-11-04T20:04:35.774733+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-05T07:26:52.855984+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000153928343",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000153928343",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Floor Supervisor",
+      "location": "Phu Quoc, An Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000153928343",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-10-07T02:10:35.568Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-07T06:33:16.196675+00:00",
+      "last_seen": "2026-11-04T20:04:35.774733+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-05T07:26:52.855984+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000143050449",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000143050449",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Airport Representative",
+      "location": "Phu Quoc, An Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000143050449",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-08-12T08:27:08.500Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-11-04T20:04:35.774733+00:00",
+      "last_checked_at": "2026-11-05T07:26:52.855984+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-05T07:26:52.855984+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159812539",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159805979",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159795599",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000159807189",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000159804416",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000159806444",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000159906939",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000159802859",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000159800277",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000159800629",
+    "at": "2026-11-05T20:17:54.945656+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
