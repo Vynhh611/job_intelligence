@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-10T07:48:16.989164+00:00",
-  "descriptions": 1268,
+  "checked_at": "2026-11-10T20:02:19.845280+00:00",
+  "descriptions": 1273,
   "errors": [
     {
-      "id": "discovery:ashby:airwallex:6aa6872f-2095-43ad-818c-5c85fe4290b9",
-      "error": "KeyError"
+      "id": "discovery:lever:cargo-partner:88a00340-f93c-4f93-b02c-6c54373e1ee2",
+      "error": "ReadTimeout"
     }
   ]
 }
