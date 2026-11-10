@@ -35604,5 +35604,202 @@
     "at": "2026-11-09T22:44:21.692660+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000159578119",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000159578119",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Manager II, Country IT (VN",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000159578119",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-11-04T09:14:00.704Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-04T20:04:35.774733+00:00",
+      "last_seen": "2026-11-09T22:44:21.692660+00:00",
+      "last_checked_at": "2026-11-09T22:44:21.692660+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000159551279",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000159551279",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Bosch HcP – Internship] Digital Quality Management System Intern",
+      "location": "An Phuoc Commune, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000159551279",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-11-04T06:12:09.125Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-04T07:00:04.666516+00:00",
+      "last_seen": "2026-11-09T22:44:21.692660+00:00",
+      "last_checked_at": "2026-11-09T22:44:21.692660+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000152587636",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000152587636",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[Internship] Indirect Purchasing Intern",
+      "location": "Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152587636",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-09-30T04:27:50.624Z",
+      "employment_type": "Intern",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-30T06:01:10.951021+00:00",
+      "last_seen": "2026-11-09T22:44:21.692660+00:00",
+      "last_checked_at": "2026-11-09T22:44:21.692660+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:ashby:airwallex:6aa6872f-2095-43ad-818c-5c85fe4290b9",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:ashby:airwallex:6aa6872f-2095-43ad-818c-5c85fe4290b9",
+      "source_key": "ashby:airwallex",
+      "company": "Airwallex",
+      "title": "(Senior) Manager, Sales, SME & Growth",
+      "location": "VN - Ho Chi Minh City",
+      "country": "Vietnam",
+      "url": "https://jobs.ashbyhq.com/airwallex/6aa6872f-2095-43ad-818c-5c85fe4290b9",
+      "source": "Ashby",
+      "record_type": "link_only",
+      "source_board_url": "https://jobs.ashbyhq.com/airwallex",
+      "source_published_at": "2026-09-18T02:57:41.414+00:00",
+      "employment_type": "FullTime",
+      "workplace_type": "OnSite",
+      "first_seen": "2026-09-28T15:19:38.354592+00:00",
+      "last_seen": "2026-11-09T22:44:21.692660+00:00",
+      "last_checked_at": "2026-11-09T22:44:21.692660+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000131625265",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000131625265",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "Senior HR Business Partner (Senior HRBP)",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000131625265",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-06-11T09:29:24.673Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-11-09T07:14:56.212517+00:00",
+      "last_checked_at": "2026-11-09T22:44:21.692660+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-09T22:44:21.692660+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000160791919",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160809109",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160807189",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160806121",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160806629",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160803579",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160792329",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000160782142",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000160791680",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000160791659",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000160801559",
+    "at": "2026-11-10T07:47:59.274553+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
