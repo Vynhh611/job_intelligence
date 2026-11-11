@@ -1,10 +1,5 @@
 {
-  "checked_at": "2026-11-10T20:02:19.845280+00:00",
-  "descriptions": 1273,
-  "errors": [
-    {
-      "id": "discovery:lever:cargo-partner:88a00340-f93c-4f93-b02c-6c54373e1ee2",
-      "error": "ReadTimeout"
-    }
-  ]
+  "checked_at": "2026-11-11T07:14:31.866955+00:00",
+  "descriptions": 1284,
+  "errors": []
 }
