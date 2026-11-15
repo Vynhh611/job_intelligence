@@ -39491,5 +39491,58 @@
     "at": "2026-11-14T18:31:48.299301+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000161458229",
+    "at": "2026-11-15T07:15:06.703968+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000161458229",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Resort Manager",
+      "location": "Phu Quoc, Kien Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000161458229",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-11-13T10:31:44.749Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-13T20:05:49.579050+00:00",
+      "last_seen": "2026-11-14T22:45:48.864572+00:00",
+      "last_checked_at": "2026-11-14T22:45:48.864572+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:RenesasElectronics:744000161432629",
+    "at": "2026-11-15T07:15:06.703968+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:RenesasElectronics:744000161432629",
+      "source_key": "smartrecruiters:RenesasElectronics",
+      "company": "Renesas Electronics Vietnam",
+      "title": "Staff Product Engineer",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/RenesasElectronics/744000161432629",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/RenesasElectronics",
+      "source_published_at": "2026-11-13T07:06:58.880Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-13T07:23:00.696905+00:00",
+      "last_seen": "2026-11-14T07:04:15.468952+00:00",
+      "last_checked_at": "2026-11-14T18:31:48.299301+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-14T18:31:48.299301+00:00"
+    }
   }
 ]
