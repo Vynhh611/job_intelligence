@@ -1,10 +1,14 @@
 {
-  "checked_at": "2026-11-17T08:32:13.047278+00:00",
-  "descriptions": 1335,
+  "checked_at": "2026-11-17T21:22:42.163405+00:00",
+  "descriptions": 1340,
   "errors": [
     {
-      "id": "discovery:lever:lalamove:8d4f94d5-3e4d-4950-a23d-3711207fe153",
-      "error": "HTTPError"
+      "id": "discovery:smartrecruiters:Grab:744000144003539",
+      "error": "ConnectionError"
+    },
+    {
+      "id": "discovery:ashby:airwallex:d1d0116d-7edb-4b15-87bc-4dbd74bc83e0",
+      "error": "KeyError"
     }
   ]
 }
