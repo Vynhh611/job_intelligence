@@ -41876,5 +41876,318 @@
     "at": "2026-11-17T21:22:32.646672+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000161436739",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000161436739",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Senior Full-stack Test Engineer (System Integration Testing - SIT)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000161436739",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-11-13T08:06:11.317Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-13T20:05:49.579050+00:00",
+      "last_seen": "2026-11-17T21:22:32.646672+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:lever:lalamove:a5fa6414-24f1-433a-9f0f-b531efc7433c",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:lever:lalamove:a5fa6414-24f1-433a-9f0f-b531efc7433c",
+      "source_key": "lever:lalamove",
+      "company": "Lalamove",
+      "title": "Driver Management Associate (Nhân Viên Quản Lý Chất Lượng Đối Tác Tài Xế) - Làm Việc Tại Điểm Hỗ Trợ Thanh Trì",
+      "location": "Hanoi",
+      "country": "Vietnam",
+      "url": "https://jobs.lever.co/lalamove/a5fa6414-24f1-433a-9f0f-b531efc7433c",
+      "source": "Lever",
+      "record_type": "link_only",
+      "source_board_url": "https://jobs.lever.co/lalamove",
+      "source_published_at": "",
+      "employment_type": "Full-time",
+      "workplace_type": "onsite",
+      "first_seen": "2026-10-01T13:57:26.043951+00:00",
+      "last_seen": "2026-11-17T21:22:32.646672+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 1
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000161243696",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Eurofins:744000161243696",
+      "source_key": "smartrecruiters:Eurofins",
+      "company": "Eurofins Vietnam",
+      "title": "[IT Delivery Center] Cloud Security Analyst",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Eurofins/744000161243696",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/Eurofins",
+      "source_published_at": "2026-11-12T09:08:35.597Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-12T20:29:08.312251+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000161022079",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Eurofins:744000161022079",
+      "source_key": "smartrecruiters:Eurofins",
+      "company": "Eurofins Vietnam",
+      "title": "[IT Delivery Center] Junior Test Automation Engineer",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Eurofins/744000161022079",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/Eurofins",
+      "source_published_at": "2026-11-11T03:44:33.361Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-11T07:14:11.646103+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Eurofins:744000160127554",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Eurofins:744000160127554",
+      "source_key": "smartrecruiters:Eurofins",
+      "company": "Eurofins Vietnam",
+      "title": "[IT Delivery Center] Database Administrator (new position)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Eurofins/744000160127554",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/Eurofins",
+      "source_published_at": "2026-11-06T07:32:21.753Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-06T19:43:28.401064+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000121385877",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000121385877",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "[EMC] Android Automotive Expert",
+      "location": "Ho Chi Minh city, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000121385877",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-04-17T09:59:18.723Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000161210669",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000161210669",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Reservations Manager",
+      "location": "Ho Chi Minh City, Vung Tau Ward, Ho Chi Minh City, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000161210669",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-11-12T02:15:32.516Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-11-12T07:45:52.873222+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000146306791",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000146306791",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "General Manager - Sofitel Diamond Crown Hai Phong - Pre Opening",
+      "location": "Haiphong, Hai Phong, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000146306791",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-08-29T14:03:42.573Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T01:21:08.218615+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:ashby:airwallex:d1d0116d-7edb-4b15-87bc-4dbd74bc83e0",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:ashby:airwallex:d1d0116d-7edb-4b15-87bc-4dbd74bc83e0",
+      "source_key": "ashby:airwallex",
+      "company": "Airwallex",
+      "title": "Business Development Manager",
+      "location": "VN - Ho Chi Minh City",
+      "country": "Vietnam",
+      "url": "https://jobs.ashbyhq.com/airwallex/d1d0116d-7edb-4b15-87bc-4dbd74bc83e0",
+      "source": "Ashby",
+      "record_type": "link_only",
+      "source_board_url": "https://jobs.ashbyhq.com/airwallex",
+      "source_published_at": "2026-04-24T00:55:39.314+00:00",
+      "employment_type": "FullTime",
+      "workplace_type": "OnSite",
+      "first_seen": "2026-09-28T15:19:38.354592+00:00",
+      "last_seen": "2026-11-17T08:32:02.588656+00:00",
+      "last_checked_at": "2026-11-17T21:22:32.646672+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-17T21:22:32.646672+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:lever:lalamove:7c7f5956-4ffa-47d5-b7eb-a471581c8ba0",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000162228021",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000162217239",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000162214189",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000162230489",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000162212839",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000162212689",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000162214789",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000162214679",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162219359",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162216860",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162216099",
+    "at": "2026-11-18T07:58:40.591644+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
