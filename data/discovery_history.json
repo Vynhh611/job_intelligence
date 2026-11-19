@@ -42299,5 +42299,138 @@
     "at": "2026-11-18T20:55:54.514727+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000157728749",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000157728749",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Senior Full-stack Test Engineer (Manual, Automation)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000157728749",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-10-26T06:46:52.350Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-10-26T13:37:19.535981+00:00",
+      "last_seen": "2026-11-18T20:55:54.514727+00:00",
+      "last_checked_at": "2026-11-18T20:55:54.514727+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000145409809",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:Grab:744000145409809",
+      "source_key": "smartrecruiters:Grab",
+      "company": "Grab",
+      "title": "Senior Software Engineer",
+      "location": "HCMC, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/Grab/744000145409809",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://www.grab.careers/en/jobs/",
+      "source_published_at": "2026-08-25T01:50:21.802Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-09-29T07:00:20.921064+00:00",
+      "last_seen": "2026-11-18T20:55:54.514727+00:00",
+      "last_checked_at": "2026-11-18T20:55:54.514727+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:BoschGroup:744000156927863",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:BoschGroup:744000156927863",
+      "source_key": "smartrecruiters:BoschGroup",
+      "company": "Bosch Vietnam",
+      "title": "Digital Transformation & Integration Specialist - AI Lead",
+      "location": "Long Thanh, Dong Nai, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000156927863",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/BoschGroup",
+      "source_published_at": "2026-10-22T01:22:56.958Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-22T05:26:02.314509+00:00",
+      "last_seen": "2026-11-18T07:58:40.591644+00:00",
+      "last_checked_at": "2026-11-18T20:55:54.514727+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-18T20:55:54.514727+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000162428899",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000162428829",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000162433579",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000162433269",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162451524",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162448536",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162450929",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162450429",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:Grab:744000162429669",
+    "at": "2026-11-19T07:58:54.658686+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
