@@ -43518,5 +43518,43 @@
       "reopen_count": 0,
       "last_missing_check_at": "2026-11-20T20:46:28.042324+00:00"
     }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000156268429",
+    "at": "2026-11-22T19:59:48.845654+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000156268429",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Minibar Attendant",
+      "location": "Phu Quoc, An Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000156268429",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-10-19T09:19:50.901Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-19T14:00:31.540345+00:00",
+      "last_seen": "2026-11-22T07:30:26.917377+00:00",
+      "last_checked_at": "2026-11-22T07:30:26.917377+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000163096359",
+    "at": "2026-11-22T19:59:48.845654+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000163094589",
+    "at": "2026-11-22T19:59:48.845654+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
