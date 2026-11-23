@@ -43556,5 +43556,122 @@
     "at": "2026-11-22T19:59:48.845654+00:00",
     "event": "first_seen",
     "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000162214789",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000162214789",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Senior Full-stack Test Engineer (Automation, SIT), based in Da Nang",
+      "location": "Da Nang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000162214789",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-11-18T02:48:20.825Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-18T07:58:40.591644+00:00",
+      "last_seen": "2026-11-22T19:59:48.845654+00:00",
+      "last_checked_at": "2026-11-22T19:59:48.845654+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000162214679",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000162214679",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Senior Full-stack Test Engineer (Automation, SIT)",
+      "location": "Ho Chi Minh City, Ho Chi Minh, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000162214679",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-11-18T02:46:47.823Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-18T07:58:40.591644+00:00",
+      "last_seen": "2026-11-22T19:59:48.845654+00:00",
+      "last_checked_at": "2026-11-22T19:59:48.845654+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:KMSTechnology1:744000161728129",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:KMSTechnology1:744000161728129",
+      "source_key": "smartrecruiters:KMSTechnology1",
+      "company": "KMS Technology",
+      "title": "Fresher Test Engineer (Manual + Automation), based in Da Nang",
+      "location": "Da Nang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/KMSTechnology1/744000161728129",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/KMSTechnology1",
+      "source_published_at": "2026-11-16T05:18:00.562Z",
+      "employment_type": "Full-time",
+      "workplace_type": "Hybrid",
+      "first_seen": "2026-11-16T07:21:19.404647+00:00",
+      "last_seen": "2026-11-22T19:59:48.845654+00:00",
+      "last_checked_at": "2026-11-22T19:59:48.845654+00:00",
+      "status": "active",
+      "missed_successful_checks": 0,
+      "reopen_count": 0
+    }
+  },
+  {
+    "job_id": "discovery:smartrecruiters:AccorHotel:744000156268429",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "snapshot",
+    "previous": {
+      "id": "discovery:smartrecruiters:AccorHotel:744000156268429",
+      "source_key": "smartrecruiters:AccorHotel",
+      "company": "Accor Vietnam",
+      "title": "Minibar Attendant",
+      "location": "Phu Quoc, An Giang, Vietnam",
+      "country": "Vietnam",
+      "url": "https://jobs.smartrecruiters.com/AccorHotel/744000156268429",
+      "source": "SmartRecruiters",
+      "record_type": "link_only",
+      "source_board_url": "https://careers.smartrecruiters.com/AccorHotel",
+      "source_published_at": "2026-10-19T09:19:50.901Z",
+      "employment_type": "Full-time",
+      "workplace_type": "On-site",
+      "first_seen": "2026-10-19T14:00:31.540345+00:00",
+      "last_seen": "2026-11-22T07:30:26.917377+00:00",
+      "last_checked_at": "2026-11-22T19:59:48.845654+00:00",
+      "status": "active",
+      "missed_successful_checks": 1,
+      "reopen_count": 0,
+      "last_missing_check_at": "2026-11-22T19:59:48.845654+00:00"
+    }
+  },
+  {
+    "job_id": "discovery:ashby:airwallex:b79d2500-aabc-42c6-a007-1b699b485641",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "first_seen",
+    "previous": null
+  },
+  {
+    "job_id": "discovery:smartrecruiters:SGS:744000163147589",
+    "at": "2026-11-23T08:18:41.329181+00:00",
+    "event": "first_seen",
+    "previous": null
   }
 ]
